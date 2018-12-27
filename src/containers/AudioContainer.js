@@ -2,11 +2,30 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
+import { Article, Editor } from "../components";
+import {
+  ContentLayout,
+  Positioner,
+  ShadowedBox,
+  WaveLayout
+} from "../styledComponents";
+
 import * as playbackActions from "../store/modules/playback";
 
 class AudioContainer extends Component {
   render() {
-    return <div>Wave</div>;
+    const editorMode = true;
+    return (
+      <Positioner clasName="audio">
+        <WaveLayout>
+          <ShadowedBox>
+            <div className="playback-box" />
+            <div className="voicewave-box" />
+          </ShadowedBox>
+        </WaveLayout>
+        <ContentLayout>{editorMode ? <Editor /> : <Article />}</ContentLayout>
+      </Positioner>
+    );
   }
 }
 

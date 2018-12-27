@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { LinkBtn } from "../styledComponents";
 
 class Maincontainer extends Component {
   render() {
     return (
       <div>
-        <Link to="/speech/postlist">AAAAAAAAA</Link>
-        <Link to="/speech/audio">BBBBBBBBBBBB</Link>
+        <LinkBtn to="/speech/postlist">postList</LinkBtn>
+        <LinkBtn to="/speech/audio">audio</LinkBtn>
       </div>
     );
   }

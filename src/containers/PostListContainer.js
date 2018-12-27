@@ -2,11 +2,33 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
+import {
+  Positioner,
+  PostWrapper,
+  SPostItem,
+  SPostNav
+} from "../styledComponents";
+
 import * as editActions from "../store/modules/edit";
+
+const PostItem = () => {
+  return <SPostItem>Test Post</SPostItem>;
+};
 
 class PostListContainer extends Component {
   render() {
-    return <div>PostList</div>;
+    return (
+      <Positioner className="postlist">
+        <PostWrapper>
+          <PostItem />
+          <PostItem />
+          <PostItem />
+          <PostItem />
+          <PostItem />
+          <SPostNav>Test Nav</SPostNav>
+        </PostWrapper>
+      </Positioner>
+    );
   }
 }
 

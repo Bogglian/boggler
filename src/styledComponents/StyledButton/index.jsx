@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import oc from "open-color";
+import { Link } from "react-router-dom";
 import { shadow } from "../../lib/styleUtil";
 
-const BorderedBtn = styled.Button`
+const BorderedBtn = styled.button`
   & {
     font-weight: 600;
     color: ${oc.cyan[6]};
@@ -32,4 +33,18 @@ const EditorBtn = styled(BorderedBtn)`
   }
 `;
 
-export { BorderedBtn, EditorBtn };
+const LinkBtn = styled(Link)`
+  & {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 90%;
+    height: 3rem;
+    font-size: 0.8rem;
+    background-color: white;
+    padding: 1rem;
+    border-ratio: 1rem;
+  }
+`;
+
+export { BorderedBtn, EditorBtn, LinkBtn };
