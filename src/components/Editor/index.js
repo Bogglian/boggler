@@ -12,11 +12,11 @@ const Editor = () => {
     <ShadowedBox>
       <EditorLayout>
         <SpeechInputForm className="speech-editor-form-title">
-          <input type="text" name="title" placeholder="title" />
+          <input type="text" name="title" placeholder="Title" />
         </SpeechInputForm>
         <SpeechInputMenuBox />
         <SpeechInputForm className="speech-editor-form-textarea">
-          <textarea type="text" name="title" placeholder="leave a comment" />
+          <textarea type="text" name="textarea" placeholder="Leave a comment" />
         </SpeechInputForm>
         <EditorBtn className="save-btn">Save</EditorBtn>
       </EditorLayout>

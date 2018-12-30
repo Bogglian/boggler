@@ -13,6 +13,7 @@ const SpeechInputForm = styled.form`
         font-size: 1rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+        margin-top: 1%;
       }
     }
 
