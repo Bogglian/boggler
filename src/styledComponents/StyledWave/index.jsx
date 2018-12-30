@@ -149,16 +149,15 @@ const WaveSlider = styled.div`
       height: 100%;
       user-select: none;
       -webkit-user-select: none;
-      background-color: #fff;
 
     .slider {
       flex-grow: 1;
-      background-color: #D8D8D8;
+      background-color: #fff;
       cursor: pointer;
       position: relative;
 
       .progress {
-        background-color: #44BFA3;
+        background-color: #fff;
         border-radius: inherit;
         position: absolute;
         pointer-events: none;
@@ -180,7 +179,7 @@ const WaveSlider = styled.div`
       padding-top: 0.1rem;
       font-family: 'Roboto', sans-serif;
       font-size: 1em;
-      color: #55606E;
+      color: #ddd;
       display: flex;
       justify-content: space-between;
       align-items: center;

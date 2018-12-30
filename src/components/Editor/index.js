@@ -1,6 +1,7 @@
 import React from "react";
 import {
   EditorLayout,
+  EditorBtn,
   ShadowedBox,
   SpeechInputForm,
   SpeechInputMenuBox
@@ -10,10 +11,14 @@ const Editor = () => {
   return (
     <ShadowedBox>
       <EditorLayout>
-        <SpeechInputMenuBox />
-        <SpeechInputForm className="speech-editor-form">
-          <textarea />
+        <SpeechInputForm className="speech-editor-form-title">
+          <input type="text" name="title" placeholder="title" />
         </SpeechInputForm>
+        <SpeechInputMenuBox />
+        <SpeechInputForm className="speech-editor-form-textarea">
+          <textarea type="text" name="title" placeholder="leave a comment" />
+        </SpeechInputForm>
+        <EditorBtn className="save-btn">Save</EditorBtn>
       </EditorLayout>
     </ShadowedBox>
   );

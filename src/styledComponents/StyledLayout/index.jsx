@@ -7,6 +7,7 @@ const AudioLayout = styled.div`
     background-color: ${oc.gray[5]};
     width: 100%;
     height: 13rem;
+    border-radius: 0.2rem;
   }
 `;
 
@@ -67,18 +68,26 @@ const ShadowedBox = styled.div`
     height: 100%;
     ${shadow(2)};
     display: flex;
-    border-radius: 0.2rem;
+    border-radius: inherit;
 
     .playback-box {
       width: 10%;
       height: 100%;
       background-color: ${oc.gray[6]};
+      border-radius: inherit;
     }
 
     .voicewave-box {
       width: 90%;
       height: 100%;
       background-color: ${oc.gray[7]};
+      border-radius: inherit;
+    }
+
+    .input-box {
+      width: 100%;
+      width: 10%;
+      height: 100%;
     }
   }
 `;
@@ -87,7 +96,8 @@ const SpeechInputMenuBox = styled.div`
   & {
     width: 100%;
     height: 10%;
-    background-color: ${oc.cyan[7]};
+    margin-top: 3%;
+    background-color: ${oc.cyan[6]};
   }
 `;
 
