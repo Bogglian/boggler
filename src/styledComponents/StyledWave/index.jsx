@@ -4,18 +4,23 @@ import oc from "open-color";
 const VoiceWave = styled.div`
   & {
     width: 100%;
-    height: 10rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 `;
 
 const WaveLoader = styled.div`
   & {
-    height: 20px;
-    width: 160px;
+    height: 4rem;
+    width: 10rem;
     position: absolute;
-    top: 11%;
+    top: 47%;
     left: 47%;
-    display: none;
+
+    &.none {
+      display: none;
+    }
 
     .rectangle-2 {
       -webkit-animation-delay: 0.1s;
