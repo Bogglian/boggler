@@ -5,11 +5,10 @@ import { shadow } from "../../lib/styleUtil";
 
 const BorderedBtn = styled.button`
   & {
+    padding: 0;
     font-weight: 600;
     color: ${oc.cyan[6]};
     border: 1px solid ${oc.cyan[6]};
-    padding: 0.5rem;
-    padding-bottom: 0.4rem;
     cursor: pointer;
     border-radius: 2px;
     text-decoration: none;
@@ -30,6 +29,14 @@ const BorderedBtn = styled.button`
 
 const EditorBtn = styled(BorderedBtn)`
   & {
+    width: 10%;
+    height: 5%;
+  }
+
+  &.save-btn {
+    margin-top: 0.5%;
+    font-size: 90%;
+    margin-left: 90%;
   }
 `;
 
