@@ -12,7 +12,7 @@ const initialState = {
     id: 0,
     title: "",
     filename: "",
-    contents: [] //문장 단위 index와 시간, 내용 등
+    content: "" //문장 단위 index와 시간, 내용 등
   }
 };
 
@@ -21,9 +21,12 @@ export default handleActions(
     [SAVE_AUDIO]: (state, action) => {
       produce(state, draft => {});
     },
-    [GET_AUDIO]: (state, action) => {
-      produce(state, draft => {});
-    }
+    [GET_AUDIO]: (state, action) => (
+      produce(state, draft => {
+        state['audio'] = action.payload;
+        console.log(action.payload);
+      })
+    )
   },
   initialState
 );

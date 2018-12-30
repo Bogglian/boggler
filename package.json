@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "immer": "^1.9.3",
     "open-color": "^1.6.3",
     "react": "^16.7.0",
