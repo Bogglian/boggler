@@ -6,7 +6,7 @@ const GET_AUDIOLIST = "audioList/GET";
 export const getAudioList = createAction(GET_AUDIOLIST);
 
 const initialState = {
-  audioList: []
+  audios: []
 };
 
 export default handleActions(

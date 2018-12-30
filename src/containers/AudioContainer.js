@@ -19,7 +19,7 @@ class AudioContainer extends Component {
   render() {
     const editorMode = true;
     const { id, title, content, filename } = this.props;
-    console.log(this.props.title);
+    console.log(this.props.id);
     return (
       <Positioner clasName="audio">
         <AudioLayout>
@@ -39,10 +39,10 @@ class AudioContainer extends Component {
 }
 
 const mapStateToProps = ({ playback, audio }) => ({
-  id: audio.audio.id,
-  title: audio.audio.title,
-  content: audio.audio.content,
-  filename: audio.audio.filename
+  id: audio.id,
+  title: audio.title,
+  content: audio.content,
+  filename: audio.filename
 });
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다.

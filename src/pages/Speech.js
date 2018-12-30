@@ -15,6 +15,7 @@ class Speech extends Component {
           <Switch>
             <Route exact path="/" component={MainContainer} />
             <Route path="/speech/postlist" component={PostListContainer} />
+            <Route path="/speech/audio/write" component={AudioContainer} />
             <Route path="/speech/audio/:audioId" component={AudioContainer} />
           </Switch>
         </Router>

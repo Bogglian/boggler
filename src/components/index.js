@@ -3,3 +3,4 @@ export { Editor } from "./Editor";
 export { AudioProgressbar } from "./AudioProgressbar";
 export { Playback } from "./Playback";
 export { Wave } from "./Wave";
+export { PostList } from "./PostList";

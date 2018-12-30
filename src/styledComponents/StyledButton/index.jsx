@@ -38,6 +38,13 @@ const EditorBtn = styled(BorderedBtn)`
     font-size: 90%;
     margin-left: 90%;
   }
+
+  &.write-btn {
+    width: 7%;
+    background: white;
+    margin-top: 0.5%;
+    margin-left: 93%;
+  }
 `;
 
 const LinkBtn = styled(Link)`
