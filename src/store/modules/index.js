@@ -1,10 +1,14 @@
 import { combineReducers } from "redux";
-import edit from "./edit";
+import posting from "./posting";
 import playback from "./playback";
+import audio from "./audio";
+import audioList from "./audioList";
 // 임포트 리듀서
 
 export default combineReducers({
-  edit,
+  audio,
+  audioList,
+  posting,
   playback
   // 추가된 리듀서
 });
