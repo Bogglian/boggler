@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import oc from "open-color";
+import { shadow } from "../../lib/styleUtil";
 
 const SpeechInputForm = styled.form`
   & {
@@ -11,8 +13,14 @@ const SpeechInputForm = styled.form`
         outline: none;
         border-radius: 0px;
         font-size: 1rem;
+        margin-top: 1%;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+
+        &:focus {
+          border: 2px solid ${oc.cyan[6]};
+          ${shadow(1)};
+        }
       }
     }
 
@@ -26,6 +34,10 @@ const SpeechInputForm = styled.form`
         border-radius: 0px;
         font-size: 1rem;
         padding: 0.5rem;
+        &:focus {
+          border: 2px solid ${oc.cyan[6]};
+          ${shadow(1)};
+        }
       }
     }
   }

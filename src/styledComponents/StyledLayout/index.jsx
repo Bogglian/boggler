@@ -98,6 +98,9 @@ const SpeechInputMenuBox = styled.div`
     height: 10%;
     margin-top: 3%;
     background-color: ${oc.cyan[6]};
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 `;
 
