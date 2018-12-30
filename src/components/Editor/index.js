@@ -4,7 +4,8 @@ import {
   EditorBtn,
   ShadowedBox,
   SpeechInputForm,
-  SpeechInputMenuBox
+  SpeechInputMenuBox,
+  TextMenuBtn
 } from "../../styledComponents";
 
 const Editor = () => {
@@ -14,7 +15,12 @@ const Editor = () => {
         <SpeechInputForm className="speech-editor-form-title">
           <input type="text" name="title" placeholder="Title" />
         </SpeechInputForm>
-        <SpeechInputMenuBox />
+        <SpeechInputMenuBox>
+          <TextMenuBtn>Header</TextMenuBtn>
+          <TextMenuBtn>Itelic</TextMenuBtn>
+          <TextMenuBtn>Bold</TextMenuBtn>
+          <TextMenuBtn>Quote</TextMenuBtn>
+        </SpeechInputMenuBox>
         <SpeechInputForm className="speech-editor-form-textarea">
           <textarea type="text" name="textarea" placeholder="Leave a comment" />
         </SpeechInputForm>

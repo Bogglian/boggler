@@ -1,4 +1,4 @@
-export { BorderedBtn, EditorBtn, LinkBtn } from "./StyledButton";
+export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn } from "./StyledButton";
 export { SpeechInputForm } from "./StyledForm";
 export {
   AudioLayout,

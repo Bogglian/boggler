@@ -40,6 +40,13 @@ const EditorBtn = styled(BorderedBtn)`
   }
 `;
 
+const TextMenuBtn = styled.div`
+  & {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+`;
+
 const LinkBtn = styled(Link)`
   & {
     margin-top: 1rem;
@@ -54,4 +61,4 @@ const LinkBtn = styled(Link)`
   }
 `;
 
-export { BorderedBtn, EditorBtn, LinkBtn };
+export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn };
