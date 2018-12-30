@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { Article, Editor } from "../components";
+import { Article, Editor, Playback, Wave } from "../components";
 import {
+  AudioLayout,
   ContentLayout,
   Positioner,
-  ShadowedBox,
-  WaveLayout
+  ShadowedBox
 } from "../styledComponents";
 
 import * as playbackActions from "../store/modules/playback";
@@ -17,12 +17,16 @@ class AudioContainer extends Component {
     const editorMode = true;
     return (
       <Positioner clasName="audio">
-        <WaveLayout>
+        <AudioLayout>
           <ShadowedBox>
-            <div className="playback-box" />
-            <div className="voicewave-box" />
+            <div className="playback-box">
+              <Playback />
+            </div>
+            <div className="voicewave-box">
+              <Wave />
+            </div>
           </ShadowedBox>
-        </WaveLayout>
+        </AudioLayout>
         <ContentLayout>{editorMode ? <Editor /> : <Article />}</ContentLayout>
       </Positioner>
     );

@@ -2,6 +2,14 @@ import styled from "styled-components";
 import oc from "open-color";
 import { shadow } from "../../lib/styleUtil";
 
+const AudioLayout = styled.div`
+  & {
+    background-color: ${oc.gray[5]};
+    width: 100%;
+    height: 13rem;
+  }
+`;
+
 const ContentLayout = styled.div`
   & {
     background-color: ${oc.gray[4]};
@@ -9,6 +17,7 @@ const ContentLayout = styled.div`
     height 32rem;
     text-align: center;
     margin-top: 1%;
+    border-radius: 0.2rem;
   }
 `;
 
@@ -58,6 +67,7 @@ const ShadowedBox = styled.div`
     height: 100%;
     ${shadow(2)};
     display: flex;
+    border-radius: 0.2rem;
 
     .playback-box {
       width: 10%;
@@ -100,14 +110,11 @@ const SPostNav = styled.div`
 
 const WaveLayout = styled.div`
   & {
-    background-color: ${oc.gray[5]};
-    width: 100%;
-    height: 13rem;
-    text-align: center;
   }
 `;
 
 export {
+  AudioLayout,
   ContentLayout,
   EditorLayout,
   Positioner,

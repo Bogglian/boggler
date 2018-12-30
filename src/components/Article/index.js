@@ -5,4 +5,4 @@ const Article = () => {
   return <ShadowedBox>{/* 아티클의 텍스트가 들어감 */}</ShadowedBox>;
 };
 
-export default Article;
+export { Article };

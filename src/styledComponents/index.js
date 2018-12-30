@@ -1,6 +1,7 @@
 export { BorderedBtn, EditorBtn, LinkBtn } from "./StyledButton";
 export { SpeechInputForm } from "./StyledForm";
 export {
+  AudioLayout,
   ContentLayout,
   EditorLayout,
   Positioner,
@@ -11,3 +12,5 @@ export {
   SPostNav,
   WaveLayout
 } from "./StyledLayout";
+export { VoiceWave, WaveLoader, WaveSlider } from "./StyledWave";
+export { SPlayback } from "./StyledPlayback";

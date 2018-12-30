@@ -1,2 +1,5 @@
-export { default as Article } from "./Article";
-export { default as Editor } from "./Editor";
+export { Article } from "./Article";
+export { Editor } from "./Editor";
+export { AudioProgressbar } from "./AudioProgressbar";
+export { Playback } from "./Playback";
+export { Wave } from "./Wave";
