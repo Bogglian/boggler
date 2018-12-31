@@ -68,4 +68,17 @@ const LinkBtn = styled(Link)`
   }
 `;
 
-export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn };
+const PostItemLinkBtn = styled(Link)`
+  &{
+    font-size: 200%;
+    display: block;
+    color: black;
+    line-height: 1.4em;
+    text-decoration:none;
+    &:hover {
+      color: white;
+    }
+  }
+`;
+
+export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn, PostItemLinkBtn };

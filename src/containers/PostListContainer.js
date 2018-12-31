@@ -17,12 +17,13 @@ import * as postingActions from "../store/modules/posting";
 import * as audioActions from "../store/modules/audio";
 import * as audioListActions from "../store/modules/audioList";
 
-const test = [ { id: 1, title: "hey", content: "hello" }, { id: 2, title: "hi", content: "hi2" } ];
+const test = [ { id: 1, title: "hey", content: "hello", createdTime:"2018-12-31" },
+               { id: 2, title: "hi", content: "hi2", createdTime:"2019-01-01" } ];
 
 class PostListContainer extends Component {
 
   handleClick = async (id) => {
-    console.log("here " + id);
+    console.log("Cliked Posts : " + id);
     const { AudioActions } = this.props;
     AudioActions.getAudio({id: id, title: "hello", content:"state", filename:'q.java'});
     // const response = await api.getAudio(id);
@@ -55,7 +56,6 @@ const mapDispatchToProps = dispatch => ({
   PostingActions: bindActionCreators(postingActions, dispatch),
   AudioActions: bindActionCreators(audioActions, dispatch),
   AudioListActions: bindActionCreators(audioListActions, dispatch)
-  // AnotherActions: bindActionCreators(anotherActions, dispatch)
 });
 
 export default connect(
