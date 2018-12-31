@@ -43,4 +43,16 @@ const SpeechInputForm = styled.form`
   }
 `;
 
-export { SpeechInputForm };
+const PostItemContent = styled.p`
+  &{
+    font-size: 120%;
+  }
+`;
+
+const PostItemTime = styled.div`
+  &{
+    font-size: 70%;
+  }
+`;
+
+export { SpeechInputForm, PostItemContent, PostItemTime };

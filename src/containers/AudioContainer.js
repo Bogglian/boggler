@@ -25,12 +25,11 @@ class AudioContainer extends Component {
   handleReady = () => {};
 
   render() {
+    const { id, title, content, filename } = this.props;
+    console.log(this.props.content);
     const editorMode = false;
     const filePath = "https://www.youtube.com/watch?v=YBzJ0jmHv-4";
     const buffering = true;
-    const title = "Sample";
-    const textarea = "TextareaSample";
-
     return (
       <Positioner clasName="audio">
         <AudioProgressbar className={buffering ? "" : "none"} />
@@ -49,7 +48,7 @@ class AudioContainer extends Component {
           {editorMode ? (
             <Editor
               title={title}
-              textarea={textarea}
+              textarea={content}
               onChangeTitle={this.handleChangeTitle}
               onChangeTextArea={this.handleChangeTextArea}
               onClickBold={this.handleClickBold}
@@ -60,7 +59,7 @@ class AudioContainer extends Component {
           ) : (
             <Article
               title={title}
-              content={textarea}
+              content={content}
               onEdit={this.handleEdit}
             />
           )}
@@ -70,7 +69,12 @@ class AudioContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ audio }) => ({});
+const mapStateToProps = ({ audio }) => ({
+  id: audio.id,
+  title: audio.title,
+  content: audio.content,
+  filename: audio.filename
+});
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다.
 const mapDispatchToProps = dispatch => ({

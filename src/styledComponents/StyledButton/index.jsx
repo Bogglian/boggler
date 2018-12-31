@@ -38,6 +38,13 @@ const EditorBtn = styled(BorderedBtn)`
     font-size: 90%;
     margin-left: 90%;
   }
+
+  &.write-btn {
+    width: 7%;
+    background: white;
+    margin-top: 0.5%;
+    margin-left: 93%;
+  }
 `;
 
 const TextMenuBtn = styled.div`
@@ -61,4 +68,17 @@ const LinkBtn = styled(Link)`
   }
 `;
 
-export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn };
+const PostItemLinkBtn = styled(Link)`
+  &{
+    font-size: 200%;
+    display: block;
+    color: black;
+    line-height: 1.4em;
+    text-decoration:none;
+    &:hover {
+      color: white;
+    }
+  }
+`;
+
+export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn, PostItemLinkBtn };

@@ -128,7 +128,15 @@ const SPostItem = styled.div`
   & {
     width: 100%;
     height: 8.5rem;
-    background-color: ${oc.gray[5]};
+    padding: 20px;
+    padding-left: 50px;
+    text-align: center;
+    background-color: ${oc.gray[4]};
+    border-bottom: 3px solid ${oc.cyan[1]};
+    &:hover {
+      background: ${oc.cyan[5]};
+      ${shadow(1)};
+    }
   }
 `;
 

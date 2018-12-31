@@ -6,7 +6,7 @@ class Maincontainer extends Component {
     return (
       <div>
         <LinkBtn to="/speech/postlist">postList</LinkBtn>
-        <LinkBtn to="/speech/audio">audio</LinkBtn>
+        <LinkBtn to="/speech/audio/write">audio</LinkBtn>
       </div>
     );
   }

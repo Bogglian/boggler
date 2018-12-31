@@ -1,5 +1,5 @@
-export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn } from "./StyledButton";
-export { SpeechInputForm } from "./StyledForm";
+export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn, PostItemLinkBtn } from "./StyledButton";
+export { SpeechInputForm, PostItemContent, PostItemTime } from "./StyledForm";
 export {
   ArticleLayout,
   AudioLayout,
