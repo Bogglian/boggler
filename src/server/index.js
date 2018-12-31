@@ -7,6 +7,17 @@ const app = express()
 //middleware
 app.use(bodyParser.json())
 app.use(fileUpload())
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000")
+  res.header("Access-Control-Allow-Credentials", true)
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE,OPTIONS")
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  )
+  next()
+})
+
 
 //router
 app.use("/board", board)
@@ -22,7 +33,7 @@ app.use(function(err, req, res, next) {
       success: false
     })
   })
-  
+
 app.listen(8080,function(){
     console.log('server on port 8080')
 })

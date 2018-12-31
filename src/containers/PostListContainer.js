@@ -25,19 +25,12 @@ const test = [
 
 class PostListContainer extends Component {
   handleClick = async id => {
-    console.log("Cliked Posts : " + id);
     const { AudioActions, PostingActions } = this.props;
+    const response = await api.getAudio(id);
 
     PostingActions.editorOff();
-    AudioActions.getAudio({
-      id: id,
-      title: "hello",
-      content: "state",
-      filename: "q.java"
-    });
-    // const response = await api.getAudio(id);
-    // console.log(`AudioPosts data : ${response}`);
-    // AudioActions.getAudio(response.data);
+    console.log(`AudioPosts data : ${JSON.stringify(response)}`);
+    AudioActions.getAudio(response.data.board);
   };
 
   handleClickWrite = () => {
@@ -48,15 +41,18 @@ class PostListContainer extends Component {
 
   getPostList = async () => {
     const { AudioListActions } = this.props;
-    const response = await api.getAudioList();
-    console.log(`Get PostList from server : ${response.data}`);
-    AudioListActions.getAudioList();
-    // await api.getAudioList()
-    //   .then(response => {
-    //     console.log(`Get PostList from server : ${response.data}`);
-    //     AudioListActions.getAudioList();
-    //   });
+    // AudioListActions.getAudioList();
+    await api.getAudioList().then(response => {
+      console.log(
+        `Get PostList from server : ${JSON.stringify(response.data)}`
+      );
+      AudioListActions.getAudioList(response.data.boards);
+    });
   };
+
+  componentDidMount() {
+    this.getPostList();
+  }
 
   render() {
     const { postList } = this.props;
@@ -68,7 +64,7 @@ class PostListContainer extends Component {
           </EditorBtn>
         </Link>
         <PostWrapper>
-          <PostList onClick={this.handleClick} postList={test} />
+          <PostList onClick={this.handleClick} postList={postList} />
           <SPostNav>Test Nav</SPostNav>
         </PostWrapper>
       </Positioner>
