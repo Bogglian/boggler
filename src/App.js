@@ -3,11 +3,7 @@ import { Speech } from "./pages";
 
 class App extends Component {
   render() {
-    return (
-      <div>
-        <Speech />
-      </div>
-    );
+    return <Speech />;
   }
 }
 
