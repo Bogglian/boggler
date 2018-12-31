@@ -18,29 +18,44 @@ import * as postingActions from "../store/modules/posting";
 import * as audioActions from "../store/modules/audio";
 import * as audioListActions from "../store/modules/audioList";
 
-const test = [ { id: 1, title: "hey", content: "hello", createdTime:"2018-12-31" },
-               { id: 2, title: "hi", content: "hi2", createdTime:"2019-01-01" } ];
+const test = [
+  { id: 1, title: "hey", content: "hello", createdTime: "2018-12-31" },
+  { id: 2, title: "hi", content: "hi2", createdTime: "2019-01-01" }
+];
 
 class PostListContainer extends Component {
-
-  handleClick = async (id) => {
+  handleClick = async id => {
     console.log("Cliked Posts : " + id);
     const { AudioActions } = this.props;
-    AudioActions.getAudio({id: id, title: "hello", content:"state", filename:'q.java'});
+    AudioActions.getAudio({
+      id: id,
+      title: "hello",
+      content: "state",
+      filename: "q.java"
+    });
     // const response = await api.getAudio(id);
     // console.log(`AudioPosts data : ${response}`);
     // AudioActions.getAudio(response.data);
-  }
+  };
 
   getPostList = async () => {
     const { AudioListActions } = this.props;
     AudioListActions.getAudioList();
+<<<<<<< HEAD
     await api.getAudioList()
       .then(response => {
         console.log(`Get PostList from server : ${response.data}`);
         AudioListActions.getAudioList();
       });
   }
+=======
+    // await api.getAudioList()
+    //   .then(response => {
+    //     console.log(`Get PostList from server : ${response.data}`);
+    //     AudioListActions.getAudioList();
+    //   });
+  };
+>>>>>>> e233107fac28219764ceb93d0310eb4adef863fd
 
   render() {
     const { postList } = this.props;
@@ -50,7 +65,7 @@ class PostListContainer extends Component {
           <EditorBtn className="write-btn">Write</EditorBtn>
         </Link>
         <PostWrapper>
-          <PostList onClick={this.handleClick} postList={test}/>
+          <PostList onClick={this.handleClick} postList={test} />
           <SPostNav>Test Nav</SPostNav>
         </PostWrapper>
       </Positioner>

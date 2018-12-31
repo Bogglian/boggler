@@ -49,7 +49,7 @@ const Positioner = styled.div`
   & {
     width: 100%;
     height: 100%;
-    padding: 2%;
+    padding: 1%;
   }
 
   .postlist {
@@ -87,6 +87,15 @@ const ShadowedBox = styled.div`
       width: 10%;
       height: 100%;
     }
+
+    &.wave-box {
+      width: 11rem;
+      height: 11rem;
+      border-radius: 4px;
+      position: absolute;
+      top 6%;
+      left: 43.8%;
+    }
   }
 `;
 
@@ -107,7 +116,7 @@ const SpeechArticle = styled.div`
 
     &.article-content {
       margin-top: 1%;
-      height: 88%;
+      height: 78%;
     }
   }
 `;
