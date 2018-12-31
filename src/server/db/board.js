@@ -1,6 +1,21 @@
 const pool = require('./db_connect')
 module.exports=function () {
     return{
+        modify: function(boardId,board,callback){
+            pool.getConnection(function(err,con){
+                if(err){
+                    callback(err)
+                }
+                let modifyBoardSql="UPDATE board SET title = ?, content = ? where id = ?"
+                con.query(modifyBoardSql,[board.title,board.content,boardId],function(err,rows,fields){
+                    con.release()
+                    if(err){
+                        callback(err)
+                    }
+                    callback(null,rows)
+                })
+            })
+        },
         delete : function(boardId,callback){
             pool.getConnection(function(err,con){
                 if(err){
@@ -69,8 +84,7 @@ module.exports=function () {
                     return callback(err)
                 }
                 let showSql = 
-                "SELECT b.id, b.title, b.content, b.created_time, f.realfilename, f.fakefilename"+
-                    "FROM board b left join audiofile f on b.id= f.board_id where b.id = ?"
+                "SELECT b.id, b.title, b.content, b.created_time, f.realfilename, f.fakefilename FROM board b left join audiofile f on b.id= f.board_id where b.id = ?"
                 con.query(
                     showSql,[boardId],function(error,rows,fields){
                         con.release()
