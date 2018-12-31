@@ -39,12 +39,24 @@ const EditorBtn = styled(BorderedBtn)`
     margin-left: 90%;
   }
 
+  &.edit-btn {
+    margin-top: 0.5%;
+    font-size: 90%;
+    margin-left: 90%;
+  }
+
   &.write-btn {
     width: 7%;
     background: white;
     margin-top: 0.5%;
     margin-left: 93%;
+    &:hover {
+      background: ${oc.cyan[6]};
+      color: white;
+      ${shadow(1)};
+    }
   }
+
 `;
 
 const TextMenuBtn = styled.div`
@@ -69,12 +81,12 @@ const LinkBtn = styled(Link)`
 `;
 
 const PostItemLinkBtn = styled(Link)`
-  &{
+  & {
     font-size: 200%;
     display: block;
     color: black;
     line-height: 1.4em;
-    text-decoration:none;
+    text-decoration: none;
     &:hover {
       color: white;
     }
