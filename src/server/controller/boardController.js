@@ -4,46 +4,70 @@ const uniqueFilename = require('unique-filename')
 
 module.exports= function(){
     return{
+        delete : function(req,res,next){
+            board.delete(req.params.boardId,function(err,data){
+                if(err){
+                    next(err)
+                }
+                res.status(200).json({success: true})
+            })
+        },
+        showAll : function(req,res,next){
+            board.showAll(function(err,data){
+                if(err){
+                    next(err)
+                }
+                res.status(201).json({boards:data})
+            })
+        },
+        showOne : function(req,res,next){
+            board.showOne(req.params.boardId,function(err,data){
+                if(err){
+                    next(err)
+                }
+                res.status(201).json({board:data[0]})
+            })
+        },
         write : function(req,res,next) {
             if(!req.files){
-            console.log('just write board no file')
-            board.write(req.body,null,function(writeErr,writeResult){
-                if(writeErr){
-                    next(writeErr)
-                }else{
-                    board.show(writeResult.insertId,function(showErr,showResult){
-                        if(showErr){
-                            next(showErr)
-                        }else{
-                            //여기 showResult[0]으로 해야하나요?
-                            res.status(201).json(showResult[0])
+                console.log('just write board no file')
+                board.write(req.body,null,function(err,writeResult){
+                    if(err){
+                        next(err)
+                    }
+                     board.show(writeResult.insertId,function(err,showResult){
+                        if(err){
+                            next(err)
                         }
+                        res.status(201).json(showResult[0])
                     })
-                }
-             })
+                })
              }else{
                 console.log(`write board with file filename: ${req.files.filename}`)
                 let getFile = req.files.audiofile
-                let fakeName = uniqueFilename(`${req.files.filename}`)
-                getFile.mv(`${__dirname}/../upload/${getFile.name}`,function(uploadErr){
-                    if(uploadErr){
-                        next(uploadErr)
-                    }else{
-                        file.upload(getFile.name,fakeName,function(fileDbErr,fileResult){
-                            if(fileDbErr){
-                                next(fileDbErr)
-                            }else{
-                                board.write(req.body,fileResult.insertId,function(boardWriteErr,writeResult){
-                                    board.show(writeResult.insertId,function(showErr,data){
-                                        //data[0]을 해야하나요?
-                                        res.status(201).json({board:data[0], file:fileResult})
-                                    })
-                                })
-                            }
-                        })
+                //file뭘로 받을지 작성
+                let fakeName = uniqueFilename(`${req.files.audiofile.filename}`)
+                getFile.mv(`${__dirname}/../upload/${fakeName}`,function(err){
+                    if(err){
+                        next(err)
                     }
+                    file.upload(getFile.name,fakeName,function(err,fileResult){
+                        if(err){
+                            next(err)
+                        }
+                        board.write(req.body,fileResult.insertId,function(err,writeResult){
+                            if(err){
+                                next(err)
+                            }
+                            board.showOne(writeResult.insertId,function(error,data){
+                                if(error){
+                                    next(error)
+                                }
+                                res.status(201).json({board:data[0]})
+                            })
+                        })  
+                    })
                 })
-                
             }
         }
     }

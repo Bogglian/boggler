@@ -4,17 +4,12 @@ const fileUpload = require("express-fileupload")
 const board = require('./router/board')
 const app = express()
 
-
-
-
-
+//middleware
 app.use(bodyParser.json())
 app.use(fileUpload())
 
-app.use()
-
-
-
+//router
+app.use("/board", board)
 
 //next함수
 app.use(function(err, req, res, next) {
@@ -28,7 +23,6 @@ app.use(function(err, req, res, next) {
     })
   })
   
-
 app.listen(8080,function(){
     console.log('server on port 8080')
 })
