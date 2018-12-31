@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import { PostList } from "../components";
+import * as api from "../lib/api";
 
 import {
   Positioner,
@@ -28,7 +29,19 @@ class PostListContainer extends Component {
     AudioActions.getAudio({id: id, title: "hello", content:"state", filename:'q.java'});
     // const response = await api.getAudio(id);
     // console.log(`AudioPosts data : ${response}`);
-    // AudioActions.getAudio(response);
+    // AudioActions.getAudio(response.data);
+  }
+
+  getPostList = async () => {
+    const { AudioListActions } = this.props;
+    const response = await api.getAudioList();
+    console.log(`Get PostList from server : ${response.data}`);
+    AudioListActions.getAudioList();
+    // await api.getAudioList()
+    //   .then(response => {
+    //     console.log(`Get PostList from server : ${response.data}`);
+    //     AudioListActions.getAudioList();
+    //   });
   }
 
   render() {
