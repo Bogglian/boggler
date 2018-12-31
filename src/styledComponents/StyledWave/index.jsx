@@ -12,11 +12,11 @@ const VoiceWave = styled.div`
 
 const WaveLoader = styled.div`
   & {
-    height: 4rem;
+    height: 2rem;
     width: 10rem;
     position: absolute;
-    top: 47%;
-    left: 47%;
+    top 40%;
+    left: 8%;
 
     &.none {
       display: none;
@@ -41,6 +41,14 @@ const WaveLoader = styled.div`
     .rectangle-6 {
       -webkit-animation-delay: 0.5s;
       animation-delay: 0.5s;
+    }
+    .rectangle-7 {
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+    .rectangle-8 {
+      -webkit-animation-delay: 0.7s;
+      animation-delay: 0.7s;
     }
     div {
       position: relative;

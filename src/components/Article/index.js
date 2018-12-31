@@ -1,11 +1,12 @@
 import React from "react";
 import {
   ArticleLayout,
+  EditorBtn,
   ShadowedBox,
   SpeechArticle
 } from "../../styledComponents";
 
-const Article = ({ title, content }) => {
+const Article = ({ title, content, onEdit }) => {
   return (
     <ShadowedBox>
       <ArticleLayout>
@@ -15,6 +16,9 @@ const Article = ({ title, content }) => {
         <SpeechArticle className="article-content">
           <h3>{content}</h3>
         </SpeechArticle>
+        <EditorBtn className="edit-btn" onClick={onEdit}>
+          Edit
+        </EditorBtn>
       </ArticleLayout>
     </ShadowedBox>
   );

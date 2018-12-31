@@ -10,8 +10,7 @@ import {
 
 const Editor = ({
   onSubmit,
-  onChangeTitle,
-  onChangeTextArea,
+  onChangeInput,
   onClickBold,
   onClickHeader,
   onClickItelic,
@@ -25,7 +24,7 @@ const Editor = ({
             type="text"
             name="title"
             placeholder="Title"
-            onChangeTitle={onChangeTitle}
+            onChange={onChangeInput}
           />
         </SpeechInputForm>
         <SpeechInputMenuBox>
@@ -37,9 +36,9 @@ const Editor = ({
         <SpeechInputForm className="speech-editor-form-textarea">
           <textarea
             type="text"
-            name="textarea"
+            name="content"
             placeholder="Leave a comment"
-            onChangeTextArea={onChangeTextArea}
+            onChange={onChangeInput}
           />
         </SpeechInputForm>
         <EditorBtn className="save-btn" onClick={onSubmit}>
