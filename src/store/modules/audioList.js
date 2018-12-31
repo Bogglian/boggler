@@ -12,7 +12,10 @@ const initialState = {
 export default handleActions(
   {
     [GET_AUDIOLIST]: (state, action) => {
-      produce(state, draft => {});
+      produce(state, draft => {
+        console.log(`producer-getPostList : ${action.payload}`);
+        draft.audios = action.payload;
+      });
     }
   },
   initialState

@@ -34,21 +34,19 @@ class PostListContainer extends Component {
 
   getPostList = async () => {
     const { AudioListActions } = this.props;
-    const response = await api.getAudioList();
-    console.log(`Get PostList from server : ${response.data}`);
     AudioListActions.getAudioList();
-    // await api.getAudioList()
-    //   .then(response => {
-    //     console.log(`Get PostList from server : ${response.data}`);
-    //     AudioListActions.getAudioList();
-    //   });
+    await api.getAudioList()
+      .then(response => {
+        console.log(`Get PostList from server : ${response.data}`);
+        AudioListActions.getAudioList();
+      });
   }
 
   render() {
     const { postList } = this.props;
     return (
       <Positioner className="postlist">
-        <Link to="/speech/audio/write">
+        <Link to="/speech/audio/new">
           <EditorBtn className="write-btn">Write</EditorBtn>
         </Link>
         <PostWrapper>

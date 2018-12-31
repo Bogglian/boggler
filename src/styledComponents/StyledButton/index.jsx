@@ -44,7 +44,13 @@ const EditorBtn = styled(BorderedBtn)`
     background: white;
     margin-top: 0.5%;
     margin-left: 93%;
+    &:hover {
+      background: ${oc.cyan[6]};
+      color: white;
+      ${shadow(1)};
+    }
   }
+
 `;
 
 const TextMenuBtn = styled.div`
