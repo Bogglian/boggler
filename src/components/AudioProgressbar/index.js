@@ -1,9 +1,9 @@
 import React from "react";
 import { WaveLoader } from "../../styledComponents";
 
-const AudioProgressbar = () => {
+const AudioProgressbar = ({ className }) => {
   return (
-    <WaveLoader>
+    <WaveLoader className={className}>
       <div class="rectangle-1" />
       <div class="rectangle-2" />
       <div class="rectangle-3" />

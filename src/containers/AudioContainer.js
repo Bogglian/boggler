@@ -2,48 +2,85 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { Article, Editor, Playback, Wave } from "../components";
+import { Article, AudioProgressbar, Editor, Wave } from "../components";
 import {
   AudioLayout,
   ContentLayout,
   Positioner,
   ShadowedBox
 } from "../styledComponents";
-import * as api from '../lib/api';
 
 import * as playbackActions from "../store/modules/playback";
 import * as audioActions from "../store/modules/audio";
 
 class AudioContainer extends Component {
+  handleBuffer = () => {};
+  handleChangeTitle = () => {};
+  handleChangeTextArea = () => {};
+  handleClickBold = () => {};
+  handleClickHeader = () => {};
+  handleClickItelic = () => {};
+  handleClickQuote = () => {};
+  handleEdit = () => {};
+  handleReady = () => {};
 
   render() {
-    const editorMode = true;
     const { id, title, content, filename } = this.props;
     console.log(this.props.id);
+    const editorMode = false;
+    const filePath = "https://www.youtube.com/watch?v=YBzJ0jmHv-4";
+    const buffering = true;
+    const title = "Sample";
+    const textarea = "TextareaSample";
     return (
       <Positioner clasName="audio">
+        <AudioProgressbar className={buffering ? "" : "none"} />
         <AudioLayout>
           <ShadowedBox>
-            <div className="playback-box">
-              <Playback />
-            </div>
             <div className="voicewave-box">
-              <Wave />
+              <Wave
+                audioPath={filePath}
+                onBuffer={this.handleBuffer}
+                onReady={this.handleReady}
+              />
             </div>
           </ShadowedBox>
         </AudioLayout>
-        <ContentLayout>{editorMode ? <Editor /> : <Article />}</ContentLayout>
+        <ContentLayout>
+          {editorMode ? (
+            <Editor
+              title={title}
+              textarea={textarea}
+              onChangeTitle={this.handleChangeTitle}
+              onChangeTextArea={this.handleChangeTextArea}
+              onClickBold={this.handleClickBold}
+              onClickHeader={this.handleClickHeader}
+              onClickItelic={this.handleClickItelic}
+              onClickQuote={this.handleClickQuote}
+            />
+          ) : (
+            <Article
+              title={title}
+              content={textarea}
+              onEdit={this.handleEdit}
+            />
+          )}
+        </ContentLayout>
       </Positioner>
     );
   }
 }
 
+<<<<<<< HEAD
 const mapStateToProps = ({ playback, audio }) => ({
   id: audio.id,
   title: audio.title,
   content: audio.content,
   filename: audio.filename
 });
+=======
+const mapStateToProps = ({ audio }) => ({});
+>>>>>>> 91876b0a6d3e48d7ccbcd9e217969a1291693519
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다.
 const mapDispatchToProps = dispatch => ({

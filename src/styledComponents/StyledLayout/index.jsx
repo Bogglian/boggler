@@ -2,11 +2,22 @@ import styled from "styled-components";
 import oc from "open-color";
 import { shadow } from "../../lib/styleUtil";
 
+const ArticleLayout = styled.div`
+  & {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+`;
+
 const AudioLayout = styled.div`
   & {
     background-color: ${oc.gray[5]};
     width: 100%;
-    height: 13rem;
+    height 15rem;
     border-radius: 0.2rem;
   }
 `;
@@ -46,12 +57,6 @@ const Positioner = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
   }
-
-  .audio {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
 `;
 
 const PostWrapper = styled.div`
@@ -70,15 +75,8 @@ const ShadowedBox = styled.div`
     display: flex;
     border-radius: inherit;
 
-    .playback-box {
-      width: 10%;
-      height: 100%;
-      background-color: ${oc.gray[6]};
-      border-radius: inherit;
-    }
-
     .voicewave-box {
-      width: 90%;
+      width: 100%;
       height: 100%;
       background-color: ${oc.gray[7]};
       border-radius: inherit;
@@ -92,12 +90,37 @@ const ShadowedBox = styled.div`
   }
 `;
 
+const SpeechArticle = styled.div`
+  & {
+    background-color: ${oc.cyan[7]};
+    padding: 1%;
+
+    h2,
+    h3 {
+      margin: 0;
+      float: left;
+    }
+
+    &.article-title {
+      height: 10%;
+    }
+
+    &.article-content {
+      margin-top: 1%;
+      height: 88%;
+    }
+  }
+`;
+
 const SpeechInputMenuBox = styled.div`
   & {
     width: 100%;
     height: 10%;
     margin-top: 3%;
     background-color: ${oc.cyan[6]};
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 `;
 
@@ -120,16 +143,21 @@ const SPostNav = styled.div`
 
 const WaveLayout = styled.div`
   & {
+    width: 100%;
+    height: 100%;
+    padding: 1%;
   }
 `;
 
 export {
+  ArticleLayout,
   AudioLayout,
   ContentLayout,
   EditorLayout,
   Positioner,
   PostWrapper,
   ShadowedBox,
+  SpeechArticle,
   SpeechInputMenuBox,
   SPostItem,
   SPostNav,
