@@ -12,7 +12,7 @@ export const bufferMedia = createAction(BUFFER_MEDIA);
 export const changeInput = createAction(CHANGE_INPUT);
 
 const initialState = {
-  editorMode: true,
+  editorMode: false,
   buffering: false,
   content: "",
   file: "",

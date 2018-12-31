@@ -30,7 +30,7 @@ module.exports=function () {
                 if(err){
                     return callback(err)
                 }
-                let showAllSql = 
+                let showAllSql =
                     "SELECT b.id, b.title, b.content, b.created_time FROM board b"
                 con.query(showAllSql,function(error,rows,fields){
                     con.release()
@@ -68,17 +68,17 @@ module.exports=function () {
                     console.log('db connect error')
                     return callback(err)
                 }
-                let showSql = 
-                "SELECT b.id, b.title, b.content, b.created_time, f.realfilename, f.fakefilename"+
-                    "FROM board b left join audiofile f on b.id= f.board_id where b.id = ?"
+                let showSql =
+                "SELECT b.id, b.title, b.content, b.created_time, f.realfilename, f.fakefilename FROM board b left join audiofile f on b.id= f.board_id where b.id = ?"
                 con.query(
                     showSql,[boardId],function(error,rows,fields){
+                      console.log(JSON.stringify(rows));
                         con.release()
                         if(error){
                             return callback(error)
                         }
                         callback(null,rows)
-                    }   
+                    }
                 )
             })
         }
