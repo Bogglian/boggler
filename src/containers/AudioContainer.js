@@ -32,13 +32,21 @@ class AudioContainer extends Component {
   handleClickHeader = () => {};
   handleClickItelic = () => {};
   handleClickQuote = () => {};
-  handleEdit = () => {};
+  handleClickEdit = () => {
+    const { PostingActions } = this.props;
+
+    PostingActions.editorOn();
+  };
   handleReady = () => {
     const { PostingActions } = this.props;
 
     PostingActions.bufferMedia();
   };
+  handleClickSave = () => {
+    const { PostingActions } = this.props;
 
+    PostingActions.editorOff();
+  };
   render() {
     const { buffering, editorMode, id, title, content, filename } = this.props;
 
@@ -68,9 +76,14 @@ class AudioContainer extends Component {
               onClickHeader={this.handleClickHeader}
               onClickItelic={this.handleClickItelic}
               onClickQuote={this.handleClickQuote}
+              onSubmit={this.handleClickSave}
             />
           ) : (
-            <Article title={title} content={content} onEdit={this.handleEdit} />
+            <Article
+              title={title}
+              content={content}
+              onClickEdit={this.handleClickEdit}
+            />
           )}
         </ContentLayout>
       </Positioner>

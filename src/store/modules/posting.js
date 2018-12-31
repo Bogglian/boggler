@@ -4,9 +4,11 @@ import produce from "immer";
 const BUFFER_DONE = "posting/BUFFER_DONE";
 const BUFFER_MEDIA = "posting/BUFFER_MEDIA";
 const CHANGE_INPUT = "posting/CHANGE_INPUT";
-const EDITOR_TOGGLE = "posting/EDITOR_TOGGLE";
+const EDITOR_ON = "posting/EDITOR_ON";
+const EDITOR_OFF = "posting/EDITOR_OFF";
 
-export const editorOn = createAction(EDITOR_TOGGLE);
+export const editorOn = createAction(EDITOR_ON);
+export const editorOff = createAction(EDITOR_OFF);
 export const bufferDone = createAction(BUFFER_DONE);
 export const bufferMedia = createAction(BUFFER_MEDIA);
 export const changeInput = createAction(CHANGE_INPUT);
@@ -34,9 +36,13 @@ export default handleActions(
       produce(state, draft => {
         draft.buffering = true;
       }),
-    [EDITOR_TOGGLE]: (state, action) =>
+    [EDITOR_ON]: (state, action) =>
       produce(state, draft => {
-        draft.editorMode = !state.editorMode;
+        draft.editorMode = true;
+      }),
+    [EDITOR_OFF]: (state, action) =>
+      produce(state, draft => {
+        draft.editorMode = false;
       })
   },
   initialState

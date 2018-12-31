@@ -6,7 +6,7 @@ import {
   SpeechArticle
 } from "../../styledComponents";
 
-const Article = ({ title, content, onEdit }) => {
+const Article = ({ title, content, onClickEdit }) => {
   return (
     <ShadowedBox>
       <ArticleLayout>
@@ -16,7 +16,7 @@ const Article = ({ title, content, onEdit }) => {
         <SpeechArticle className="article-content">
           <h3>{content}</h3>
         </SpeechArticle>
-        <EditorBtn className="edit-btn" onClick={onEdit}>
+        <EditorBtn className="edit-btn" onClick={onClickEdit}>
           Edit
         </EditorBtn>
       </ArticleLayout>
