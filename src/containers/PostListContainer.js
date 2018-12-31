@@ -27,35 +27,25 @@ class PostListContainer extends Component {
   handleClick = async id => {
     console.log("Cliked Posts : " + id);
     const { AudioActions } = this.props;
-    AudioActions.getAudio({
-      id: id,
-      title: "hello",
-      content: "state",
-      filename: "q.java"
-    });
-    // const response = await api.getAudio(id);
-    // console.log(`AudioPosts data : ${response}`);
-    // AudioActions.getAudio(response.data);
+
+    const response = await api.getAudio(id);
+    console.log(`AudioPosts data : ${JSON.stringify(response)}`);
+    AudioActions.getAudio(response.data.board);
   };
 
   getPostList = async () => {
     const { AudioListActions } = this.props;
-    AudioListActions.getAudioList();
-<<<<<<< HEAD
+    // AudioListActions.getAudioList();
     await api.getAudioList()
       .then(response => {
-        console.log(`Get PostList from server : ${response.data}`);
-        AudioListActions.getAudioList();
+        console.log(`Get PostList from server : ${JSON.stringify(response.data)}`);
+        AudioListActions.getAudioList(response.data.boards);
       });
   }
-=======
-    // await api.getAudioList()
-    //   .then(response => {
-    //     console.log(`Get PostList from server : ${response.data}`);
-    //     AudioListActions.getAudioList();
-    //   });
-  };
->>>>>>> e233107fac28219764ceb93d0310eb4adef863fd
+
+  componentDidMount(){
+    this.getPostList();
+  }
 
   render() {
     const { postList } = this.props;
@@ -65,7 +55,7 @@ class PostListContainer extends Component {
           <EditorBtn className="write-btn">Write</EditorBtn>
         </Link>
         <PostWrapper>
-          <PostList onClick={this.handleClick} postList={test} />
+          <PostList onClick={this.handleClick} postList={postList} />
           <SPostNav>Test Nav</SPostNav>
         </PostWrapper>
       </Positioner>

@@ -1,5 +1,5 @@
-const board = require('../db/board')
-const file = require('../db/file')
+const board = require('../db/board')()
+const file = require('../db/file')()
 const uniqueFilename = require('unique-filename')
 
 module.exports= function(){
@@ -65,7 +65,7 @@ module.exports= function(){
                                 }
                                 res.status(201).json({board:data[0]})
                             })
-                        })  
+                        })
                     })
                 })
             }

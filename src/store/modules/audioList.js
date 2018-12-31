@@ -11,12 +11,12 @@ const initialState = {
 
 export default handleActions(
   {
-    [GET_AUDIOLIST]: (state, action) => {
+    [GET_AUDIOLIST]: (state, action) => (
       produce(state, draft => {
-        console.log(`producer-getPostList : ${action.payload}`);
+        console.log(`producer-getPostList : ${JSON.stringify(action.payload)}`);
         draft.audios = action.payload;
-      });
-    }
+      })
+    )
   },
   initialState
 );

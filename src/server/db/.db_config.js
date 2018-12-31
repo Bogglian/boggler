@@ -2,9 +2,8 @@ module.exports = (function() {
     return {
       database: "boggler",
       host: "localhost",
-      password: "1111",
+      password: "rlfls159",
       port: "3306",
       user: "root"
     }
   })()
-  
