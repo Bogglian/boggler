@@ -1,0 +1,46 @@
+import React, {Component} from 'react';
+import { Link } from "react-router-dom";
+
+import {
+  SPostItem,
+  PostItemLinkBtn,
+  PostItemContent,
+  PostItemTime
+} from "../../styledComponents";
+
+const PostItem = ({id, title, content, createdTime, onClick}) => {
+  return (
+             <SPostItem>
+                <PostItemLinkBtn to={`/speech/audio/${id}`} onClick={() => onClick(id)}>
+                  {title}
+                </PostItemLinkBtn>
+                <PostItemContent>
+                  {content}
+                <PostItemTime>
+                  {createdTime}
+                </PostItemTime>
+                </PostItemContent>
+             </SPostItem>
+         );
+};
+
+
+class PostListItems extends Component {
+
+  render() {
+    const { postList, onClick } = this.props;
+    const postListItems = postList.map(
+      ({ id, title, content, createdTime }) => (
+        <PostItem id={id} onClick={onClick} title={title} content={content} createdTime={createdTime} key={id} />
+      )
+    );
+
+    return(
+      <div>
+        { postListItems }
+      </div>
+    );
+  }
+}
+
+export default PostListItems;
