@@ -2,17 +2,17 @@ import { createAction, handleActions } from "redux-actions";
 import produce from "immer";
 
 const BUFFER_DONE = "posting/BUFFER_DONE";
-const BUFFER_MIDEA = "posting/BUFFER_MIDEA";
+const BUFFER_MEDIA = "posting/BUFFER_MEDIA";
 const CHANGE_INPUT = "posting/CHANGE_INPUT";
 const EDITOR_TOGGLE = "posting/EDITOR_TOGGLE";
 
 export const editorOn = createAction(EDITOR_TOGGLE);
 export const bufferDone = createAction(BUFFER_DONE);
-export const bufferMidea = createAction(BUFFER_MIDEA);
+export const bufferMedia = createAction(BUFFER_MEDIA);
 export const changeInput = createAction(CHANGE_INPUT);
 
 const initialState = {
-  editorMode: false,
+  editorMode: true,
   buffering: false,
   content: "",
   file: "",
@@ -30,7 +30,7 @@ export default handleActions(
       produce(state, draft => {
         draft.buffering = false;
       }),
-    [BUFFER_MIDEA]: (state, action) =>
+    [BUFFER_MEDIA]: (state, action) =>
       produce(state, draft => {
         draft.buffering = true;
       }),
