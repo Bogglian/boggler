@@ -7,6 +7,6 @@ router.post('', board.write)
 router.get('', board.showAll)
 router.get('/:boardId',board.showOne)
 router.delete('/:boardId', board.delete)
-// router.put('/:boardId',board.update)
+router.put('/:boardId',board.modify)
 
 module.exports = router;

@@ -4,6 +4,14 @@ const uniqueFilename = require('unique-filename')
 
 module.exports= function(){
     return{
+        modify : function(req,res,next){
+            board.modify(req.params.boardId,req.body,function(err,data){
+                if(err){
+                    next(err)
+                }
+                res.status(200).json({success : true})
+            })
+        },
         delete : function(req,res,next){
             board.delete(req.params.boardId,function(err,data){
                 if(err){
@@ -34,13 +42,8 @@ module.exports= function(){
                 board.write(req.body,null,function(err,writeResult){
                     if(err){
                         next(err)
-                    }
-                     board.show(writeResult.insertId,function(err,showResult){
-                        if(err){
-                            next(err)
-                        }
-                        res.status(201).json(showResult[0])
-                    })
+                    } 
+                    res.status(200).json({ success :true })
                 })
              }else{
                 console.log(`write board with file filename: ${req.files.filename}`)
@@ -59,11 +62,7 @@ module.exports= function(){
                             if(err){
                                 next(err)
                             }
-                            board.showOne(writeResult.insertId,function(error,data){
-                                if(error){
-                                    next(error)
-                                }
-                                res.status(201).json({board:data[0]})
+                            res.status(200).json({success : true})
                             })
                         })
                     })
