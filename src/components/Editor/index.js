@@ -13,6 +13,7 @@ const Editor = ({
   content,
   onSubmit,
   onChangeInput,
+  onChangeFile,
   onClickBold,
   onClickHeader,
   onClickItelic,
@@ -44,6 +45,7 @@ const Editor = ({
             placeholder="Leave a comment"
             onChange={onChangeInput}
           />
+          <input type="file" name="uploadFile" onChange={onChangeFile} />
         </SpeechInputForm>
         <EditorBtn className="save-btn" onClick={onSubmit}>
           Save

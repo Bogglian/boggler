@@ -51,19 +51,20 @@ module.exports= function() {
                     })
                 })
              }else{
-                console.log(`write board with file filename: ${req.files.filename}`)
+                console.log(`write board with file filename: ${req.files.audiofile.name}`)
                 let getFile = req.files.audiofile
                 //file뭘로 받을지 작성
-                let fakeName = uniqueFilename(`${req.files.audiofile.filename}`)
+                let fakeName = uniqueFilename('')
+                console.log(fakeName);
                 getFile.mv(`${__dirname}/../upload/${fakeName}`,function(err){
                     if(err){
                         next(err)
                     }
-                    file.upload(getFile.name,fakeName,function(err,fileResult){
+                    board.write(req.body,function(err,writeResult){
                         if(err){
                             next(err)
                         }
-                        board.write(req.body,fileResult.insertId,function(err,writeResult){
+                        file.upload(getFile.name,fakeName,writeResult.insertId,function(err,fileResult){
                             if(err){
                                 next(err)
                             }

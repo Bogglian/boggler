@@ -48,20 +48,41 @@ class AudioContainer extends Component {
 
     PostingActions.bufferMedia();
   };
+  handleUploadFile = e => {
+    const { AudioActions } = this.props;
+
+    AudioActions.uploadFile({file: e.target.files[0]});
+  }
+  //액션함수를 호출하면 렌더가 계속 됌
   handleClickSave = async () => {
-    const { PostingActions } = this.props;
-    const { title, content } = this.props;
+    const { PostingActions, AudioActions } = this.props;
+    const { title, content, file } = this.props;
+
+    const formData = new FormData()
+    formData.append("audiofile", file)
+    formData.append("content", content)
+    formData.append("title", title)
+
+    const headers = {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "multipart/form-data"
+    }}
 
     PostingActions.editorOff();
-    await api.writePosts({title: title, content: content})
+    PostingActions.bufferMedia();
+    await api.writePosts(formData, headers)
       .then(response => {
-        console.log(JSON.stringify(response.data.created_time));
+        console.log(JSON.stringify(response.data));
+        AudioActions.getAudio(response.data.board);
+        PostingActions.bufferDone();
+        PostingActions.editorOn();
       })
   };
   render() {
-    const { buffering, editorMode, id, title, content, filename } = this.props;
+    const { buffering, editorMode, id, title, content, file } = this.props;
 
-    console.log(this.props.content);
+    console.log("Hell" + content);
     const filePath = "https://www.youtube.com/watch?v=YBzJ0jmHv-4";
     return (
       <Positioner clasName="audio">
@@ -82,7 +103,8 @@ class AudioContainer extends Component {
           {editorMode ? (
             <Editor
               title={title}
-              textarea={content}
+              content={content}
+              onChangeFile={this.handleUploadFile}
               onChangeInput={this.handleChangeInput}
               onClickBold={this.handleClickBold}
               onClickHeader={this.handleClickHeader}
@@ -107,7 +129,7 @@ const mapStateToProps = ({ posting, audio }) => ({
   id: audio.id,
   title: audio.title,
   content: audio.content,
-  filename: audio.filename,
+  file: audio.file,
   editorMode: posting.editorMode,
   buffering: posting.buffering
 });

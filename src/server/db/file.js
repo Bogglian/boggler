@@ -14,10 +14,10 @@ module.exports = function(){
     //     });
     //   });
     // },
-    upload : function(realfilename,fakefilename, callback) {
+    upload : function(realfilename, fakefilename, boardId, callback) {
       pool.getConnection(function(err, con) {
-        let sql = 'INSERT INTO audiofile (realfilename,fakefilename) VALUES (?,?)';
-        con.query(sql, [realfilename,fakefilename], function(error, rows, fields) {
+        let sql = 'INSERT INTO audiofile (realfilename,fakefilename, board_id) VALUES (?,?,?)';
+        con.query(sql, [realfilename,fakefilename, boardId], function(error, rows, fields) {
           if(error){
             return callback(error);
           }
