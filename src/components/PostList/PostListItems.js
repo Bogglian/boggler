@@ -30,8 +30,8 @@ class PostListItems extends Component {
   render() {
     const { postList, onClick } = this.props;
     const postListItems = postList.map(
-      ({ id, title, content, createdTime }) => (
-        <PostItem id={id} onClick={onClick} title={title} content={content} createdTime={createdTime} key={id} />
+      ({ id, title, content, created_time }) => (
+        <PostItem id={id} onClick={onClick} title={title} content={content} createdTime={created_time} key={id} />
       )
     );
 

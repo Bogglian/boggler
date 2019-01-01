@@ -2,7 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 import { VoiceWave, WaveLayout } from "../../styledComponents";
 
-const Wave = ({ audioPath, onBuffer, onReady }) => {
+const Wave = ({ audioPath, onBuffer, onReady, onPlay }) => {
   return (
     <WaveLayout>
       <VoiceWave>
@@ -12,6 +12,7 @@ const Wave = ({ audioPath, onBuffer, onReady }) => {
           height="100%"
           onBuffer={onBuffer}
           onReady={onReady}
+          onPlay={onPlay}
           playing
         />
       </VoiceWave>

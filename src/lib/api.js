@@ -4,8 +4,8 @@ export function getAudio(id) {
   return axios.get(`http://localhost:8080/board/${id}`);
 }
 
-export function writePosts(posts) {
-  return axios.post(`http://localhost:8080/board`, posts);
+export function writePosts(posts, headers) {
+  return axios.post(`http://localhost:8080/board`, posts, headers);
 }
 
 export function modifyPosts(id, posts) {

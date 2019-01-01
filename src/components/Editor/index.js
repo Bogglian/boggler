@@ -9,8 +9,11 @@ import {
 } from "../../styledComponents";
 
 const Editor = ({
+  title,
+  content,
   onSubmit,
   onChangeInput,
+  onChangeFile,
   onClickBold,
   onClickHeader,
   onClickItelic,
@@ -23,6 +26,7 @@ const Editor = ({
           <input
             type="text"
             name="title"
+            value={title}
             placeholder="Title"
             onChange={onChangeInput}
           />
@@ -37,9 +41,11 @@ const Editor = ({
           <textarea
             type="text"
             name="content"
+            value={content}
             placeholder="Leave a comment"
             onChange={onChangeInput}
           />
+          <input type="file" name="uploadFile" onChange={onChangeFile} />
         </SpeechInputForm>
         <EditorBtn className="save-btn" onClick={onSubmit}>
           Save

@@ -2,9 +2,9 @@ const board = require('../db/board')()
 const file = require('../db/file')()
 const uniqueFilename = require('unique-filename')
 
-module.exports= function(){
+module.exports= function() {
     return{
-        modify : function(req,res,next){
+       modify : function(req,res,next){
             board.modify(req.params.boardId,req.body,function(err,data){
                 if(err){
                     next(err)
@@ -42,27 +42,37 @@ module.exports= function(){
                 board.write(req.body,null,function(err,writeResult){
                     if(err){
                         next(err)
-                    } 
-                    res.status(200).json({ success :true })
+                    }
+                     board.showOne(writeResult.insertId,function(err,showResult){
+                        if(err){
+                            next(err)
+                        }
+                        res.status(201).json(showResult[0])
+                    })
                 })
              }else{
-                console.log(`write board with file filename: ${req.files.filename}`)
+                console.log(`write board with file filename: ${req.files.audiofile.name}`)
                 let getFile = req.files.audiofile
                 //file뭘로 받을지 작성
-                let fakeName = uniqueFilename(`${req.files.audiofile.filename}`)
+                let fakeName = uniqueFilename('')
+                console.log(fakeName);
                 getFile.mv(`${__dirname}/../upload/${fakeName}`,function(err){
                     if(err){
                         next(err)
                     }
-                    file.upload(getFile.name,fakeName,function(err,fileResult){
+                    board.write(req.body,function(err,writeResult){
                         if(err){
                             next(err)
                         }
-                        board.write(req.body,fileResult.insertId,function(err,writeResult){
+                        file.upload(getFile.name,fakeName,writeResult.insertId,function(err,fileResult){
                             if(err){
                                 next(err)
                             }
-                            res.status(200).json({success : true})
+                            board.showOne(writeResult.insertId,function(error,data){
+                                if(error){
+                                    next(error)
+                                }
+                                res.status(201).json({board:data[0]})
                             })
                         })
                     })

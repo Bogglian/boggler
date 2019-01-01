@@ -56,7 +56,7 @@ module.exports=function () {
                 })
             })
         },
-        write: function(board,callback){
+        write: function(board, callback){
             pool.getConnection(function(err,con){
                 if(err){
                     console.log('db connect error')
