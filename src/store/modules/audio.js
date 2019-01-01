@@ -3,7 +3,9 @@ import produce from "immer";
 
 const SAVE_AUDIO = "audio/SAVE";
 const GET_AUDIO = "audio/GET";
+const CHANGE_INPUT = "audio/CHANGE_INPUT";
 
+export const changeInput = createAction(CHANGE_INPUT);
 export const saveAudio = createAction(SAVE_AUDIO);
 export const getAudio = createAction(GET_AUDIO);
 
@@ -16,6 +18,11 @@ const initialState = {
 
 export default handleActions(
   {
+    [CHANGE_INPUT]: (state, action) =>
+      produce(state, draft => {
+        const { name, value } = action.payload;
+        draft[name] = value;
+    }),
     [SAVE_AUDIO]: (state, action) => {
       produce(state, draft => {});
     },

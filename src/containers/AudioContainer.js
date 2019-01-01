@@ -12,6 +12,7 @@ import {
 
 import * as postingActions from "../store/modules/posting";
 import * as audioActions from "../store/modules/audio";
+import * as api from "../lib/api";
 
 class AudioContainer extends Component {
   handleBuffer = () => {
@@ -19,11 +20,16 @@ class AudioContainer extends Component {
 
     PostingActions.bufferMedia();
   };
-  handleChangeInput = e => {
+  handlePlay = () => {
     const { PostingActions } = this.props;
+
+    PostingActions.bufferDone();
+  }
+  handleChangeInput = e => {
+    const { AudioActions } = this.props;
     const { name, value } = e.target;
 
-    PostingActions.changeInput({
+    AudioActions.changeInput({
       name,
       value
     });
@@ -42,10 +48,15 @@ class AudioContainer extends Component {
 
     PostingActions.bufferMedia();
   };
-  handleClickSave = () => {
+  handleClickSave = async () => {
     const { PostingActions } = this.props;
+    const { title, content } = this.props;
 
     PostingActions.editorOff();
+    await api.writePosts({title: title, content: content})
+      .then(response => {
+        console.log(JSON.stringify(response.data.created_time));
+      })
   };
   render() {
     const { buffering, editorMode, id, title, content, filename } = this.props;
@@ -62,6 +73,7 @@ class AudioContainer extends Component {
                 audioPath={filePath}
                 onBuffer={this.handleBuffer}
                 onReady={this.handleReady}
+                onPlay={this.handlePlay}
               />
             </div>
           </ShadowedBox>

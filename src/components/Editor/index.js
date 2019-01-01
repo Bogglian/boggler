@@ -9,6 +9,8 @@ import {
 } from "../../styledComponents";
 
 const Editor = ({
+  title,
+  content,
   onSubmit,
   onChangeInput,
   onClickBold,
@@ -23,6 +25,7 @@ const Editor = ({
           <input
             type="text"
             name="title"
+            value={title}
             placeholder="Title"
             onChange={onChangeInput}
           />
@@ -37,6 +40,7 @@ const Editor = ({
           <textarea
             type="text"
             name="content"
+            value={content}
             placeholder="Leave a comment"
             onChange={onChangeInput}
           />
