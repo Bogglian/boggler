@@ -54,7 +54,35 @@ class AudioContainer extends Component {
     AudioActions.uploadFile({file: e.target.files[0]});
   }
   //액션함수를 호출하면 렌더가 계속 됌
-  handleClickSave = async () => {
+  handleClickSave = () => {
+    const { id } = this.props;
+    if( id !== 0 ){
+      console.log("Modify Posts")
+      this.modifyPosts()
+      return;
+    }
+    console.log("New Posts")
+    this.createPosts()
+  };
+
+  modifyPosts = async () => {
+    const { PostingActions, AudioActions } = this.props;
+    const { id, title, content } = this.props;
+    const modifiedPosts = {
+      title: title,
+      content: content
+    }
+    PostingActions.editorOff();
+    await api.modifyPosts(id, modifiedPosts)
+      .then(response => {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(err => {
+        alert('수정에 실패 하였습니다.')
+      })
+  }
+
+  createPosts = async () => {
     const { PostingActions, AudioActions } = this.props;
     const { title, content, file } = this.props;
 
@@ -78,7 +106,7 @@ class AudioContainer extends Component {
         PostingActions.bufferDone();
         PostingActions.editorOn();
       })
-  };
+  }
   render() {
     const { buffering, editorMode, id, title, content, file } = this.props;
 
