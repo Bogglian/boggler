@@ -11,6 +11,7 @@ import {
 const Editor = ({
   title,
   content,
+  file,
   onSubmit,
   onChangeInput,
   onChangeFile,
@@ -46,7 +47,7 @@ const Editor = ({
             onChange={onChangeInput}
           />
           <div className="upload-box">
-            <input className="file-name" value="파일선택" disabled="disabled" />
+            <input className="file-name" value={file ? file.name: "파일선택"} disabled="disabled" />
             <label for="uploadFile">업로드</label>
             <input
               type="file"

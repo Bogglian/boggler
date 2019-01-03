@@ -132,6 +132,7 @@ class AudioContainer extends Component {
             <Editor
               title={title}
               content={content}
+              file={file}
               onChangeFile={this.handleUploadFile}
               onChangeInput={this.handleChangeInput}
               onClickBold={this.handleClickBold}
