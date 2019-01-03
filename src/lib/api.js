@@ -9,7 +9,7 @@ export function writePosts(posts, headers) {
 }
 
 export function modifyPosts(id, posts) {
-  return axios.put(`http://localhost:8080/audios/${id}`, posts);
+  return axios.put(`http://localhost:8080/board/${id}`, posts);
 }
 
 export function getAudioList(posts) {

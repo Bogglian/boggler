@@ -39,7 +39,7 @@ module.exports= function() {
         write : function(req,res,next) {
             if(!req.files){
                 console.log('just write board no file')
-                board.write(req.body,null,function(err,writeResult){
+                board.write(req.body,function(err,writeResult){
                     if(err){
                         next(err)
                     }
@@ -47,7 +47,7 @@ module.exports= function() {
                         if(err){
                             next(err)
                         }
-                        res.status(201).json(showResult[0])
+                        res.status(201).json({board:showResult[0]})
                     })
                 })
              }else{
