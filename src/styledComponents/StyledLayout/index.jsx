@@ -96,6 +96,9 @@ const ShadowedBox = styled.div`
       top 6%;
       left: 43.8%;
     }
+
+    &.none { display: none; }
+    
   }
 `;
 

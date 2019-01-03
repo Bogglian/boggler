@@ -45,7 +45,17 @@ const Editor = ({
             placeholder="Leave a comment"
             onChange={onChangeInput}
           />
-          <input type="file" name="uploadFile" onChange={onChangeFile} />
+          <div className="upload-box">
+            <input className="file-name" value="파일선택" disabled="disabled" />
+            <label for="uploadFile">업로드</label>
+            <input
+              type="file"
+              name="uploadFile"
+              id="uploadFile"
+              onChange={onChangeFile}
+              accept=".wav, .raw, .mp3, .mp4, .flex, .m4a"
+            />
+          </div>
         </SpeechInputForm>
         <EditorBtn className="save-btn" onClick={onSubmit}>
           Save

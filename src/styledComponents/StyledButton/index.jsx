@@ -30,7 +30,8 @@ const BorderedBtn = styled.button`
 const EditorBtn = styled(BorderedBtn)`
   & {
     width: 10%;
-    height: 5%;
+    height: 7.5%;
+    border-radius: 2px;
   }
 
   &.save-btn {
@@ -41,7 +42,7 @@ const EditorBtn = styled(BorderedBtn)`
 
   &.edit-btn {
     margin-top: 0.5%;
-    font-size: 90%;
+    font-size: 100%;
     margin-left: 90%;
   }
 
@@ -56,7 +57,6 @@ const EditorBtn = styled(BorderedBtn)`
       ${shadow(1)};
     }
   }
-
 `;
 
 const TextMenuBtn = styled.div`

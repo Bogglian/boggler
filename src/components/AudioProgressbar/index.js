@@ -3,7 +3,7 @@ import { ShadowedBox, WaveLoader } from "../../styledComponents";
 
 const AudioProgressbar = ({ className }) => {
   return (
-    <ShadowedBox className="wave-box">
+    <ShadowedBox className={"wave-box " + className}>
       <WaveLoader className={className}>
         <div class="rectangle-1" />
         <div class="rectangle-2" />
