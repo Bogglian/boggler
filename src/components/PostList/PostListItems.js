@@ -8,7 +8,7 @@ import {
   PostItemTime
 } from "../../styledComponents";
 
-const PostItem = ({id, title, content, createdTime, onClick}) => {
+const PostItem = ({id, title, content, createdTime, onClick, deletePosts}) => {
   return (
              <SPostItem>
                 <PostItemLinkBtn to={`/speech/audio/${id}`} onClick={() => onClick(id)}>
@@ -28,10 +28,10 @@ const PostItem = ({id, title, content, createdTime, onClick}) => {
 class PostListItems extends Component {
 
   render() {
-    const { postList, onClick } = this.props;
+    const { postList, onClick, deletePosts } = this.props;
     const postListItems = postList.map(
       ({ id, title, content, created_time }) => (
-        <PostItem id={id} onClick={onClick} title={title} content={content} createdTime={created_time} key={id} />
+        <PostItem id={id} onClick={onClick} delete={deletePosts} title={title} content={content} createdTime={created_time} key={id} />
       )
     );
 
