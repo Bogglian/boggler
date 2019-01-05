@@ -15,3 +15,7 @@ export function modifyPosts(id, posts) {
 export function getAudioList(posts) {
   return axios.get(`http://localhost:8080/board`, posts);
 }
+
+export function deletePosts(id) {
+  return axios.delete(`http://localhost:8080/board/${id}`);
+}

@@ -3,7 +3,7 @@ import PostListItems from './PostListItems';
 
 const PostList = ({ onClick, postList, deletePosts }) => {
   return (
-    <PostListItems onClick={onClick} postList={postList} delete={deletePosts}/>
+    <PostListItems onClick={onClick} postList={postList} deletePosts={deletePosts}/>
   );
 }
 

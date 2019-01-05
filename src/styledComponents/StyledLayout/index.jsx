@@ -98,7 +98,7 @@ const ShadowedBox = styled.div`
     }
 
     &.none { display: none; }
-    
+
   }
 `;
 
@@ -169,6 +169,21 @@ const WaveLayout = styled.div`
   }
 `;
 
+const PostItemLayout = styled.div`
+  & {
+    width: 90%;
+    float: left;
+  }
+`;
+
+const PostItemBtnLayout = styled.div`
+  & {
+    width: 10%;
+    height: 5.5rem;
+    float: right;
+  }
+`;
+
 export {
   ArticleLayout,
   AudioLayout,
@@ -181,5 +196,7 @@ export {
   SpeechInputMenuBox,
   SPostItem,
   SPostNav,
-  WaveLayout
+  WaveLayout,
+  PostItemLayout,
+  PostItemBtnLayout
 };

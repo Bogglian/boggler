@@ -16,7 +16,7 @@ module.exports=function () {
                 })
             })
         },
-        delete : function(boardId,callback){
+        delete: function(boardId,callback){
             pool.getConnection(function(err,con){
                 if(err){
                     return callback(err)

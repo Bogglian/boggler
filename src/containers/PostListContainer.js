@@ -50,14 +50,16 @@ class PostListContainer extends Component {
     });
   };
 
-  deletePosts = (id) => {
+  deletePosts = async (id) => {
     const { AudioListActions } = this.props;
     const { postList } = this.props;
 
     const deletedPostList = postList.filter(
       posts => posts.id !== id
     )
-    AudioListActions.deletePosts(deletedPostList);
+    await api.deletePosts(id).then(response => {
+      AudioListActions.deletePosts(deletedPostList);
+    })
   }
 
   componentDidMount() {
