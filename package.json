@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
+    "deepspeech": "^0.3.0",
     "express": "^4.16.4",
     "express-fileupload": "^1.1.1-alpha.1",
     "immer": "^1.9.3",
@@ -20,6 +21,7 @@
     "react-scripts": "2.1.2",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.4",
+    "sox-stream": "^2.0.3",
     "styled-components": "^4.1.3",
     "unique-filename": "^1.1.1"
   },

@@ -25,7 +25,7 @@ const SpeechInputForm = styled.form`
     }
 
     &.speech-editor-form-textarea {
-      height: 65%;
+      height: 64.3%;
       width: 100%;
       > textarea {
         width: 100%;
