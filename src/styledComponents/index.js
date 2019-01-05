@@ -12,6 +12,8 @@ export {
   SpeechInputMenuBox,
   SPostItem,
   SPostNav,
-  WaveLayout
+  WaveLayout,
+  PostItemLayout,
+  PostItemBtnLayout
 } from "./StyledLayout";
 export { VoiceWave, WaveLoader, WaveSlider } from "./StyledWave";

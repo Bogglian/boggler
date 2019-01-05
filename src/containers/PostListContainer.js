@@ -50,6 +50,18 @@ class PostListContainer extends Component {
     });
   };
 
+  deletePosts = async (id) => {
+    const { AudioListActions } = this.props;
+    const { postList } = this.props;
+
+    const deletedPostList = postList.filter(
+      posts => posts.id !== id
+    )
+    await api.deletePosts(id).then(response => {
+      AudioListActions.deletePosts(deletedPostList);
+    })
+  }
+
   componentDidMount() {
     this.getPostList();
   }
@@ -59,12 +71,12 @@ class PostListContainer extends Component {
     return (
       <Positioner className="postlist">
         <Link to="/speech/audio/write">
-          <EditorBtn className="write-btn" onClick={this.handleClickWrite}>
+          <EditorBtn className="write-btn" onClick={this.handleClickWrite} >
             Write
           </EditorBtn>
         </Link>
         <PostWrapper>
-          <PostList onClick={this.handleClick} postList={postList} />
+          <PostList onClick={this.handleClick} postList={postList} deletePosts={this.deletePosts} />
           <SPostNav>Test Nav</SPostNav>
         </PostWrapper>
       </Positioner>
