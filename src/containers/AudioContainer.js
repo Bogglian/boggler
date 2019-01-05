@@ -24,7 +24,7 @@ class AudioContainer extends Component {
     const { PostingActions } = this.props;
 
     PostingActions.bufferDone();
-  }
+  };
   handleChangeInput = e => {
     const { AudioActions } = this.props;
     const { name, value } = e.target;
@@ -51,64 +51,67 @@ class AudioContainer extends Component {
   handleUploadFile = e => {
     const { AudioActions } = this.props;
 
-    AudioActions.uploadFile({file: e.target.files[0]});
-  }
+    AudioActions.uploadFile({ file: e.target.files[0] });
+  };
   //액션함수를 호출하면 렌더가 계속 됌
   handleClickSave = () => {
-    const { id } = this.props;
-    if( id !== 0 ){
-      console.log("Modify Posts")
-      this.modifyPosts()
+    const { PostingActions, id } = this.props;
+    if (id !== 0) {
+      console.log("Modify Posts");
+      this.modifyPosts();
       return;
     }
-    console.log("New Posts")
-    this.createPosts()
+    console.log("New Posts");
+    this.createPosts();
+    PostingActions.bufferDone();
   };
 
   modifyPosts = async () => {
-    const { PostingActions, AudioActions } = this.props;
+    const { PostingActions } = this.props;
     const { id, title, content } = this.props;
     const modifiedPosts = {
       title: title,
       content: content
-    }
+    };
+
     PostingActions.editorOff();
-    await api.modifyPosts(id, modifiedPosts)
+    await api
+      .modifyPosts(id, modifiedPosts)
       .then(response => {
         console.log(JSON.stringify(response.data));
       })
       .catch(err => {
-        alert('수정에 실패 하였습니다.')
-      })
-  }
+        alert("수정에 실패 하였습니다.");
+      });
+  };
 
   createPosts = async () => {
     const { PostingActions, AudioActions } = this.props;
     const { title, content, file } = this.props;
 
-    const formData = new FormData()
-    formData.append("audiofile", file)
-    formData.append("content", content)
-    formData.append("title", title)
+    const formData = new FormData();
+    formData.append("audiofile", file);
+    formData.append("content", content);
+    formData.append("title", title);
 
     const headers = {
       headers: {
         Accept: "application/json",
         "Content-Type": "multipart/form-data"
-    }}
+      }
+    };
 
     PostingActions.editorOff();
     PostingActions.bufferMedia();
-    await api.writePosts(formData, headers)
-      .then(response => {
-        console.log(JSON.stringify(response.data));
-        AudioActions.getAudio(response.data.board);
-        PostingActions.bufferDone();
-        PostingActions.editorOn();
-      })
-  }
+    await api.writePosts(formData, headers).then(response => {
+      console.log(JSON.stringify(response.data));
+      AudioActions.getAudio(response.data.board);
+      PostingActions.bufferDone();
+      PostingActions.editorOn();
+    });
+  };
   render() {
-    const { buffering, editorMode, id, title, content, file } = this.props;
+    const { buffering, editorMode, title, content, file } = this.props;
 
     console.log("Hell" + content);
     const filePath = "https://www.youtube.com/watch?v=YBzJ0jmHv-4";
