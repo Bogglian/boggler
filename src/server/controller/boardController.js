@@ -38,9 +38,12 @@ module.exports= function() {
             })
         },
         write : function(req,res,next) {
+            var body = new Object()
+            body.title=req.body.title
             if(!req.files){
+                body.content=req.body.content
                 console.log('just write board no file')
-                board.write(req.body,function(err,writeResult){
+                board.write(body,function(err,writeResult){
                     if(err){
                         next(err)
                     }
@@ -52,20 +55,25 @@ module.exports= function() {
                     })
                 })
              }else{
+                
                 console.log(`write board with file filename: ${req.files.audiofile.name}`)
                 let getFile = req.files.audiofile
                 //file뭘로 받을지 작성
                 let fakeName = uniqueFilename('')
-                let sttResult = ''
                 console.log(fakeName);
                 getFile.mv(`${__dirname}/../upload/${fakeName}`,function(err){
                     
                     if(err){
                         next(err)
                     }
-                    sttResult = ds(fakename)
-                    console.log(`boardController의 stt ${sttResult}`)
-                    board.write(req.body,function(err,writeResult){
+                    ds(fakeName,function(err,sttResult){
+                        if(err){
+                            next(err)
+                        }
+                        body.content=sttResult
+                        console.log(`boardController의 stt ${body.content}`)
+                    
+                        board.write(body,function(err,writeResult){
                         if(err){
                             next(err)
                         }
@@ -73,7 +81,7 @@ module.exports= function() {
                             if(err){
                                 next(err)
                             }
-                            // stt작업해주는 공간
+
                             board.showOne(writeResult.insertId,function(error,data){
                                 if(error){
                                     next(error)
@@ -82,6 +90,7 @@ module.exports= function() {
                             })
                         })
                     })
+                })
                 })
             }
         }
