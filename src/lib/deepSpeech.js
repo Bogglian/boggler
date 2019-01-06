@@ -2,7 +2,7 @@
 
 const Fs = require("fs");
 const Sox = require("sox-stream");
-const Ds = require("deepspeech");
+const DeepSpeech = require("deepspeech");
 const argparse = require("argparse");
 const MemoryStream = require("memory-stream");
 const Wav = require("node-wav");
@@ -35,6 +35,7 @@ const MODEL = "./models/output_graph.pb";
 const ALPHABET = "./models/alphabet.txt";
 const LM = "./models/lm.binary";
 const TRIE = "./models/trie";
+const AUDIO = "./audio/4507-16021-0012.wav";
 
 let VersionAction = function VersionAction(options) {
   options = options || {};
@@ -44,7 +45,7 @@ let VersionAction = function VersionAction(options) {
 util.inherits(VersionAction, argparse.Action);
 
 VersionAction.prototype.call = function(parser) {
-  Ds.printVersions();
+  DeepSpeech.printVersions();
   process.exit(0);
 };
 
@@ -78,13 +79,12 @@ parser.addArgument(["--version"], {
   action: VersionAction,
   help: "Print version and exits"
 });
-let args = parser.parseArgs();
 
 function totalTime(hrtimeValue) {
   return (hrtimeValue[0] + hrtimeValue[1] / 1000000000).toPrecision(4);
 }
 
-const buffer = Fs.readFileSync(args["audio"]);
+const buffer = Fs.readFileSync(AUDIO);
 const result = Wav.decode(buffer);
 
 if (result.sampleRate < 16000) {
@@ -125,32 +125,22 @@ bufferToStream(buffer)
 audioStream.on("finish", () => {
   let audioBuffer = audioStream.toBuffer();
 
-  console.error("Loading model from file %s", args["model"]);
+  console.error("Loading model from file %s", MODEL);
   const model_load_start = process.hrtime();
-  let model = new Ds.Model(
-    args["model"],
+  let model = new DeepSpeech.Model(
+    MODEL,
     N_FEATURES,
     N_CONTEXT,
-    args["alphabet"],
+    ALPHABET,
     BEAM_WIDTH
   );
   const model_load_end = process.hrtime(model_load_start);
   console.error("Loaded model in %ds.", totalTime(model_load_end));
 
-  if (args["lm"] && args["trie"]) {
-    console.error(
-      "Loading language model from files %s %s",
-      args["lm"],
-      args["trie"]
-    );
+  if (LM && TRIE) {
+    console.error("Loading language model from files %s %s", LM, TRIE);
     const lm_load_start = process.hrtime();
-    model.enableDecoderWithLM(
-      args["alphabet"],
-      args["lm"],
-      args["trie"],
-      LM_ALPHA,
-      LM_BETA
-    );
+    model.enableDecoderWithLM(ALPHABET, LM, TRIE, LM_ALPHA, LM_BETA);
     const lm_load_end = process.hrtime(lm_load_start);
     console.error("Loaded language model in %ds.", totalTime(lm_load_end));
   }
@@ -161,6 +151,7 @@ audioStream.on("finish", () => {
 
   // We take half of the buffer_size because buffer is a char* while
   // LocalDsSTT() expected a short*
+
   console.log(model.stt(audioBuffer.slice(0, audioBuffer.length / 2), 16000));
   const inference_stop = process.hrtime(inference_start);
   console.error(
