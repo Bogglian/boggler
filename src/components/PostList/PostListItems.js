@@ -5,12 +5,16 @@ import {
   SPostItem,
   PostItemLinkBtn,
   PostItemContent,
-  PostItemTime
+  PostItemTime,
+  PostItemLayout,
+  PostItemBtnLayout,
+  EditorBtn
 } from "../../styledComponents";
 
-const PostItem = ({id, title, content, createdTime, onClick}) => {
+const PostItem = ({id, title, content, createdTime, onClick, deletePosts}) => {
   return (
              <SPostItem>
+              <PostItemLayout>
                 <PostItemLinkBtn to={`/speech/audio/${id}`} onClick={() => onClick(id)}>
                   {title}
                 </PostItemLinkBtn>
@@ -20,6 +24,12 @@ const PostItem = ({id, title, content, createdTime, onClick}) => {
                   {createdTime}
                 </PostItemTime>
                 </PostItemContent>
+              </PostItemLayout>
+              <PostItemBtnLayout>
+              <EditorBtn className="delete-btn" onClick={() => deletePosts(id)} >
+                Delete
+              </EditorBtn>
+              </PostItemBtnLayout>
              </SPostItem>
          );
 };
@@ -28,10 +38,18 @@ const PostItem = ({id, title, content, createdTime, onClick}) => {
 class PostListItems extends Component {
 
   render() {
-    const { postList, onClick } = this.props;
+    const { postList, onClick, deletePosts } = this.props;
     const postListItems = postList.map(
       ({ id, title, content, created_time }) => (
-        <PostItem id={id} onClick={onClick} title={title} content={content} createdTime={created_time} key={id} />
+        <PostItem
+          id={id}
+          onClick={onClick}
+          deletePosts={deletePosts}
+          title={title}
+          content={content}
+          createdTime={created_time}
+          key={id}
+        />
       )
     );
 

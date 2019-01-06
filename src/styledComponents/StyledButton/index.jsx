@@ -57,6 +57,16 @@ const EditorBtn = styled(BorderedBtn)`
       ${shadow(1)};
     }
   }
+
+  &.delete-btn {
+    width: 7%;
+    border: 0px solid ${oc.cyan[6]};
+    &:hover {
+      color: white;
+      background: white;
+      ${shadow(1)};
+    }
+  }
 `;
 
 const TextMenuBtn = styled.div`
