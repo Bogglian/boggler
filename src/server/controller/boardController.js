@@ -1,6 +1,7 @@
 const board = require('../db/board')()
 const file = require('../db/file')()
 const uniqueFilename = require('unique-filename')
+const ds = require('../../lib/deepSpeech')()
 
 module.exports= function() {
     return{
@@ -55,11 +56,15 @@ module.exports= function() {
                 let getFile = req.files.audiofile
                 //file뭘로 받을지 작성
                 let fakeName = uniqueFilename('')
+                let sttResult = ''
                 console.log(fakeName);
                 getFile.mv(`${__dirname}/../upload/${fakeName}`,function(err){
+                    
                     if(err){
                         next(err)
                     }
+                    sttResult = ds(fakename)
+                    console.log(`boardController의 stt ${sttResult}`)
                     board.write(req.body,function(err,writeResult){
                         if(err){
                             next(err)
@@ -68,6 +73,7 @@ module.exports= function() {
                             if(err){
                                 next(err)
                             }
+                            // stt작업해주는 공간
                             board.showOne(writeResult.insertId,function(error,data){
                                 if(error){
                                     next(error)

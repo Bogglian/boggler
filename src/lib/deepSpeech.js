@@ -9,6 +9,8 @@ const Wav = require("node-wav");
 const Duplex = require("stream").Duplex;
 const util = require("util");
 
+module.exports=function(fakeName){
+
 // These constants control the beam search decoder
 
 // Beam width used in the CTC decoder when building candidate transcriptions
@@ -35,7 +37,7 @@ const MODEL = "./models/output_graph.pb";
 const ALPHABET = "./models/alphabet.txt";
 const LM = "./models/lm.binary";
 const TRIE = "./models/trie";
-const AUDIO = "./audio/4507-16021-0012.wav";
+const AUDIO = `${__dirname}/../server/upload/${fakeName}`;
 
 let VersionAction = function VersionAction(options) {
   options = options || {};
@@ -152,7 +154,9 @@ audioStream.on("finish", () => {
   // We take half of the buffer_size because buffer is a char* while
   // LocalDsSTT() expected a short*
 
-  console.log(model.stt(audioBuffer.slice(0, audioBuffer.length / 2), 16000));
+  
+  let result = model.stt(audioBuffer.slice(0, audioBuffer.length / 2), 16000)
+  console.log(result)
   const inference_stop = process.hrtime(inference_start);
   console.error(
     "Inference took %ds for %ds audio file.",
@@ -160,3 +164,5 @@ audioStream.on("finish", () => {
     audioLength.toPrecision(4)
   );
 });
+return result
+}
