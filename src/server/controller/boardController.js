@@ -1,7 +1,8 @@
 const board = require("../db/board")();
 const file = require("../db/file")();
 const uniqueFilename = require("unique-filename");
-const ds = require("../../lib/deepSpeech")();
+const ds = require("../../lib/deepSpeech");
+const fs = require('fs');
 
 module.exports = function () {
     return {
@@ -17,6 +18,14 @@ module.exports = function () {
             board.delete(req.params.boardId, function (err, data) {
                 if (err) {
                     next(err);
+                }
+                let fakeName = data[0].fakeFileName
+                if (fakeName) {
+                    fs.unlink(`${__dirname}/../../../public/upload/${fakeName}`, function (err) {
+                        if (err) {
+                            next(err)
+                        }
+                    });
                 }
                 res.status(200).json({ success: true });
             });
