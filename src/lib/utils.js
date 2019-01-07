@@ -5,6 +5,7 @@
  */
 export const getAudioBuffer = async (path, context) => {
   const response = await fetch(path);
+
   const audioData = await response.arrayBuffer();
 
   return new Promise((resolve, reject) => {
@@ -20,6 +21,7 @@ export const getContext = () => {
     window.webkitAudioContext ||
     window.mozAudioContext ||
     window.oAudioContext;
+
   const context = new AudioContext();
   return context;
 };

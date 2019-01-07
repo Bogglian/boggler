@@ -18,12 +18,8 @@ import * as api from "../lib/api";
 class AudioContainer extends Component {
   componentWillMount() {
     const { AudioActions } = this.props;
-    const audioContext = getContext();
 
-    // setContext 액션함수 추가 필요
-    AudioActions.setContext({
-      context: audioContext
-    });
+    AudioActions.setContext({ context: getContext() });
   }
 
   handleBuffer = () => {
@@ -50,6 +46,7 @@ class AudioContainer extends Component {
   handleClickHeader = () => {};
   handleClickItelic = () => {};
   handleClickQuote = () => {};
+  handleReady = () => {};
 
   handleClickEdit = () => {
     const { PostingActions } = this.props;
@@ -57,20 +54,13 @@ class AudioContainer extends Component {
     PostingActions.editorOn();
   };
 
-  handleReady = () => {
-    const { PostingActions } = this.props;
-
-    PostingActions.bufferMedia();
-  };
-
   handleUploadFile = e => {
     const { AudioActions } = this.props;
-    const fileURL = window.URL.createObjectURL(e.target.files[0]);
+    const audioFile = e.target.files[0];
+    const fileURL = window.URL.createObjectURL(audioFile);
 
+    AudioActions.uploadFile({ file: audioFile, url: fileURL });
     this.getFile(fileURL);
-
-    // uploadFile 액션함수 수정 필요( 인자 2개로 )
-    AudioActions.uploadFile({ file: e.target.files[0], url: fileURL });
   };
 
   //액션함수를 호출하면 렌더가 계속 됌
@@ -89,16 +79,14 @@ class AudioContainer extends Component {
   handlePosChange = pos => {
     const { AudioActions } = this.props;
 
-    // setPosition 액션함수 필요
-    AudioActions.setPosition({ markerPosition: pos });
+    AudioActions.setPosition(pos);
   };
 
-  getFile = async (path = "audio/test.mp3") => {
+  getFile = async path => {
     const { AudioActions, context } = this.props;
     const fileBuffer = await getAudioBuffer(path, context);
 
-    // uploadBuffer 액션함수 필요
-    AudioActions.uploadBuffer(fileBuffer);
+    AudioActions.uploadBuffer({ buffer: fileBuffer });
   };
 
   modifyPosts = async () => {
@@ -155,7 +143,7 @@ class AudioContainer extends Component {
       file,
       url,
       buffer,
-      markerPosition
+      position
     } = this.props;
 
     return (
@@ -165,23 +153,13 @@ class AudioContainer extends Component {
           <ShadowedBox>
             <div className="voicewave-box">
               <Wave
-                audioPath={url}
+                url={url}
                 onBuffer={this.handleBuffer}
                 onReady={this.handleReady}
                 onPlay={this.handlePlay}
                 onPosChange={pos => this.handlePosChange(pos)}
                 buffer={buffer}
-                position={markerPosition}
-                markerStyle={{
-                  color: "#030303",
-                  width: 4
-                }}
-                waveStyle={{
-                  animate: true,
-                  color: "#020202",
-                  plot: "bar",
-                  pointWidth: 1
-                }}
+                position={position}
               />
             </div>
           </ShadowedBox>
@@ -219,7 +197,9 @@ const mapStateToProps = ({ posting, audio }) => ({
   content: audio.content,
   context: audio.context,
   file: audio.file,
-  markerPosition: audio.markerPosition,
+  buffer: audio.buffer,
+  url: audio.url,
+  position: audio.position,
   editorMode: posting.editorMode,
   buffering: posting.buffering
 });

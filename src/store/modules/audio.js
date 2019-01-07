@@ -6,7 +6,9 @@ const GET_AUDIO = "audio/GET";
 const CHANGE_INPUT = "audio/CHANGE_INPUT";
 const SET_CONTEXT = "audio/SET_CONTEXT";
 const UPLOAD_BUFFER = "audio/UPLOAD_BUFFER";
+const SET_POSITION = "audio/SET_POSITION";
 
+export const setPosition = createAction(SET_POSITION);
 export const uploadBuffer = createAction(UPLOAD_BUFFER);
 export const setContext = createAction(SET_CONTEXT);
 export const changeInput = createAction(CHANGE_INPUT);
@@ -18,8 +20,10 @@ const initialState = {
   title: "",
   file: null,
   content: "", //문장 단위 index와 시간, 내용 등
-  context: "",
-  buffer: ""
+  url: "",
+  context: null,
+  buffer: null,
+  position: 0
 };
 
 export default handleActions(
@@ -31,8 +35,8 @@ export default handleActions(
       }),
     [UPLOAD_FILE]: (state, action) =>
       produce(state, draft => {
-        console.log("gg" + action.payload);
-        const { file } = action.payload;
+        const { file, url } = action.payload;
+        draft.url = url;
         draft.file = file;
       }),
     [GET_AUDIO]: (state, action) =>
@@ -43,15 +47,25 @@ export default handleActions(
         draft.content = content;
         console.log("asdasf" + action.payload);
       }),
-    // 제대로 동작 안되는 현상 있음
+    [SET_POSITION]: (state, action) =>
+      produce(state, draft => {
+        const { position } = action.payload;
+
+        draft.position = position;
+      }),
     [SET_CONTEXT]: (state, action) =>
       produce(state, draft => {
-        draft.context = action.payload;
+        const { context } = action.payload;
+        console.log("context: " + context);
+
+        draft.context = context;
       }),
-    // 제대로 동작 안되는 현상 있음
     [UPLOAD_BUFFER]: (state, action) =>
       produce(state, draft => {
-        draft.buffer = action.payload;
+        const { buffer } = action.payload;
+        console.log("buffer: " + buffer);
+
+        draft.buffer = buffer;
       })
   },
   initialState
