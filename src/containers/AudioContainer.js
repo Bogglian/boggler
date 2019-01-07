@@ -10,20 +10,19 @@ import {
   ShadowedBox
 } from "../styledComponents";
 
-import * as postingActions from "../store/modules/posting";
 import * as audioActions from "../store/modules/audio";
 import * as api from "../lib/api";
 
 class AudioContainer extends Component {
   handleBuffer = () => {
-    const { PostingActions } = this.props;
+    const { AudioActions } = this.props;
 
-    PostingActions.bufferMedia();
+    AudioActions.bufferMedia();
   };
   handlePlay = () => {
-    const { PostingActions } = this.props;
+    const { AudioActions } = this.props;
 
-    PostingActions.bufferDone();
+    AudioActions.bufferDone();
   };
   handleChangeInput = e => {
     const { AudioActions } = this.props;
@@ -39,14 +38,14 @@ class AudioContainer extends Component {
   handleClickItelic = () => {};
   handleClickQuote = () => {};
   handleClickEdit = () => {
-    const { PostingActions } = this.props;
+    const { AudioActions } = this.props;
 
-    PostingActions.editorOn();
+    AudioActions.editorOn();
   };
   handleReady = () => {
-    const { PostingActions } = this.props;
+    const { AudioActions } = this.props;
 
-    PostingActions.bufferMedia();
+    AudioActions.bufferMedia();
   };
   handleUploadFile = e => {
     const { AudioActions } = this.props;
@@ -55,7 +54,7 @@ class AudioContainer extends Component {
   };
   //액션함수를 호출하면 렌더가 계속 됌
   handleClickSave = () => {
-    const { PostingActions, id } = this.props;
+    const { AudioActions, id } = this.props;
     if (id !== 0) {
       console.log("Modify Posts");
       this.modifyPosts();
@@ -63,18 +62,18 @@ class AudioContainer extends Component {
     }
     console.log("New Posts");
     this.createPosts();
-    PostingActions.bufferDone();
+    AudioActions.bufferDone();
   };
 
   modifyPosts = async () => {
-    const { PostingActions } = this.props;
+    const { AudioActions } = this.props;
     const { id, title, content } = this.props;
     const modifiedPosts = {
       title: title,
       content: content
     };
 
-    PostingActions.editorOff();
+    AudioActions.editorOff();
     await api
       .modifyPosts(id, modifiedPosts)
       .then(response => {
@@ -86,7 +85,7 @@ class AudioContainer extends Component {
   };
 
   createPosts = async () => {
-    const { PostingActions, AudioActions } = this.props;
+    const { AudioActions } = this.props;
     const { title, content, file } = this.props;
 
     const formData = new FormData();
@@ -101,13 +100,10 @@ class AudioContainer extends Component {
       }
     };
 
-    PostingActions.editorOff();
-    PostingActions.bufferMedia();
+    AudioActions.bufferMedia();
     await api.writePosts(formData, headers).then(response => {
       console.log(JSON.stringify(response.data));
-      AudioActions.getAudio(response.data.board);
-      PostingActions.bufferDone();
-      PostingActions.editorOn();
+      AudioActions.saveAudio(response.data.board);
     });
   };
   render() {
@@ -157,18 +153,17 @@ class AudioContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ posting, audio }) => ({
+const mapStateToProps = ({ audio }) => ({
   id: audio.id,
   title: audio.title,
   content: audio.content,
   file: audio.file,
-  editorMode: posting.editorMode,
-  buffering: posting.buffering
+  editorMode: audio.editorMode,
+  buffering: audio.buffering
 });
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다
 const mapDispatchToProps = dispatch => ({
-  PostingActions: bindActionCreators(postingActions, dispatch),
   AudioActions: bindActionCreators(audioActions, dispatch)
 });
 

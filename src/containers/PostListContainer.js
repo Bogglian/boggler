@@ -14,29 +14,23 @@ import {
   EditorBtn
 } from "../styledComponents";
 
-import * as postingActions from "../store/modules/posting";
 import * as audioActions from "../store/modules/audio";
 import * as audioListActions from "../store/modules/audioList";
-
-const test = [
-  { id: 1, title: "hey", content: "hello", createdTime: "2018-12-31" },
-  { id: 2, title: "hi", content: "hi2", createdTime: "2019-01-01" }
-];
 
 class PostListContainer extends Component {
   handleClick = async id => {
     const { AudioActions, PostingActions } = this.props;
     const response = await api.getAudio(id);
 
-    PostingActions.editorOff();
+    AudioActions.editorOff();
     console.log(`AudioPosts data : ${JSON.stringify(response)}`);
     AudioActions.getAudio(response.data.board);
   };
 
   handleClickWrite = () => {
-    const { PostingActions } = this.props;
+    const { AudioActions } = this.props;
 
-    PostingActions.editorOn();
+    AudioActions.editorOn();
   };
 
   getPostList = async () => {
@@ -90,7 +84,6 @@ const mapStateToProps = ({ audioList }) => ({
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다.
 const mapDispatchToProps = dispatch => ({
-  PostingActions: bindActionCreators(postingActions, dispatch),
   AudioActions: bindActionCreators(audioActions, dispatch),
   AudioListActions: bindActionCreators(audioListActions, dispatch)
 });
