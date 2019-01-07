@@ -61,6 +61,7 @@ const Editor = ({
         <EditorBtn className="save-btn" onClick={onSubmit}>
           Save
         </EditorBtn>
+        
       </EditorLayout>
     </ShadowedBox>
   );

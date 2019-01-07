@@ -8,6 +8,19 @@ const MemoryStream = require("memory-stream");
 const Wav = require("node-wav");
 const Duplex = require("stream").Duplex;
 const util = require("util");
+// upload : function(realfilename, fakefilename, boardId, callback) {
+//   pool.getConnection(function(err, con) {
+//     let sql = 'INSERT INTO audiofile (realfilename,fakefilename, board_id) VALUES (?,?,?)';
+//     con.query(sql, [realfilename,fakefilename, boardId], function(error, rows, fields) {
+//       if(error){
+//         return callback(error);
+//       }
+//       con.release();
+//       callback(null, rows);
+//     });
+//   });
+// }
+module.exports=function(fakeName,callback){
 
 // These constants control the beam search decoder
 
@@ -35,7 +48,8 @@ const MODEL = "./models/output_graph.pb";
 const ALPHABET = "./models/alphabet.txt";
 const LM = "./models/lm.binary";
 const TRIE = "./models/trie";
-const AUDIO = "./audio/4507-16021-0012.wav";
+//const AUDIO = `${__dirname}/../server/upload/${fakeName}`;
+const AUDIO = `/home/jihun/boggler/src/server/upload/${fakeName}`
 
 let VersionAction = function VersionAction(options) {
   options = options || {};
@@ -137,7 +151,7 @@ audioStream.on("finish", () => {
   const model_load_end = process.hrtime(model_load_start);
   console.error("Loaded model in %ds.", totalTime(model_load_end));
 
-  if (LM && TRIE) {
+  if (LM && TRIE) { 
     console.error("Loading language model from files %s %s", LM, TRIE);
     const lm_load_start = process.hrtime();
     model.enableDecoderWithLM(ALPHABET, LM, TRIE, LM_ALPHA, LM_BETA);
@@ -152,11 +166,17 @@ audioStream.on("finish", () => {
   // We take half of the buffer_size because buffer is a char* while
   // LocalDsSTT() expected a short*
 
-  console.log(model.stt(audioBuffer.slice(0, audioBuffer.length / 2), 16000));
+  
+  let result = model.stt(audioBuffer.slice(0, audioBuffer.length / 2), 16000)
+  console.log(result)
   const inference_stop = process.hrtime(inference_start);
   console.error(
     "Inference took %ds for %ds audio file.",
     totalTime(inference_stop),
     audioLength.toPrecision(4)
   );
+  callback(null, result);
 });
+      
+
+}
