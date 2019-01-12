@@ -34,6 +34,12 @@ CodeSandbox에서 핵심 API인 deepSpeech와 waveform 패키지를 미지원해
 
 #### Etc.
 
+**Environment**
+
+- [vscode](https://github.com/Microsoft/vscode) - MIT
+- [eslint](https://github.com/eslint/eslint) - MIT
+- [prettier](https://github.com/prettier/prettier) - MIT
+
 **Front-end**
 
 - [react-router](https://github.com/ReactTraining/react-router) - MIT
@@ -54,8 +60,10 @@ CodeSandbox에서 핵심 API인 deepSpeech와 waveform 패키지를 미지원해
 
 ### How can I contribute to this project?
 
-First, read the [our contribution guideline](/CONTRIBUTING.md).
+먼저, [우리의 컨트리뷰션 가이드라인]()을 읽어주세요. 만약 이것을 읽었다면, 이제부터 우리의 프로젝트에 [이슈](https://github.com/rayleighChild/boggler/issues)를 작성하거나 [풀리퀘스트](https://github.com/rayleighChild/boggler/pulls)를 통해 기여하실 수 있습니다.
+
+First, read the [our contribution guideline](/CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/rayleighChild/boggler/issues) or contribute to it in [pull requests](https://github.com/rayleighChild/boggler/pulls).
 
 ### License
 
-[MIT Lisence](/LICENSE)
+we follow MIT and MPL 2.0 [License](/LICENSE).
