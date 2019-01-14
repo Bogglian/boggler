@@ -9,11 +9,18 @@ import {
   Positioner,
   ShadowedBox
 } from "../styledComponents";
+import { getAudioBuffer, getContext } from "../lib/utils";
 
 import * as audioActions from "../store/modules/audio";
 import * as api from "../lib/api";
 
 class AudioContainer extends Component {
+  componentWillMount() {
+    const { AudioActions } = this.props;
+
+    AudioActions.setContext({ context: getContext() });
+  }
+
   handleBuffer = () => {
     const { AudioActions } = this.props;
 
@@ -33,25 +40,28 @@ class AudioContainer extends Component {
       value
     });
   };
+
   handleClickBold = () => {};
   handleClickHeader = () => {};
   handleClickItelic = () => {};
   handleClickQuote = () => {};
+  handleReady = () => {};
+
   handleClickEdit = () => {
     const { AudioActions } = this.props;
 
     AudioActions.editorOn();
   };
-  handleReady = () => {
-    const { AudioActions } = this.props;
 
-    AudioActions.bufferMedia();
-  };
   handleUploadFile = e => {
     const { AudioActions } = this.props;
+    const audioFile = e.target.files[0];
+    const fileURL = window.URL.createObjectURL(audioFile);
 
-    AudioActions.uploadFile({ file: e.target.files[0] });
+    AudioActions.uploadFile({ file: audioFile, url: fileURL });
+    this.getFile(fileURL);
   };
+
   //액션함수를 호출하면 렌더가 계속 됌
   handleClickSave = () => {
     const { AudioActions, id } = this.props;
@@ -63,6 +73,19 @@ class AudioContainer extends Component {
     console.log("New Posts");
     this.createPosts();
     AudioActions.bufferDone();
+  };
+
+  handlePosChange = pos => {
+    const { AudioActions } = this.props;
+
+    AudioActions.setPosition(pos);
+  };
+
+  getFile = async path => {
+    const { AudioActions, context } = this.props;
+    const fileBuffer = await getAudioBuffer(path, context);
+
+    AudioActions.uploadBuffer({ buffer: fileBuffer });
   };
 
   modifyPosts = async () => {
@@ -106,11 +129,19 @@ class AudioContainer extends Component {
       AudioActions.saveAudio(response.data.board);
     });
   };
-  render() {
-    const { buffering, editorMode, title, content, file } = this.props;
 
-    console.log("Hell" + content);
-    const filePath = "https://www.youtube.com/watch?v=YBzJ0jmHv-4";
+  render() {
+    const {
+      buffering,
+      editorMode,
+      title,
+      content,
+      file,
+      url,
+      buffer,
+      position
+    } = this.props;
+
     return (
       <Positioner clasName="audio">
         <AudioProgressbar className={buffering ? "" : "none"} />
@@ -118,10 +149,13 @@ class AudioContainer extends Component {
           <ShadowedBox>
             <div className="voicewave-box">
               <Wave
-                audioPath={filePath}
+                url={url}
                 onBuffer={this.handleBuffer}
                 onReady={this.handleReady}
                 onPlay={this.handlePlay}
+                onPosChange={pos => this.handlePosChange(pos)}
+                buffer={buffer}
+                position={position}
               />
             </div>
           </ShadowedBox>
@@ -157,9 +191,13 @@ const mapStateToProps = ({ audio }) => ({
   id: audio.id,
   title: audio.title,
   content: audio.content,
+  context: audio.context,
   file: audio.file,
-  editorMode: audio.editorMode,
-  buffering: audio.buffering
+  buffer: audio.buffer,
+  url: audio.url,
+  position: audio.position,
+  editorMode: posting.editorMode,
+  buffering: posting.buffering
 });
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다
