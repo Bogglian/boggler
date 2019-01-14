@@ -196,8 +196,8 @@ const mapStateToProps = ({ audio }) => ({
   buffer: audio.buffer,
   url: audio.url,
   position: audio.position,
-  editorMode: posting.editorMode,
-  buffering: posting.buffering
+  editorMode: audio.editorMode,
+  buffering: audio.buffering
 });
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다

@@ -60,8 +60,7 @@ export default handleActions(
         draft.id = id;
         draft.title = title;
         draft.content = content;
-      })
-    ),
+      }),
     [SAVE_AUDIO]: (state, action) => (
       produce(state, draft => {
         const { id, title, content } = action.payload;
