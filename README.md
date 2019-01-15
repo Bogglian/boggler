@@ -38,7 +38,7 @@ Boggler basically used the React boilerplate [create-react-app] to organize the 
 
 ### OpenSources
 
-- [mozila deepspeech](https://github.com/mozilla/DeepSpeech) - MPL 2.0
+- [react-DeepSpeech](https://github.com/Bogglian/react-DeepSpeech) - MPL 2.0
 - [react](https://github.com/facebook/react) - MIT
 - [node](https://github.com/nodejs/node) - MIT
 
