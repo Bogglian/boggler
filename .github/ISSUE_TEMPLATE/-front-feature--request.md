@@ -1,7 +1,7 @@
 ---
 name: "[Front-feature] request"
 about: Suggest an idea for this project
-title: ''
+title: "[Front-feature] "
 labels: ''
 assignees: ''
 
