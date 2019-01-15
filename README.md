@@ -1,8 +1,8 @@
 # 🎙 보글러 / Boggler
 
-[The 6th D2 CAMPUS FEST Final Entry Project](https://github.com/D2CampusFest/6th) - in Naver D2
+It started in Dec 26, 2018
 
-[제 6회 D2 CAMPUS FEST 결승진출 프로젝트](https://github.com/D2CampusFest/6th) - 네이버 D2
+[The 6th D2 CAMPUS FEST Final Entry Project](https://github.com/D2CampusFest/6th) - in Naver D2
 
 ## ❓ 보글러란? / What is Boggler?
 
