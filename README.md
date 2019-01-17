@@ -40,7 +40,7 @@ CodeSandbox does not support the core tools in this project, the deepSpeech and 
 
 > 준비중입니다.
 >
-> This is in preparation.
+> Coming soon.
 
 ## 🔧 사용된 공개 도구 / Used Open Tools
 
