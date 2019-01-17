@@ -38,9 +38,9 @@ CodeSandbox does not support the core tools in this project, the deepSpeech and 
 
 ## 🏃‍♂️🏃‍♀️ 손쉬운 시작 / Quickstart
 
-> 이 내용은 아직 준비가 안됐습니다.
+> 준비중입니다.
 >
-> This contents is not ready yet.
+> This is in preparation.
 
 ## 🔧 사용된 공개 도구 / Used Open Tools
 
