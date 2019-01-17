@@ -2,6 +2,10 @@
 
 It started in Dec 26, 2018
 
+## :sweat: Sorry for user
+
+>  this is not yet built the publish version.
+
 [The 6th D2 CAMPUS FEST Final Entry Project](https://github.com/D2CampusFest/6th) - in Naver D2
 
 ## ❓ 보글러란? / What is Boggler?
