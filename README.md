@@ -42,6 +42,12 @@ CodeSandbox does not support the core tools in this project, the deepSpeech and 
 >
 > Coming soon.
 
+## 🚀 Usage
+
+> 준비중입니다.
+>
+> Coming soon.
+
 ## 🔧 사용된 공개 도구 / Used Open Tools
 
 보글러는 기본적으로 [create-react-app](https://github.com/facebook/create-react-app)라는 리액트 보일러플레이트를 사용해 프로젝트의 뼈대를 이루고 다음과 같은 다양한 도구를 사용했습니다.
