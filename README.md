@@ -2,7 +2,7 @@
 
 It started in Dec 26, 2018
 
-## :sweat: Sorry for user
+## :sweat: Sorry for users
 
 >  this is not yet built the publish version.
 
