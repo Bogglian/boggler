@@ -30,9 +30,9 @@ Boggler is being created as a tool to reduce the fatigue of work to convert spee
 
 ![](assets/wave-demo.png)
 
-CodeSandbox에서 핵심 도구인 deepSpeech와 waveform 패키지를 미지원해 스타일 데모만 확인하실 수 있습니다.
+CodeSandbox에서 본 프로젝트의 핵심 도구인 deepSpeech와 waveform 패키지를 미지원해 스타일 데모만 확인하실 수 있습니다.
 
-CodeSandbox does not support the core tools the deepSpeech and the waveform package, so you can only see style demos.
+CodeSandbox does not support the core tools in this project, the deepSpeech and the waveform package, so you can only see style demos.
 
 [![Edit Boggler](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6n2orxr5yz)
 
