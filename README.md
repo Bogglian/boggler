@@ -4,6 +4,10 @@ It started in Dec 26, 2018
 
 [The 6th D2 CAMPUS FEST Final Entry Project](https://github.com/D2CampusFest/6th) - in Naver D2
 
+## :sweat: Sorry for users
+
+>  this is not yet built the publish version.
+
 ## ❓ 보글러란? / What is Boggler?
 
 보글러의 가장 큰 핵심은 스트리밍 혹은 파일로 입력받은 음성 정보를 분석해 이를 텍스트로 변환시킨다는 점입니다. 가령 미팅에서의 가벼운 대화 혹은 강연자의 음성을 텍스트로 변환해 보다 나은 필사 환경을 제공합니다.
@@ -74,12 +78,12 @@ Boggler basically used the React boilerplate [create-react-app] to organize the 
 
 ## How can I contribute to this project?
 
-먼저, [우리의 컨트리뷰션 가이드라인]()을 읽어주세요. 만약 이것을 읽었다면, 이제부터 우리의 프로젝트에 [이슈](https://github.com/rayleighChild/boggler/issues)를 작성하거나 [풀리퀘스트](https://github.com/rayleighChild/boggler/pulls)를 통해 기여하실 수 있습니다.
+먼저, [우리의 컨트리뷰션 가이드라인](CONTRIBUTING.md)을 읽어주세요. 만약 이것을 읽었다면, 이제부터 우리의 프로젝트에 [이슈](https://github.com/rayleighChild/boggler/issues)를 작성하거나 [풀리퀘스트](https://github.com/rayleighChild/boggler/pulls)를 통해 기여하실 수 있습니다.
 
-First, read the [our contribution guideline](/CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/rayleighChild/boggler/issues) or contribute to it in [pull requests](https://github.com/rayleighChild/boggler/pulls).
+First, read the [our contribution guideline](CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/rayleighChild/boggler/issues) or contribute to it in [pull requests](https://github.com/rayleighChild/boggler/pulls).
 
 ## License
 
-we follow MIT and (Some of)MPL 2.0 [License](/LICENSE).
+we follow MIT and (Some of)MPL 2.0 [License](LICENSE).
 
-우리는 MIT와 (일부)MPL 2.0 [라이선스](/LICENSE)를 준수합니다.
+우리는 MIT와 (일부)MPL 2.0 [라이선스](LICENSE)를 준수합니다.
