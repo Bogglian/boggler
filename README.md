@@ -6,7 +6,7 @@ It started in Dec 26, 2018
 
 ## :sweat: Sorry for users
 
->  this is not yet built the publish version.
+> this is not yet built the publish version.
 
 ## ❓ 보글러란? / What is Boggler?
 

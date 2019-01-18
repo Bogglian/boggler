@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import oc from "open-color";
-import { shadow } from "../../lib/styleUtil";
+import styled from 'styled-components';
+import oc from 'open-color';
+import { shadow } from '../../lib/styleUtil';
 
 const SpeechInputForm = styled.form`
   & {
     &.speech-editor-form-title {
       height: 8%;
       width: 100%;
-      > input[type="text"] {
+      > input[type='text'] {
         width: 100%;
         height: 100%;
         outline: none;
@@ -41,7 +41,7 @@ const SpeechInputForm = styled.form`
         }
       }
       .upload-box {
-        > input[type="file"] {
+        > input[type='file'] {
           position: absolute;
           width: 1px;
           height: 1px;

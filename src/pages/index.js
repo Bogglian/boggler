@@ -1,1 +1,1 @@
-export { default as Speech } from "./Speech";
+export { default as Speech } from './Speech';

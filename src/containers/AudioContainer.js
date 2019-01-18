@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import { Article, AudioProgressbar, Editor, Wave } from "../components";
+import { Article, AudioProgressbar, Editor, Wave } from '../components';
 import {
   AudioLayout,
   ContentLayout,
   Positioner,
-  ShadowedBox
-} from "../styledComponents";
-import { getAudioBuffer, getContext } from "../lib/utils";
+  ShadowedBox,
+} from '../styledComponents';
+import { getAudioBuffer, getContext } from '../lib/utils';
 
-import * as audioActions from "../store/modules/audio";
-import * as api from "../lib/api";
+import * as audioActions from '../store/modules/audio';
+import * as api from '../lib/api';
 
 class AudioContainer extends Component {
   componentWillMount() {
@@ -37,7 +37,7 @@ class AudioContainer extends Component {
 
     AudioActions.changeInput({
       name,
-      value
+      value,
     });
   };
 
@@ -66,11 +66,11 @@ class AudioContainer extends Component {
   handleClickSave = () => {
     const { AudioActions, id } = this.props;
     if (id !== 0) {
-      console.log("Modify Posts");
+      console.log('Modify Posts');
       this.modifyPosts();
       return;
     }
-    console.log("New Posts");
+    console.log('New Posts');
     this.createPosts();
     AudioActions.bufferDone();
   };
@@ -93,7 +93,7 @@ class AudioContainer extends Component {
     const { id, title, content } = this.props;
     const modifiedPosts = {
       title: title,
-      content: content
+      content: content,
     };
 
     AudioActions.editorOff();
@@ -103,7 +103,7 @@ class AudioContainer extends Component {
         console.log(JSON.stringify(response.data));
       })
       .catch(err => {
-        alert("수정에 실패 하였습니다.");
+        alert('수정에 실패 하였습니다.');
       });
   };
 
@@ -112,15 +112,15 @@ class AudioContainer extends Component {
     const { title, content, file } = this.props;
 
     const formData = new FormData();
-    formData.append("audiofile", file);
-    formData.append("content", content);
-    formData.append("title", title);
+    formData.append('audiofile', file);
+    formData.append('content', content);
+    formData.append('title', title);
 
     const headers = {
       headers: {
-        Accept: "application/json",
-        "Content-Type": "multipart/form-data"
-      }
+        Accept: 'application/json',
+        'Content-Type': 'multipart/form-data',
+      },
     };
 
     AudioActions.bufferMedia();
@@ -139,12 +139,12 @@ class AudioContainer extends Component {
       file,
       url,
       buffer,
-      position
+      position,
     } = this.props;
 
     return (
       <Positioner clasName="audio">
-        <AudioProgressbar className={buffering ? "" : "none"} />
+        <AudioProgressbar className={buffering ? '' : 'none'} />
         <AudioLayout>
           <ShadowedBox>
             <div className="voicewave-box">
@@ -197,15 +197,15 @@ const mapStateToProps = ({ audio }) => ({
   url: audio.url,
   position: audio.position,
   editorMode: audio.editorMode,
-  buffering: audio.buffering
+  buffering: audio.buffering,
 });
 
 // 이런 구조로 하면 나중에 다양한 리덕스 모듈을 적용해야 하는 상황에서 유용합니다
 const mapDispatchToProps = dispatch => ({
-  AudioActions: bindActionCreators(audioActions, dispatch)
+  AudioActions: bindActionCreators(audioActions, dispatch),
 });
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(AudioContainer);

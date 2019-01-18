@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import oc from "open-color";
-import { Link } from "react-router-dom";
-import { shadow } from "../../lib/styleUtil";
+import styled from 'styled-components';
+import oc from 'open-color';
+import { Link } from 'react-router-dom';
+import { shadow } from '../../lib/styleUtil';
 
 const BorderedBtn = styled.button`
   & {

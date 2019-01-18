@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import React, { Component } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import { AudioContainer, PostListContainer } from "../containers";
+import { AudioContainer, PostListContainer } from '../containers';
 
 class Speech extends Component {
   render() {

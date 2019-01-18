@@ -1,17 +1,17 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
 // https://www.styled-components.com/docs/advanced#media-templates 참조
 export const sizes = {
-  wide: "1200px",
-  desktop: "992px",
-  tablet: "768px",
-  phone: "376px"
+  wide: '1200px',
+  desktop: '992px',
+  tablet: '768px',
+  phone: '376px',
 };
 
 export const media = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (...args) => css`
     @media (max-width: ${sizes[label]}) {
-      ${css(...args)}
+      ${css(...args)};
     }
   `;
   return acc;
@@ -36,7 +36,7 @@ export const shadow = weight => {
     css`
       box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
         0 15px 12px rgba(0, 0, 0, 0.22);
-    `
+    `,
   ];
 
   return shadows[weight];

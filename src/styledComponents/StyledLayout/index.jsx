@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import oc from "open-color";
-import { shadow } from "../../lib/styleUtil";
+import styled from 'styled-components';
+import oc from 'open-color';
+import { shadow } from '../../lib/styleUtil';
 
 const ArticleLayout = styled.div`
   & {
@@ -198,5 +198,5 @@ export {
   SPostNav,
   WaveLayout,
   PostItemLayout,
-  PostItemBtnLayout
+  PostItemBtnLayout,
 };

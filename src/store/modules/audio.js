@@ -1,19 +1,19 @@
-import { createAction, handleActions } from "redux-actions";
-import produce from "immer";
+import { createAction, handleActions } from 'redux-actions';
+import produce from 'immer';
 
-const UPLOAD_FILE = "audio/UPLOAD_FILE";
-const GET_AUDIO = "audio/GET";
-const CHANGE_INPUT = "audio/CHANGE_INPUT";
-const SAVE_AUDIO = "audio/SAVE";
+const UPLOAD_FILE = 'audio/UPLOAD_FILE';
+const GET_AUDIO = 'audio/GET';
+const CHANGE_INPUT = 'audio/CHANGE_INPUT';
+const SAVE_AUDIO = 'audio/SAVE';
 
-const BUFFER_DONE = "audio/BUFFER_DONE";
-const BUFFER_MEDIA = "audio/BUFFER_MEDIA";
-const EDITOR_ON = "audio/EDITOR_ON";
-const EDITOR_OFF = "audio/EDITOR_OFF";
+const BUFFER_DONE = 'audio/BUFFER_DONE';
+const BUFFER_MEDIA = 'audio/BUFFER_MEDIA';
+const EDITOR_ON = 'audio/EDITOR_ON';
+const EDITOR_OFF = 'audio/EDITOR_OFF';
 
-const SET_CONTEXT = "audio/SET_CONTEXT";
-const UPLOAD_BUFFER = "audio/UPLOAD_BUFFER";
-const SET_POSITION = "audio/SET_POSITION";
+const SET_CONTEXT = 'audio/SET_CONTEXT';
+const UPLOAD_BUFFER = 'audio/UPLOAD_BUFFER';
+const SET_POSITION = 'audio/SET_POSITION';
 
 export const setPosition = createAction(SET_POSITION);
 export const uploadBuffer = createAction(UPLOAD_BUFFER);
@@ -30,15 +30,15 @@ export const bufferMedia = createAction(BUFFER_MEDIA);
 
 const initialState = {
   id: 0,
-  title: "",
+  title: '',
   file: null,
-  content: "",
+  content: '',
   editorMode: false,
   buffering: false,
-  url: "",
+  url: '',
   context: null,
   buffer: null,
-  position: 0
+  position: 0,
 };
 
 export default handleActions(
@@ -61,7 +61,7 @@ export default handleActions(
         draft.title = title;
         draft.content = content;
       }),
-    [SAVE_AUDIO]: (state, action) => (
+    [SAVE_AUDIO]: (state, action) =>
       produce(state, draft => {
         const { id, title, content } = action.payload;
         draft.id = id;
@@ -69,8 +69,7 @@ export default handleActions(
         draft.content = content;
         draft.buffering = false;
         draft.editorMode = true;
-      })
-    ),
+      }),
     [BUFFER_DONE]: (state, action) =>
       produce(state, draft => {
         draft.buffering = false;
@@ -96,17 +95,17 @@ export default handleActions(
     [SET_CONTEXT]: (state, action) =>
       produce(state, draft => {
         const { context } = action.payload;
-        console.log("context: " + context);
+        console.log(`context: ${context}`);
 
         draft.context = context;
       }),
     [UPLOAD_BUFFER]: (state, action) =>
       produce(state, draft => {
         const { buffer } = action.payload;
-        console.log("buffer: " + buffer);
+        console.log(`buffer: ${buffer}`);
 
         draft.buffer = buffer;
-      })
+      }),
   },
-  initialState
+  initialState,
 );

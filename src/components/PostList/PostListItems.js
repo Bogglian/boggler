@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   SPostItem,
@@ -8,35 +8,36 @@ import {
   PostItemTime,
   PostItemLayout,
   PostItemBtnLayout,
-  EditorBtn
-} from "../../styledComponents";
+  EditorBtn,
+} from '../../styledComponents';
 
-const PostItem = ({id, title, content, createdTime, onClick, deletePosts}) => {
-  return (
-             <SPostItem>
-              <PostItemLayout>
-                <PostItemLinkBtn to={`/speech/audio/${id}`} onClick={() => onClick(id)}>
-                  {title}
-                </PostItemLinkBtn>
-                <PostItemContent>
-                  {content}
-                <PostItemTime>
-                  {createdTime}
-                </PostItemTime>
-                </PostItemContent>
-              </PostItemLayout>
-              <PostItemBtnLayout>
-              <EditorBtn className="delete-btn" onClick={() => deletePosts(id)} >
-                Delete
-              </EditorBtn>
-              </PostItemBtnLayout>
-             </SPostItem>
-         );
-};
-
+const PostItem = ({
+  id,
+  title,
+  content,
+  createdTime,
+  onClick,
+  deletePosts,
+}) => (
+  <SPostItem>
+    <PostItemLayout>
+      <PostItemLinkBtn to={`/speech/audio/${id}`} onClick={() => onClick(id)}>
+        {title}
+      </PostItemLinkBtn>
+      <PostItemContent>
+        {content}
+        <PostItemTime>{createdTime}</PostItemTime>
+      </PostItemContent>
+    </PostItemLayout>
+    <PostItemBtnLayout>
+      <EditorBtn className="delete-btn" onClick={() => deletePosts(id)}>
+        Delete
+      </EditorBtn>
+    </PostItemBtnLayout>
+  </SPostItem>
+);
 
 class PostListItems extends Component {
-
   render() {
     const { postList, onClick, deletePosts } = this.props;
     const postListItems = postList.map(
@@ -50,14 +51,10 @@ class PostListItems extends Component {
           createdTime={created_time}
           key={id}
         />
-      )
+      ),
     );
 
-    return(
-      <div>
-        { postListItems }
-      </div>
-    );
+    return <div>{postListItems}</div>;
   }
 }
 

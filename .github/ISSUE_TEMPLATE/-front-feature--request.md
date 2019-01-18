@@ -1,10 +1,9 @@
 ---
-name: "[Front-feature] request"
+name: '[Front-feature] request'
 about: Suggest an idea for this project
-title: "[Front-feature] "
+title: '[Front-feature] '
 labels: ''
 assignees: ''
-
 ---
 
 **Is your feature request related to a problem? Please describe.**

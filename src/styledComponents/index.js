@@ -1,5 +1,11 @@
-export { BorderedBtn, EditorBtn, LinkBtn, TextMenuBtn, PostItemLinkBtn } from "./StyledButton";
-export { SpeechInputForm, PostItemContent, PostItemTime } from "./StyledForm";
+export {
+  BorderedBtn,
+  EditorBtn,
+  LinkBtn,
+  TextMenuBtn,
+  PostItemLinkBtn,
+} from './StyledButton';
+export { SpeechInputForm, PostItemContent, PostItemTime } from './StyledForm';
 export {
   ArticleLayout,
   AudioLayout,
@@ -14,6 +20,6 @@ export {
   SPostNav,
   WaveLayout,
   PostItemLayout,
-  PostItemBtnLayout
-} from "./StyledLayout";
-export { VoiceWave, WaveLoader, WaveSlider } from "./StyledWave";
+  PostItemBtnLayout,
+} from './StyledLayout';
+export { VoiceWave, WaveLoader, WaveSlider } from './StyledWave';
