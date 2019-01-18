@@ -7,6 +7,8 @@
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "deepspeech": "^0.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.5.0",
     "express": "^4.16.4",
     "express-fileupload": "^1.1.1-alpha.1",
     "immer": "^1.9.3",
@@ -34,7 +36,18 @@
     "dev": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn start\""
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "rules": {
+      "react/prefer-stateless-function": 0,
+      "react/jsx-filename-extension": 0,
+      "react/jsx-one-expression-per-line": 0
+    },
+    "env": {
+      "browser": true
+    }
   },
   "browserslist": [
     ">0.2%",
