@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Speech } from './pages';
+import TestContainer from './containers/TestContainer';
 
 class App extends Component {
   render() {
-    return <Speech />;
+    return (
+      <TestContainer />
+    );
   }
 }
 
