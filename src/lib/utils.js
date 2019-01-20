@@ -9,7 +9,9 @@ export const getAudioBuffer = async (path, context) => {
   const audioData = await response.arrayBuffer();
 
   return new Promise((resolve, reject) => {
-    context.decodeAudioData(audioData, buffer => resolve(buffer));
+    context.decodeAudioData(audioData, buffer => {
+      return resolve(buffer);
+    });
   });
 };
 
