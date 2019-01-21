@@ -43,6 +43,24 @@ Our commit messages conform to the following rules:
 |docs  |All about documentation.                         |docs: Add title or docs: Modify README.md contents |
 |env   |All about the development environment settings.  |env: Update Package.json or Update Packages        |
 
+### Commit Contents
+
+The contents of the commit should be as detailed as possible. For example:
+
+```
+feat: Add feature.js
+
+We were having some kind of issue and decided to implement some feature to solve it.
+
+As a result, I implemented this functionality through this commit. A description of this feature follows.
+
+1. Do something.
+2. Perform some function.
+3. Some input is coming in and some output is coming out.
+
+In addition, it is efficient to substitute any role of function.
+```
+
 ## Issue Template
 
 We are using [issue templates](.github/ISSUE_TEMPLATE/).
