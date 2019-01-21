@@ -27,3 +27,22 @@ https://github.com/prettier/prettier-eslint
 $ yarn add eslint-config-airbnb
 // or $ npm install eslint-config-airbnb
 ```
+
+## Commit Style
+
+Our commit messages conform to the following rules:
+
+> Please don't write commit messages in the past. also, don't use periods in the title. But, please write in the content.
+
+### Commit Style Types
+
+|Title |Describe                                         |Usage - commit title                               |
+|------|-------------------------------------------------|---------------------------------------------------|
+|feat  |Add or Delete a feature.                         |feat: Add feature.js or feat: Add feature name     |
+|fix   |fix the code                                     |fix: Modify code.js                                |
+|docs  |All about documentation.                         |docs: Add title or docs: Modify README.md contents |
+|env   |All about the development environment settings.  |env: Update Package.json or Update Packages        |
+
+## Issue Template
+
+We are using [issue templates](.github/ISSUE_TEMPLATE/).
