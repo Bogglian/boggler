@@ -47,8 +47,12 @@ const animateLine = (canvas, ctx, bounds, style, maxAmp, step, index = 0) => {
 export const calculateWaveData = (buffer, width, barDistance, pointWidth) => {
   if (!buffer) return [];
   // get the wave data
+  console.log(buffer.duration / 10);
+  //Seconds to be shown on a single screen
+  const seconds = 10;
   const wave = buffer.getChannelData(0);
-  const pointCnt = width / (pointWidth + barDistance);
+  const pointCnt = width / (pointWidth + barDistance) * (buffer.duration / 10);
+  console.log(pointCnt);
   // find how many steps we are going to draw
   const step = Math.ceil(wave.length / pointCnt);
   // Get array of bounds of each step
