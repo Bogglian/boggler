@@ -34,6 +34,16 @@ class Waveform extends React.Component {
     return false;
   }
 
+  handleKeyPress = (e) => {
+    if(e.key === 'ArrowRight') {
+      console.log('right');
+    }
+
+    if(e.key === 'ArrowLeft'){
+      console.log('left');
+    }
+  }
+
   draw = async (animate = true, next) => {
     const props = next || this.props;
     drawWaveform(
@@ -53,6 +63,8 @@ class Waveform extends React.Component {
   render() {
     return (
       <canvas
+        tabIndex="0"
+        onKeyDown={this.handleKeyPress}
         ref={canvas => (this.canvas = canvas)}
         style={{
           height: '100%',
