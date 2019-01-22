@@ -8,6 +8,7 @@ const color = [oc.red[light], oc.orange[light], oc.yellow[light], oc.lime[light]
                 oc.cyan[light], oc.blue[light], oc.indigo[light], oc.violet[light], oc.grape[light], oc.pink[light]];
 
 const animateBar = (ctx, bounds, style, maxAmp, scaleFactor = 1) => {
+  console.log("1");
   if (scaleFactor <= 100) {
     setTimeout(() => {
       requestAnimationFrame(() =>
@@ -17,30 +18,7 @@ const animateBar = (ctx, bounds, style, maxAmp, scaleFactor = 1) => {
     }, 1);
   }
 };
-/**
- * Animate the drawing of a line wave
- */
-const animateLine = (canvas, ctx, bounds, style, maxAmp, step, index = 0) => {
-  if (index < bounds.length) {
-    setTimeout(() => {
-      ctx.moveTo(0, maxAmp);
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.beginPath();
-      for (let i = 0; i < index + step && i < bounds.length; i++) {
-        drawPoint(
-          ctx,
-          i * style.pointWidth,
-          (1 + bounds[i].min) * maxAmp,
-          style.pointWidth,
-          Math.max(1, (bounds[i].max - bounds[i].min) * maxAmp),
-          style.plot
-        );
-      }
-      ctx.stroke();
-      animateLine(canvas, ctx, bounds, style, maxAmp, step, index + step);
-    }, 1);
-  }
-};
+
 /**
  * Calculate all wave data points
  */
@@ -73,6 +51,7 @@ const drawPoint = (ctx, x, y, width, height, type) => {
  * Draw all the points in the wave
  */
 const drawPoints = (ctx, bounds, style, maxAmp, scaleFactor = 1) => {
+  console.log("2");
   if (style.plot === 'line') {
     ctx.moveTo(0, maxAmp);
   }
@@ -125,10 +104,7 @@ export const drawWaveform = (
   const maxAmp = canvasSize.height / 2 -10;
   console.log("maxAmp!! : " + maxAmp);
   if (waveStyle.animate) {
-    if (waveStyle.plot === 'line') {
-      const step = Math.floor(bounds.length / 50);
-      animateLine(canvas, ctx, bounds, waveStyle, maxAmp, step);
-    } else {
+    if (waveStyle.plot === 'bar') {
       animateBar(ctx, bounds, waveStyle, maxAmp, 1);
     }
   } else {
