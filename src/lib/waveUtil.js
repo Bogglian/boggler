@@ -8,13 +8,11 @@ const color = [oc.red[light], oc.orange[light], oc.yellow[light], oc.lime[light]
                 oc.cyan[light], oc.blue[light], oc.indigo[light], oc.violet[light], oc.grape[light], oc.pink[light]];
 
 const animateBar = (ctx, bounds, style, maxAmp, scaleFactor = 1) => {
-  console.log("1");
   if (scaleFactor <= 100) {
     setTimeout(() => {
       requestAnimationFrame(() =>
-        drawPoints(ctx, bounds, style, maxAmp, scaleFactor / 100)
+        drawPoints(ctx, bounds, style, maxAmp, scaleFactor)
       );
-      animateBar(ctx, bounds, style, maxAmp, scaleFactor + 1);
     }, 1);
   }
 };
@@ -51,10 +49,7 @@ const drawPoint = (ctx, x, y, width, height, type) => {
  * Draw all the points in the wave
  */
 const drawPoints = (ctx, bounds, style, maxAmp, scaleFactor = 1) => {
-  console.log("2");
-  if (style.plot === 'line') {
-    ctx.moveTo(0, maxAmp);
-  }
+  console.log("scaleFactor2 : " + scaleFactor);
   bounds.forEach((bound, i) => {
     ctx.fillStyle = color[i % 12];
     //선의 색
