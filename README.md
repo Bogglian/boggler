@@ -94,6 +94,6 @@ First, read the [our contribution guideline](CONTRIBUTING.md). if you have read 
 
 ## License
 
-we follow MIT and (Some of)MPL 2.0 [License](LICENSE).
+we follow MIT and (partial)MPL 2.0 [License](LICENSE).
 
 우리는 MIT와 (일부)MPL 2.0 [라이선스](LICENSE)를 준수합니다.
