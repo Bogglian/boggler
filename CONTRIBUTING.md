@@ -61,6 +61,10 @@ As a result, I implemented this functionality through this commit. A description
 In addition, it is efficient to substitute any role of function.
 ```
 
+When creating a commit message, avoid duplication of words as much as possible. If there are many overlap of words, the document becomes unnatural.
+
+Also, the title of the commit message should be written in the current form, not the past or future form.
+
 ## Issue Template
 
 We are using [issue templates](.github/ISSUE_TEMPLATE/).
