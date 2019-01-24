@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { calculateWaveData, drawWaveform } from '../../lib/waveUtil';
+import { calculateWaveData, drawWaveform, getDataOfPage } from '../../lib/waveUtil';
 
 class Waveform extends React.Component {
   state = {
-    data: null
+    data: null,
+    nowPage: 0,
+    maxPage: 0
   };
 
   componentWillReceiveProps(next) {
@@ -20,7 +22,12 @@ class Waveform extends React.Component {
         next.waveStyle.barDistance,
         next.waveStyle.pointWidth
       );
-      this.setState({ data }, this.draw);
+      const maxPage = parseInt(next.buffer.duration / 10);
+      console.log(maxPage);
+      this.setState({
+        data: data,
+        maxPage: maxPage
+      }, this.draw);
     } else if (
       Object.keys(next.waveStyle).some(
         k => next.waveStyle[k] !== this.props.waveStyle[k]
@@ -35,19 +42,41 @@ class Waveform extends React.Component {
   }
 
   handleKeyPress = (e) => {
+    const { nowPage, maxPage } = this.state;
     if(e.key === 'ArrowRight') {
       console.log('right');
+      if(nowPage < maxPage){
+        this.draw(false, this.props, nowPage + 1);
+        this.setState({
+          nowPage: nowPage + 1
+        })
+      }
     }
 
     if(e.key === 'ArrowLeft'){
       console.log('left');
+      if(nowPage > 0){
+        this.draw(false, this.props, nowPage - 1);
+        this.setState({
+          nowPage: nowPage - 1
+        })
+      }
     }
   }
 
+
+
   draw = async (animate = true, next) => {
+    const { data, nowPage, maxPage }= this.state;
+    const step = parseInt(data.length / (this.props.buffer.duration / 10));
+    const drawingData = getDataOfPage(nowPage, maxPage, step, data);
+    console.log(nowPage);
+    console.log(step);
+    console.log(data.length);
+    console.log(drawingData);
     const props = next || this.props;
     drawWaveform(
-      this.state.data,
+      drawingData,
       this.canvas,
       props.markerStyle,
       -1,

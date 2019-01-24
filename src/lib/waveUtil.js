@@ -130,3 +130,10 @@ const getBounds = values => {
     { max: -1.0, min: 1.0 }
   );
 };
+
+export const getDataOfPage = (nowPage, maxPage, step, data) => {
+   if (nowPage === maxPage) {
+     return data.slice(nowPage * step, data.length);
+   }
+   return data.slice(nowPage * step, nowPage * step + step);
+};
