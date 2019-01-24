@@ -26,6 +26,7 @@ class Waveform extends React.Component {
       console.log(maxPage);
       this.setState({
         data: data,
+        nowPage: 0,
         maxPage: maxPage
       }, this.draw);
     } else if (
@@ -44,36 +45,30 @@ class Waveform extends React.Component {
   handleKeyPress = (e) => {
     const { nowPage, maxPage } = this.state;
     if(e.key === 'ArrowRight') {
-      console.log('right');
       if(nowPage < maxPage){
-        this.draw(false, this.props, nowPage + 1);
         this.setState({
           nowPage: nowPage + 1
         })
+        this.draw(false, this.props, nowPage + 1);
       }
     }
 
     if(e.key === 'ArrowLeft'){
-      console.log('left');
       if(nowPage > 0){
-        this.draw(false, this.props, nowPage - 1);
         this.setState({
           nowPage: nowPage - 1
         })
+        this.draw(false, this.props, nowPage - 1);
       }
     }
   }
 
 
 
-  draw = async (animate = true, next) => {
-    const { data, nowPage, maxPage }= this.state;
+  draw = async (animate = true, next, nextPage = 0) => {
+    const { data, maxPage }= this.state;
     const step = parseInt(data.length / (this.props.buffer.duration / 10));
-    const drawingData = getDataOfPage(nowPage, maxPage, step, data);
-    console.log(nowPage);
-    console.log(step);
-    console.log(data.length);
-    console.log(drawingData);
+    const drawingData = getDataOfPage(nextPage, maxPage, step, data);
     const props = next || this.props;
     drawWaveform(
       drawingData,
