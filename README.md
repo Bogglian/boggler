@@ -56,7 +56,8 @@ Boggler basically used the React boilerplate [create-react-app](https://github.c
 
 ### OpenSources
 
-- [react-DeepSpeech](https://github.com/Bogglian/react-DeepSpeech) - MPL 2.0
+- [react-DeepSpeech](https://github.com/teamthesol/react-DeepSpeech) - MPL 2.0
+- [node-DeepSpeech](https://github.com/teamthesol/ndoe-DeepSpeech) - MPL 2.0
 - [react](https://github.com/facebook/react) - MIT
 - [node](https://github.com/nodejs/node) - MIT
 
@@ -88,9 +89,9 @@ Boggler basically used the React boilerplate [create-react-app](https://github.c
 
 ## How can I contribute to this project?
 
-먼저, [우리의 컨트리뷰션 가이드라인](CONTRIBUTING.md)을 읽어주세요. 만약 이것을 읽었다면, 이제부터 우리의 프로젝트에 [이슈](https://github.com/Bogglian/boggler/issues)를 작성하거나 [풀리퀘스트](https://github.com/rayleighChild/boggler/pulls)를 통해 기여하실 수 있습니다.
+먼저, [우리의 컨트리뷰션 가이드라인](CONTRIBUTING.md)을 읽어주세요. 만약 이것을 읽었다면, 이제부터 우리의 프로젝트에 [이슈](https://github.com/teamthesol/boggler/issues)를 작성하거나 [풀리퀘스트](https://github.com/teamthesol/boggler/pulls)를 통해 기여하실 수 있습니다.
 
-First, read the [our contribution guideline](CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/Bogglian/boggler/issues) or contribute to it in [pull requests](https://github.com/rayleighChild/boggler/pulls).
+First, read the [our contribution guideline](CONTRIBUTING.md). if you have read it, you can contribute to our project by creating [issues](https://github.com/teamthesol/boggler/issues) or contribute to it in [pull requests](https://github.com/teamthesol/boggler/pulls).
 
 ## License
 

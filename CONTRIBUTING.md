@@ -32,16 +32,20 @@ $ yarn add eslint-config-airbnb
 
 Our commit messages conform to the following rules:
 
-> Please don't write commit messages in the past. also, don't use periods in the title. But, please write in the content.
+> The title of the commit message should be written in the current form, not the past or future form.
+>
+> Don't use periods in the title. Only use content.
+>
+> When creating a commit message, avoid duplication of words as much as possible. If there are many overlap of words, the document becomes unnatural.
 
 ### Commit Style Types
 
-|Title |Describe                                         |Usage - commit title                               |
-|------|-------------------------------------------------|---------------------------------------------------|
-|feat  |Add or Delete a feature.                         |feat: Add feature.js or feat: Add feature name     |
-|fix   |fix the code                                     |fix: Modify code.js                                |
-|docs  |All about documentation.                         |docs: Add title or docs: Modify README.md contents |
-|env   |All about the development environment settings.  |env: Update Package.json or Update Packages        |
+| Title | Describe                                        | Usage - commit title                               |
+| ----- | ----------------------------------------------- | -------------------------------------------------- |
+| feat  | Add or Delete a feature.                        | feat: Add feature.js or feat: Add feature name     |
+| fix   | fix the code                                    | fix: Modify code.js                                |
+| docs  | All about documentation.                        | docs: Add title or docs: Modify README.md contents |
+| env   | All about the development environment settings. | env: Update Package.json or Update Packages        |
 
 ### Commit Contents
 
