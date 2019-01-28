@@ -24,6 +24,10 @@ Sometimes we listen to lectures or record important things. However, there is th
 
 Boggler is being created as a tool to reduce the fatigue of work to convert speech to text.
 
+## Git history by January 28, 2019
+
+[![Git history by January 28, 2019](https://img.youtube.com/vi/mcGezqSdXi8/0.jpg)](https://www.youtube.com/watch?v=mcGezqSdXi8&feature=youtu.be)
+
 ## 💅 스타일 데모 / Style Demo
 
 ### Wave-Demo
