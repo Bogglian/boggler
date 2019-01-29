@@ -1,6 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import Waveform from "./WaveForm";
+import Wrapper from "./Wrapper";
 
 import { VoiceWave, WaveLayout } from "../../styledComponents";
 
@@ -16,10 +16,13 @@ const Wave = ({
   return (
     <WaveLayout>
       <VoiceWave>
-        <Waveform
+        <Wrapper
           width="400"
           height="200"
           buffer={buffer}
+          onPositionChange={pos => console.log(pos)}
+          position={0.5}
+          showPosition={true}
         />
         <ReactPlayer
           url={url}
