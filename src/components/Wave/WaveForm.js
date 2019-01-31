@@ -117,7 +117,7 @@ Waveform.defaultProps = {
     animate: true,
     color: '#38d9a9',
     plot: 'bar',
-    pointWidth: 4,
+    pointWidth: 10,
     barDistance: 2
   },
   width: 500
