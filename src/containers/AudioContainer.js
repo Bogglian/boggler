@@ -31,7 +31,9 @@ class AudioContainer extends Component {
 
   handleReady = () => {};
 
-  handlePosChange = pos => {
+  handlePosChange = () => {
+    const {position} = this.state;
+    this.setState({ position: position + 0.01 })
   };
 
   getFileBuffer = async path => {

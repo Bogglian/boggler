@@ -63,8 +63,6 @@ class Waveform extends React.Component {
     }
   }
 
-
-
   draw = async (animate = true, next, nextPage = 0) => {
     const { data, maxPage }= this.state;
     const step = parseInt(data.length / (this.props.buffer.duration / 10));
