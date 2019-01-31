@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 
 import AudioContainer from "./AudioContainer";
+import InputFileForm from "../components/InputFileForm";
 
 class TestContainer extends Component {
 
   state= {
+    input:`default data`,
     file:null
   }
 
@@ -16,16 +18,11 @@ class TestContainer extends Component {
 
   render() {
     const file = this.state.file;
-
+    const input = this.state.input;
     return (
       <div>
-        <input
-        type="file"
-        name="uploadFile"
-        id="uploadFile"
-        onChange={this.onChangeFile}
-        accept=".wav, .raw, .mp3, .mp4, .flex, .m4a"
-        />
+        <input type="text" value={input} />
+        <InputFileForm onChangeFile={this.onChangeFile}/>
         <AudioContainer file={file} />
       </div>
     );
