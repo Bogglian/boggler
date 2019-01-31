@@ -9,7 +9,8 @@ class Wrapper extends React.Component {
     dragging: false,
     height: this.props.height,
     resizing: null,
-    width: this.props.width
+    width: this.props.width,
+    position: 0
   };
 
   componentDidMount() {
@@ -101,15 +102,20 @@ class Wrapper extends React.Component {
     }
   };
 
+  onPositionChange = position => {
+    console.log(position);
+    this.setState({ position: position});
+  }
+
   render() {
     const {
       buffer,
       markerStyle,
-      position,
       responsive,
       showPosition,
       waveStyle
     } = this.props;
+    const { position } = this.state;
     return (
       <div
         onMouseDown={this.handleMouseDown}
@@ -126,6 +132,7 @@ class Wrapper extends React.Component {
           buffer={buffer}
           height={this.state.height}
           width={this.state.width}
+          handlePositionChange={this.onPositionChange}
         />
         {showPosition &&
           buffer && (
@@ -147,8 +154,6 @@ Wrapper.propTypes = {
     color: PropTypes.string,
     width: PropTypes.number
   }),
-  onPositionChange: PropTypes.func,
-  position: PropTypes.number,
   responsive: PropTypes.bool,
   showPosition: PropTypes.bool,
   waveStyle: PropTypes.shape({
