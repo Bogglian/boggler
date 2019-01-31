@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"yarn nodemon ./src/server/index.js \" \"node scripts/start.js\""
+    "dev": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn start\""
   },
   "eslintConfig": {
     "extends": [
