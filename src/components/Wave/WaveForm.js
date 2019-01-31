@@ -23,7 +23,6 @@ class Waveform extends React.Component {
         next.waveStyle.pointWidth
       );
       const maxPage = parseInt(next.buffer.duration / 10);
-      console.log(maxPage);
       this.setState({
         data: data,
         nowPage: 0,
@@ -35,6 +34,8 @@ class Waveform extends React.Component {
       )
     ) {
       this.draw(false, next);
+    } else if (this.verifyDrawableNextPage(next)) {
+      this.drawNextPage();
     }
   }
 
@@ -43,24 +44,37 @@ class Waveform extends React.Component {
   }
 
   handleKeyPress = (e) => {
-    const { nowPage, maxPage } = this.state;
     if(e.key === 'ArrowRight') {
-      if(nowPage < maxPage){
-        this.setState({
-          nowPage: nowPage + 1
-        })
-        this.draw(false, this.props, nowPage + 1);
-      }
+      this.drawNextPage();
     }
 
     if(e.key === 'ArrowLeft'){
-      if(nowPage > 0){
-        this.setState({
-          nowPage: nowPage - 1
-        })
-        this.draw(false, this.props, nowPage - 1);
-      }
+      this.drawPreviousPage();
     }
+  }
+
+  drawNextPage = () => {
+    const { nowPage, maxPage } = this.state;
+    if(nowPage < maxPage){
+      this.setState({
+        nowPage: nowPage + 1
+      })
+      this.draw(false, this.props, nowPage + 1);
+    }
+  }
+
+  drawPreviousPage = () => {
+    const { nowPage } = this.state;
+    if(nowPage > 0){
+      this.setState({
+        nowPage: nowPage - 1
+      })
+      this.draw(false, this.props, nowPage - 1);
+    }
+  }
+
+  verifyDrawableNextPage = (next) => {
+    return ( next.seconds % 100 === 0 ) && ( next.seconds / 100  > 0 );
   }
 
   draw = async (animate = true, next, nextPage = 0) => {
@@ -119,7 +133,9 @@ Waveform.propTypes = {
     pointWidth: PropTypes.number,
     barDistance: PropTypes.number
   }),
-  width: PropTypes.number
+  width: PropTypes.number,
+  seconds: PropTypes.number,
+  onWaveFormChange: PropTypes.func
 };
 
 export default Waveform;

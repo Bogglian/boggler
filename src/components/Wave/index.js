@@ -6,10 +6,12 @@ import { VoiceWave, WaveLayout } from "../../styledComponents";
 
 const Wave = ({
   url,
+  seconds,
   onBuffer,
   onReady,
   onPlay,
   onPosChange,
+  onWaveFormChange,
   buffer,
   position
 }) => {
@@ -21,6 +23,8 @@ const Wave = ({
           height="200"
           buffer={buffer}
           position={position}
+          seconds={seconds}
+          onWaveFormChange={onWaveFormChange}
           showPosition={true}
         />
         <ReactPlayer

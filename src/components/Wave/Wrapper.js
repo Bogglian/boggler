@@ -104,6 +104,7 @@ class Wrapper extends React.Component {
   render() {
     const {
       buffer,
+      seconds,
       markerStyle,
       position,
       responsive,
@@ -124,6 +125,7 @@ class Wrapper extends React.Component {
       >
         <WaveForm
           buffer={buffer}
+          seconds={seconds}
           height={this.state.height}
           width={this.state.width}
         />
