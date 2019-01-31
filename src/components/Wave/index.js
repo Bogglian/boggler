@@ -20,8 +20,6 @@ const Wave = ({
           width="400"
           height="200"
           buffer={buffer}
-          onPositionChange={pos => console.log(pos)}
-          position={0.5}
           showPosition={true}
         />
         <ReactPlayer
