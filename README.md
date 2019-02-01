@@ -60,7 +60,6 @@ Boggler basically used the React boilerplate [create-react-app](https://github.c
 
 ### OpenSources
 
-- [react-DeepSpeech](https://github.com/teamthesol/react-DeepSpeech) - MPL 2.0
 - [node-DeepSpeech](https://github.com/teamthesol/ndoe-DeepSpeech) - MPL 2.0
 - [react](https://github.com/facebook/react) - MIT
 - [node](https://github.com/nodejs/node) - MIT
