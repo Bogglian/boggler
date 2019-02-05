@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import AudioContainer from "./AudioContainer";
 import InputFileForm from "../components/InputFileForm";
+import {Editor} from "../components/Codemirror";
 
 class TestContainer extends Component {
 
@@ -16,7 +17,7 @@ class TestContainer extends Component {
       file: e.target.files[0]
     });
   }
-
+  
   onFileSubmit = () => {
     const formData = new FormData();
     formData.append("audiofile", this.state.file);
@@ -31,18 +32,25 @@ class TestContainer extends Component {
     })
   }
 
-  handleAddResult=value=>{
+  handleAddResult = value => {
     this.setState(prevState => ({input: prevState.input + value}));
   }
 
+  handleBeforeChange = (editor, data, value) => {
+    this.setState({ input: value });
+  };
+  
   render() {
     const file = this.state.file;
     const input = this.state.input;
     return (
       <div>
-        <input type="text" value={input} />
-        <input type="button" value="submit" onClick={this.onFileSubmit} />
+        <Editor
+          input={this.state.input}
+          onBeforeChange={this.handleBeforeChange}
+        />
         <InputFileForm onChangeFile={this.onChangeFile} />
+        <input type="button" value="submit" onClick={this.onFileSubmit} />
         <AudioContainer file={file} />
       </div>
     );
