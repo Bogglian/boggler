@@ -51,6 +51,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "dotenv": "^6.2.0",
     "wget-improved": "^3.0.2"
   }
 }

@@ -27,3 +27,6 @@ models.tar.gz
 audio.tar.gz
 models/
 audio/
+
+# dotenv for deepspeech
+.env
