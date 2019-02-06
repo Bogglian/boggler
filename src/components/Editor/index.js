@@ -18,14 +18,12 @@ class Editor extends Component {
     };
 
     return (
-      <div>
-        <CodeMirror
-          width="100%"
-          value={input}
-          onBeforeChange={onBeforeChange}
-          options={options}
-        />
-      </div>
+      <CodeMirror
+        width="100%"
+        value={input}
+        onBeforeChange={onBeforeChange}
+        options={options}
+      />
     );
   }
 }
