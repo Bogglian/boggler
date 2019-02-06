@@ -4,6 +4,7 @@ import axios from 'axios';
 import AudioContainer from "./AudioContainer";
 import InputFileForm from "../components/InputFileForm";
 import {Editor} from "../components/Codemirror";
+import {Viewer} from "../components/Markdown";
 
 class TestContainer extends Component {
 
@@ -45,13 +46,14 @@ class TestContainer extends Component {
     const input = this.state.input;
     return (
       <div>
+        <InputFileForm onChangeFile={this.onChangeFile} />
+        <input type="button" value="submit" onClick={this.onFileSubmit} />
+        <AudioContainer file={file} />
         <Editor
           input={this.state.input}
           onBeforeChange={this.handleBeforeChange}
         />
-        <InputFileForm onChangeFile={this.onChangeFile} />
-        <input type="button" value="submit" onClick={this.onFileSubmit} />
-        <AudioContainer file={file} />
+        <Viewer input={this.state.input} />
       </div>
     );
   }
