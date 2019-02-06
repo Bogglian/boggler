@@ -6,14 +6,7 @@ class Viewer extends Component {
     const { input } = this.props;
 
     return (
-      <div>
-        <ReactMarkdown
-          sourcePos={false}
-          source={input}
-          skipHtml
-          escapeHtml
-        />
-      </div>
+      <ReactMarkdown sourcePos={false} source={input} skipHtml escapeHtml />
     );
   }
 }
