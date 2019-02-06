@@ -5,7 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
-    "codemirror": "^5.43.0", 
+    "codemirror": "^5.43.0",
     "concurrently": "^4.1.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.5.0",
@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn start\""
+    "dev": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn start\"",
+    "pre": "node preinstall.js"
   },
   "eslintConfig": {
     "extends": [
@@ -48,5 +49,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "wget-improved": "^3.0.2"
+  }
 }

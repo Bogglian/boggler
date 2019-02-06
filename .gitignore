@@ -22,6 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Deepspeech
+# Deepspeech files
+models.tar.gz
+audio.tar.gz
 models/
 audio/
