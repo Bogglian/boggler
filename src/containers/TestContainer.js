@@ -3,12 +3,14 @@ import axios from 'axios';
 
 import AudioContainer from "./AudioContainer";
 import InputFileForm from "../components/InputFileForm";
-import {Editor} from "../components/Codemirror";
+import {Editor} from "../components/Editor";
+import {Viewer} from "../components/Viewer";
 
 class TestContainer extends Component {
 
   state= {
-    input:`default data`,
+    input:
+    '# Headline\n\n## sub-title\n\n* option\n  * sub-option1\n  * sub-option2\n\n> tip\n>\n> tipe contents\n\n\n```\ntest conetnts\n\ntest input\n\n```',
     file:null
   }
 
@@ -45,13 +47,14 @@ class TestContainer extends Component {
     const input = this.state.input;
     return (
       <div>
+        <InputFileForm onChangeFile={this.onChangeFile} />
+        <input type="button" value="submit" onClick={this.onFileSubmit} />
+        <AudioContainer file={file} />
         <Editor
           input={this.state.input}
           onBeforeChange={this.handleBeforeChange}
         />
-        <InputFileForm onChangeFile={this.onChangeFile} />
-        <input type="button" value="submit" onClick={this.onFileSubmit} />
-        <AudioContainer file={file} />
+        <Viewer input={this.state.input} />
       </div>
     );
   }
