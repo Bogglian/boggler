@@ -3,8 +3,8 @@ import axios from 'axios';
 
 import AudioContainer from "./AudioContainer";
 import InputFileForm from "../components/InputFileForm";
-import {Editor} from "../components/Codemirror";
-import {Viewer} from "../components/Markdown";
+import {Editor} from "../components/Editor";
+import {Viewer} from "../components/Viewer";
 
 class TestContainer extends Component {
 
