@@ -54,7 +54,7 @@ class Wave extends Component {
             url={url}
             width="100%"
             height="100%"
-            progressInterval={100}
+            progressInterval={70}
             onProgress={this.handlePosChange}
             onBuffer={onBuffer}
             onReady={onReady}
