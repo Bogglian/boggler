@@ -3,6 +3,7 @@ export {
   ButtonLayout,
   MarkdownLayout,
   Positioner,
+  ProgressLayout,
   ShadowedBox,
   StyledInput,
   WaveLayout,

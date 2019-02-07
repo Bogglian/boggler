@@ -60,6 +60,14 @@ const Positioner = styled.div`
   }
 `;
 
+const ProgressLayout = styled.div`
+  & {
+    width: 80%;
+    height: 100%;
+    padding: 0.5%;
+  }
+`;
+
 const ShadowedBox = styled.div`
   & {
     width: 100%;
@@ -153,6 +161,14 @@ const ShadowedBox = styled.div`
       left: 43.8%;
     }
 
+    &.wave-box-stt {
+      width: 100%;
+      height: 8rem;
+      border-radius: 4px;
+      position: relative;
+      display: inherite;
+    }
+
     &.none { display: none; }
 
   }
@@ -203,7 +219,8 @@ export {
   ButtonLayout,
   MarkdownLayout,
   Positioner,
+  ProgressLayout,
   ShadowedBox,
   StyledInput,
-  WaveLayout,
+  WaveLayout
 };
