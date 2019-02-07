@@ -8,9 +8,10 @@ import MarkdownContainer from './MarkdownContainer';
 class TestContainer extends Component {
   state = {
     input:
-      '# Headline\n\n## sub-title\n\n* option\n  * sub-option1\n  * sub-option2\n\n> tip\n>\n> tipe contents\n\n\n```\ntest conetnts\n\ntest input\n\n```',
-    file: null,
-  };
+    '# Headline\n\n## sub-title\n\n* option\n  * sub-option1\n  * sub-option2\n\n> tip\n>\n> tipe contents\n\n\n```\ntest conetnts\n\ntest input\n\n```',
+    file:null,
+    progress:false
+  }
 
   onChangeFile = e => {
     this.setState({
@@ -27,12 +28,19 @@ class TestContainer extends Component {
         'Content-Type': 'multipart/form-data',
       },
     };
-    axios
-      .post(`http://localhost:8080/deepspeech`, formData, headers)
-      .then(result => {
-        this.handleAddResult('\n```\n' + result.data.ds + '\n```\n');
-      });
-  };
+    this.handleToggleProgress()
+    axios.post(`http://localhost:8080/deepspeech`, formData, headers)
+    .then(result=> {
+      this.handleAddResult("\n```\n"+result.data.ds+"\n```\n")
+      this.handleToggleProgress()
+    })
+  }
+
+  handleToggleProgress= () => {
+    this.setState(prevState => ({
+      progress: !prevState.progress
+    }))
+  }
 
   handleAddResult = value => {
     this.setState(prevState => ({ input: prevState.input + value }));
@@ -43,17 +51,21 @@ class TestContainer extends Component {
   };
 
   render() {
-    const file = this.state.file;
-    const input = this.state.input;
+    const {
+      file,
+      input,
+      progress
+    } = this.state;
     return (
       <div>
         <AudioContainer file={file} />
         <InputFileForm
+          progress={progress}
           onChange={this.onChangeFile}
           onClick={this.onFileSubmit}
         />
         <MarkdownContainer
-          input={this.state.input}
+          input={input}
           onBeforeChange={this.handleBeforeChange}
         />
       </div>
