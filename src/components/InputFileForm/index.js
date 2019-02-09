@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import { ButtonLayout, Positioner, StyledInput, ProgressLayout } from '../../styledComponents';
-import {AudioProgressbar} from '../AudioProgressbar'
+import { ButtonLayout, Positioner, StyledInput } from '../../styledComponents';
+import { AudioProgressbar } from '../AudioProgressbar';
 
 class InputFileForm extends Component {
   render() {
     const { onChange, onClick, progress } = this.props;
     return (
       <Positioner>
-        <ProgressLayout>
-          <AudioProgressbar className={progress ? "-stt " : "none"} />
-        </ProgressLayout>
         <ButtonLayout>
           <form>
             <label htmlFor="file-upload">UPLOAD</label>
@@ -27,6 +24,7 @@ class InputFileForm extends Component {
               onClick={onClick}
             />
           </form>
+          <AudioProgressbar className={progress ? '-stt ' : 'none'} />
         </ButtonLayout>
       </Positioner>
     );
