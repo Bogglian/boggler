@@ -61,7 +61,7 @@ class AudioContainer extends Component {
     } = this.state;
     return (
       <Positioner clasName="audio">
-        <AudioProgressbar className={buffering ? "" : "none"} />
+        <AudioProgressbar className={buffering ? " " : "none"} />
         <AudioLayout>
           <ShadowedBox>
             <div className="voicewave-box">
