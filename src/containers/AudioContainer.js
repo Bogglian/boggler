@@ -1,21 +1,17 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { AudioProgressbar, Wave } from "../components";
-import {
-  AudioLayout,
-  Positioner,
-  ShadowedBox
-} from "../styledComponents";
-import { getAudioBuffer, getContext } from "../lib/utils";
+import { AudioProgressbar, Wave } from '../components';
+import { AudioLayout, Positioner, ShadowedBox } from '../styledComponents';
+import { getAudioBuffer, getContext } from '../lib/utils';
 
 class AudioContainer extends Component {
-  state= {
+  state = {
     buffering: false,
-    url: "",
+    url: '',
     buffer: null,
     position: 0,
-    seconds: 0
-  }
+    seconds: 0,
+  };
 
   componentWillReceiveProps(next) {
     if (next.file !== this.props.file) {
@@ -24,22 +20,20 @@ class AudioContainer extends Component {
     }
   }
 
-  handleBuffer = () => {
-  };
+  handleBuffer = () => {};
 
-  handlePlay = () => {
-  };
+  handlePlay = () => {};
 
   handleReady = () => {};
 
   handlePosChange = () => {
-    const {position, seconds} = this.state;
+    const { position, seconds } = this.state;
     const nowSeconds = seconds + 1;
-    if(nowSeconds % 100 === 0){
+    if (nowSeconds % 100 === 0) {
       this.setState({ position: 0, seconds: nowSeconds });
       return;
     }
-    this.setState({ position: position + 0.01, seconds: nowSeconds});
+    this.setState({ position: position + 0.01, seconds: nowSeconds });
   };
 
   getFileBuffer = async path => {
@@ -47,21 +41,14 @@ class AudioContainer extends Component {
     const fileBuffer = await getAudioBuffer(path, context);
     this.setState({
       buffer: fileBuffer,
-      url: path
-    })
+      url: path,
+    });
   };
 
   render() {
-    const {
-      buffering,
-      url,
-      buffer,
-      seconds,
-      position
-    } = this.state;
+    const { buffering, url, buffer, seconds, position } = this.state;
     return (
       <Positioner clasName="audio">
-        <AudioProgressbar className={buffering ? " " : "none"} />
         <AudioLayout>
           <ShadowedBox>
             <div className="voicewave-box">
