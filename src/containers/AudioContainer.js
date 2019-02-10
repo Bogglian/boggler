@@ -14,17 +14,12 @@ class AudioContainer extends Component {
   };
 
   componentWillReceiveProps(next) {
-    if (next.file !== this.props.file) {
+    if (next.file && next.file !== this.props.file) {
       const url = window.URL.createObjectURL(next.file);
+
       this.getFileBuffer(url);
     }
   }
-
-  handleBuffer = () => {};
-
-  handlePlay = () => {};
-
-  handleReady = () => {};
 
   handlePosChange = () => {
     const { position, seconds } = this.state;
