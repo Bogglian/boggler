@@ -1,4 +1,4 @@
-# 🎙 보글러 / Boggler
+# 🎙 보글러
 
 [English](README.md)
 
@@ -29,10 +29,16 @@ CodeSandbox에서 본 프로젝트의 핵심 도구인 deepSpeech와 waveform �
 ## 🏃‍♂️🏃‍♀️ 손쉬운 시작
 
 > \$ yarn // or npm install
-> // Installing node modules
 >
-> \$ yarn start
-> // Start the frontend and the backend Server
+> // 노드 모듈 설치
+>
+> \$ yarn pre // or npm run pre
+>
+> // 사전에 필요한 파일(models, audio samples) 설치와 tar.gz 형식 해제(unzip)
+>
+> \$ yarn start // or npm run start
+>
+> // 프론트 엔드 서버와 백 엔드 서버 실행
 
 ## 🚀 사용 사례
 

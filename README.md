@@ -24,14 +24,20 @@ Boggler is being created as a tool to reduce the fatigue of work to convert spee
 
 CodeSandbox does not support the core tools in this project, the deepSpeech and the waveform package, so you can only see style demos.
 
-[![Edit Boggler](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6n2orxr5yz)
+[![Edit Boggler](https://codesandbox.io/static/img/play-codesandbox.svg)](https://6n2orxr5yz.codesandbox.io/)
 
 ## 🏃‍♂️🏃‍♀️ Quickstart
 
 > \$ yarn // or npm install
+>
 > // Installing node modules
 >
-> \$ yarn start
+> \$ yarn pre // or npm run pre
+>
+> // Installing pre-files(models, audio samples) and unzip tar.gz
+>
+> \$ yarn start // or npm run start
+>
 > // Start the frontend and the backend Server
 
 ## 🚀 Usage
