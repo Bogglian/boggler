@@ -4,25 +4,61 @@ import { AudioProgressbar } from '../AudioProgressbar';
 
 class InputFileForm extends Component {
   render() {
-    const { onChange, onClick, progress } = this.props;
-    return (
-      <Positioner>
-        <ButtonLayout>
-          <form>
-            <label htmlFor="file-upload">UPLOAD</label>
-            <StyledInput
-              type="file"
-              name="upload"
-              id="file-upload"
-              onChange={onChange}
-              accept=".wav"
-            />
-            <StyledInput
-              id="file-submit"
+    const { file, onChange, onClick, progress } = this.props;
+      const submit = () => {
+        if(!file||progress){
+          return(
+            <StyledInput 
+              id="file-submit-block"
               type="button"
               value="SUBMIT"
               onClick={onClick}
+              disabled 
             />
+          )
+        }else{
+          return(
+            <StyledInput 
+              id="file-submit"
+              type="button"
+              value="SUBMIT"
+              onClick={onClick} 
+            />
+          )
+        }
+      }
+    const fileUpload = () =>{
+      if(progress){
+        return(
+          <StyledInput
+            type="file"
+            name="upload"
+            id="file-upload-block"
+            onChange={onChange}
+            accept=".wav"
+            disabled
+          />
+        )
+      }else{
+        return(
+          <StyledInput
+            type="file"
+            name="upload"
+            id="file-upload"
+            onChange={onChange}
+            accept=".wav"
+          />
+        )
+      }
+    }
+
+    return (
+      <Positioner>
+        <ButtonLayout id={progress ? 'block' : 'hover'}>
+          <form>
+            <label htmlFor="file-upload">UPLOAD</label>
+            {fileUpload()}
+            {submit()}
           </form>
           <AudioProgressbar className={progress ? '-stt ' : 'none'} />
         </ButtonLayout>

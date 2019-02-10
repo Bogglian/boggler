@@ -60,6 +60,7 @@ class TestContainer extends Component {
       <div>
         <AudioContainer file={file} />
         <InputFileForm
+          file={file}
           progress={progress}
           onChange={this.onChangeFile}
           onClick={this.onFileSubmit}

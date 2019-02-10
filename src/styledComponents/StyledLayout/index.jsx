@@ -20,7 +20,8 @@ const ButtonLayout = styled.div`
     form {
       display: inherit;
     }
-
+  }
+  &#hover {
     label {
       ${shadow(1)};
       border-radius: 0.2em;
@@ -39,6 +40,20 @@ const ButtonLayout = styled.div`
       :active {
         background-color: ${oc.cyan[3]};
       }
+    }
+  }
+  &#block {
+    label {
+      ${shadow(1)};
+      border-radius: 0.2em;
+      background-color: ${oc.cyan[3]};
+      display: inherit;
+      padding: 0.6em 0.8em;
+      text-align: center;
+      font-size: 1.3em;
+      margin-right: 2%;
+      font-weight: bold;
+      color: ${oc.gray[6]};
     }
   }
 `;
@@ -188,6 +203,10 @@ const StyledInput = styled.input`
     display: none;
   }
 
+  &#file-upload-block {
+    display: none;
+  }
+
   &#file-submit {
     font-weight: bold;
     background-color: ${oc.cyan[3]};
@@ -204,6 +223,16 @@ const StyledInput = styled.input`
     :active {
       background-color: ${oc.cyan[3]};
     }
+  }
+
+  &#file-submit-block {
+    font-weight: bold;
+    background-color: ${oc.cyan[3]};
+    border-radius: 0.2em;
+    margin-right: 2%;
+    display: inherit;
+    padding: 0.6em 0.8em;
+    font-size: 1.2em;
   }
 `;
 
