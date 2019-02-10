@@ -28,7 +28,11 @@ CodeSandbox does not support the core tools in this project, the deepSpeech and 
 
 ## 🏃‍♂️🏃‍♀️ Quickstart
 
-> Coming soon.
+> \$ yarn // or npm install
+> // Installing node modules
+>
+> \$ yarn start
+> // Start the frontend and the backend Server
 
 ## 🚀 Usage
 

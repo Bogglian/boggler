@@ -28,7 +28,11 @@ CodeSandbox에서 본 프로젝트의 핵심 도구인 deepSpeech와 waveform �
 
 ## 🏃‍♂️🏃‍♀️ 손쉬운 시작
 
-> 준비중입니다.
+> \$ yarn // or npm install
+> // Installing node modules
+>
+> \$ yarn start
+> // Start the frontend and the backend Server
 
 ## 🚀 사용 사례
 
