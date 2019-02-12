@@ -14,8 +14,9 @@ class AudioContainer extends Component {
   };
 
   componentWillReceiveProps(next) {
-    if (next.file !== this.props.file) {
+    if (next.file && next.file !== this.props.file) {
       const url = window.URL.createObjectURL(next.file);
+
       this.getFileBuffer(url);
     }
   }
@@ -54,14 +55,10 @@ class AudioContainer extends Component {
             <div className="voicewave-box">
               <Wave
                 url={url}
-                seconds={seconds}
                 onBuffer={this.handleBuffer}
                 onReady={this.handleReady}
                 onPlay={this.handlePlay}
-                onPosChange={pos => this.handlePosChange(pos)}
-                onWaveFormChange={this.handleWaveFormChange}
                 buffer={buffer}
-                position={position}
               />
             </div>
           </ShadowedBox>

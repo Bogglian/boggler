@@ -34,8 +34,8 @@ class Waveform extends React.Component {
       )
     ) {
       this.draw(false, next);
-    } else if (this.verifyDrawableNextPage(next)) {
-      this.drawNextPage();
+    } else if (this.verifyDrawablePage(next.seconds) && next.seconds !== this.props.seconds) {
+      this.drawPage(parseInt(next.seconds / 100));
     }
   }
 
@@ -53,28 +53,30 @@ class Waveform extends React.Component {
     }
   }
 
+  drawPage = (page) => {
+    this.setState({
+      nowPage: page
+    });
+    this.draw(false, this.props, page);
+  }
+
   drawNextPage = () => {
     const { nowPage, maxPage } = this.state;
     if(nowPage < maxPage){
-      this.setState({
-        nowPage: nowPage + 1
-      })
-      this.draw(false, this.props, nowPage + 1);
+      this.drawPage(nowPage + 1);
     }
   }
 
   drawPreviousPage = () => {
     const { nowPage } = this.state;
     if(nowPage > 0){
-      this.setState({
-        nowPage: nowPage - 1
-      })
-      this.draw(false, this.props, nowPage - 1);
+      this.drawPage(nowPage - 1);
     }
   }
 
-  verifyDrawableNextPage = (next) => {
-    return ( next.seconds % 100 === 0 ) && ( next.seconds / 100  > 0 );
+  verifyDrawablePage = (seconds) => {
+    const { nowPage } = this.state;
+    return ( seconds % 100 === 0 || parseInt(seconds / 100) !== nowPage);
   }
 
   draw = async (animate = true, next, nextPage = 0) => {
@@ -117,7 +119,7 @@ Waveform.defaultProps = {
     animate: true,
     color: '#38d9a9',
     plot: 'bar',
-    pointWidth: 4,
+    pointWidth: 10,
     barDistance: 2
   },
   width: 500
