@@ -25,7 +25,7 @@
   "scripts": {
     "start": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn start\"",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "dev": "react-scripts start",
     "pre": "node preinstall.js"
@@ -52,6 +52,7 @@
   ],
   "devDependencies": {
     "dotenv": "^6.2.0",
+    "enzyme": "^3.8.0",
     "wget-improved": "^3.0.2"
   }
 }
