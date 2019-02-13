@@ -14,9 +14,11 @@ class TestContainer extends Component {
   }
 
   onChangeFile = e => {
-    this.setState({
-      file: e.target.files[0],
-    });
+    if(e.target.files.length>0){
+      this.setState({
+        file: e.target.files[0],
+      });
+    }
   };
 
   onFileSubmit = () => {
