@@ -1,14 +1,6 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-import App from './App';
-
-describe('App Component', () => {
-  describe('user possibly create a App component.', () => {
-    it('should render a App', () => {
-      const component = shallow(<App />);
-
-      expect(component).toMatchInlineSnapshot(`
+exports[`App Component user possibly create a App component. should render a App 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App />,
@@ -63,7 +55,4 @@ ShallowWrapper {
     },
   },
 }
-`);
-    });
-  });
-});
+`;
