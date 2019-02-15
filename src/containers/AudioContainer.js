@@ -49,7 +49,7 @@ class AudioContainer extends Component {
   render() {
     const { buffering, url, buffer, seconds, position } = this.state;
     return (
-      <Positioner clasName="audio">
+      <Positioner className="audio">
         <AudioLayout>
           <ShadowedBox>
             <div className="voicewave-box">
