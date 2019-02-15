@@ -83,8 +83,9 @@ const ProgressLayout = styled.div`
   & {
     width: 100%;
     height: 100%;
-    display: inherit;
+    display: block;
     text-align: center;
+    margin-top: -15px; 
   }
 `;
 
