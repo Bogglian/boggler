@@ -15,8 +15,14 @@ const VoiceWave = styled.div`
   & {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
+    display: block;
+    
+  }
+  
+  .player-wrapper {
+    height: 3%;
+    width: 97%;
+    position : absolute;
   }
 `;
 
