@@ -9,7 +9,7 @@ class Wrapper extends React.Component {
     dragging: false,
     height: this.props.height,
     resizing: null,
-    width: this.props.width
+    width: this.props.width,
   };
 
   componentDidMount() {
@@ -50,12 +50,12 @@ class Wrapper extends React.Component {
       if (height !== this.state.height || width !== this.state.width) {
         this.setState({
           height,
-          width
+          width,
         });
       }
     }, 200);
     this.setState({
-      resizing
+      resizing,
     });
   };
 
@@ -79,7 +79,7 @@ class Wrapper extends React.Component {
     this.setState({ dragging: true });
     if (this.props.onPositionChange) {
       this.props.onPositionChange(
-        this.getMousePosition(e) / this.wrapper.offsetWidth
+        this.getMousePosition(e) / this.wrapper.offsetWidth,
       );
     }
   };
@@ -87,7 +87,7 @@ class Wrapper extends React.Component {
   handleMouseMove = e => {
     if (this.state.dragging && this.props.onPositionChange) {
       this.props.onPositionChange(
-        this.getMousePosition(e) / this.wrapper.offsetWidth
+        this.getMousePosition(e) / this.wrapper.offsetWidth,
       );
     }
   };
@@ -96,7 +96,7 @@ class Wrapper extends React.Component {
     this.setState({ dragging: false });
     if (this.props.onPositionChange) {
       this.props.onPositionChange(
-        this.getMousePosition(e) / this.wrapper.offsetWidth
+        this.getMousePosition(e) / this.wrapper.offsetWidth,
       );
     }
   };
@@ -109,7 +109,7 @@ class Wrapper extends React.Component {
       position,
       responsive,
       showPosition,
-      waveStyle
+      waveStyle,
     } = this.props;
     return (
       <div
@@ -120,7 +120,7 @@ class Wrapper extends React.Component {
         style={{
           height: responsive ? '100%' : this.props.height + 'px',
           position: 'relative',
-          width: responsive ? '100%' : this.props.width + 'px'
+          width: responsive ? '100%' : this.props.width + 'px',
         }}
       >
         <WaveForm
@@ -147,7 +147,7 @@ Wrapper.propTypes = {
   height: PropTypes.number,
   markerStyle: PropTypes.shape({
     color: PropTypes.string,
-    width: PropTypes.number
+    width: PropTypes.number,
   }),
   onPositionChange: PropTypes.func,
   position: PropTypes.number,
@@ -156,9 +156,9 @@ Wrapper.propTypes = {
   waveStyle: PropTypes.shape({
     animate: PropTypes.bool,
     color: PropTypes.string,
-    pointWidth: PropTypes.number
+    pointWidth: PropTypes.number,
   }),
-  width: PropTypes.number
+  width: PropTypes.number,
 };
 
 export default Wrapper;
