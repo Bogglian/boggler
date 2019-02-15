@@ -33,7 +33,7 @@ class TestContainer extends Component {
     this.handleToggleProgress()
     axios.post(`http://localhost:8080/deepspeech`, formData, headers)
     .then(result=> {
-      this.handleAddResult("\n```\n"+result.data.ds+"\n```\n")
+      this.handleAddResult("\n---\n##### "+result.data.ds+"\n---\n")
       this.handleToggleProgress()
     })
   }
