@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import FileDownload from "js-file-download"
 
 import { InputFileForm } from '../components';
 import AudioContainer from './AudioContainer';
@@ -38,6 +39,21 @@ class TestContainer extends Component {
     })
   }
 
+  onConvertToPDF = () => {
+    const markdownText = this.state.input;
+    this.handleToggleProgress()
+    axios({
+      method: 'post',
+      url: `http://localhost:8080/markdown/conversion/pdf`,
+      data: {markdownText: markdownText},
+      responseType: 'blob'
+    })
+    .then(result=> {
+      FileDownload(result.data, 'test.pdf');
+      this.handleToggleProgress()
+    })
+  }
+
   handleToggleProgress= () => {
     this.setState(prevState => ({
       progress: !prevState.progress
@@ -66,6 +82,7 @@ class TestContainer extends Component {
           progress={progress}
           onChange={this.onChangeFile}
           onClick={this.onFileSubmit}
+          onConvertToPDF={this.onConvertToPDF}
         />
         <MarkdownContainer
           input={input}

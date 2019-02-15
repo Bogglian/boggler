@@ -1,7 +1,10 @@
 const express = require('express')
 const bodyParser = require("body-parser")
 const fileUpload = require("express-fileupload")
+const markdownpdf = require("markdown-pdf")
+
 const deepspeech = require('./router/deepspeechRoute')
+const markdown = require('./router/markdownRoute')
 const app = express()
 
 //middleware
@@ -20,6 +23,7 @@ app.use(function(req, res, next) {
 
 //router
 app.use("/deepspeech", deepspeech)
+app.use("/markdown/conversion", markdown)
 
 //next함수
 app.use(function(err, req, res, next) {
