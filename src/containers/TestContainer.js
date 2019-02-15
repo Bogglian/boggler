@@ -80,6 +80,7 @@ class TestContainer extends Component {
           progress={progress}
           onChange={this.onChangeFile}
           onClick={this.onFileSubmit}
+          onConvertToPDF={this.onConvertToPDF}
         />
         <MarkdownContainer
           input={input}
