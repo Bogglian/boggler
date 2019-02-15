@@ -73,6 +73,10 @@ const Positioner = styled.div`
     height: 100%;
     padding: 0.3%;
   }
+    
+    &.audio {
+      padding-bottom : 0.5%;
+    }
 `;
 
 const ProgressLayout = styled.div`
