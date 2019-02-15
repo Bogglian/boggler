@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import FileDownload from "js-file-download"
 
 import { InputFileForm } from '../components';
 import AudioContainer from './AudioContainer';
@@ -32,6 +33,21 @@ class TestContainer extends Component {
     axios.post(`http://localhost:8080/deepspeech`, formData, headers)
     .then(result=> {
       this.handleAddResult("\n```\n"+result.data.ds+"\n```\n")
+      this.handleToggleProgress()
+    })
+  }
+
+  onConvertToPDF = () => {
+    const markdownText = this.state.input;
+    this.handleToggleProgress()
+    axios({
+      method: 'post',
+      url: `http://localhost:8080/markdown/conversion/pdf`,
+      data: {markdownText: markdownText},
+      responseType: 'blob'
+    })
+    .then(result=> {
+      FileDownload(result.data, 'test.pdf');
       this.handleToggleProgress()
     })
   }
