@@ -48,8 +48,8 @@ class TestContainer extends Component {
       data: {markdownText: markdownText},
       responseType: 'blob'
     })
-    .then(result=> {
-      FileDownload(result.data, 'test.pdf');
+    .then(response=> {
+      FileDownload(response.data, 'test.pdf');
       this.handleToggleProgress()
     })
   }

@@ -62,7 +62,7 @@ class InputFileForm extends Component {
             <StyledInput
               id="file-submit"
               type="button"
-              value="ToPDF"
+              value="TO PDF"
               onClick={onConvertToPDF}
             />
           </form>
