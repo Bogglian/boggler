@@ -15,9 +15,11 @@ class TestContainer extends Component {
   }
 
   onChangeFile = e => {
-    this.setState({
-      file: e.target.files[0],
-    });
+    if(e.target.files.length>0){
+      this.setState({
+        file: e.target.files[0],
+      });
+    }
   };
 
   onFileSubmit = () => {
@@ -32,7 +34,7 @@ class TestContainer extends Component {
     this.handleToggleProgress()
     axios.post(`http://localhost:8080/deepspeech`, formData, headers)
     .then(result=> {
-      this.handleAddResult("\n```\n"+result.data.ds+"\n```\n")
+      this.handleAddResult("\n---\n##### "+result.data.ds+"\n---\n")
       this.handleToggleProgress()
     })
   }

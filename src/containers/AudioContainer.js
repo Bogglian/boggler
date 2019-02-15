@@ -8,7 +8,9 @@ class AudioContainer extends Component {
   state = {
     buffering: false,
     url: '',
-    buffer: null
+    buffer: null,
+    position: 0,
+    seconds: 0,
   };
 
   componentWillReceiveProps(next) {
@@ -19,14 +21,21 @@ class AudioContainer extends Component {
     }
   }
 
-  handleReady = () => {
-  }
+  handleBuffer = () => {};
 
-  handlePlay = () => {
-  }
+  handlePlay = () => {};
 
-  handleBuffer = () => {
-  }
+  handleReady = () => {};
+
+  handlePosChange = () => {
+    const { position, seconds } = this.state;
+    const nowSeconds = seconds + 1;
+    if (nowSeconds % 100 === 0) {
+      this.setState({ position: 0, seconds: nowSeconds });
+      return;
+    }
+    this.setState({ position: position + 0.01, seconds: nowSeconds });
+  };
 
   getFileBuffer = async path => {
     const context = getContext();
@@ -38,9 +47,9 @@ class AudioContainer extends Component {
   };
 
   render() {
-    const { buffering, url, buffer } = this.state;
+    const { buffering, url, buffer, seconds, position } = this.state;
     return (
-      <Positioner clasName="audio">
+      <Positioner className="audio">
         <AudioLayout>
           <ShadowedBox>
             <div className="voicewave-box">

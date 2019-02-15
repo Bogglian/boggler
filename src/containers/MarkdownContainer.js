@@ -9,7 +9,7 @@ class MarkdownContainer extends Component {
   render() {
     const { input, onBeforeChange } = this.props;
     return (
-      <Positioner clasName="audio">
+      <Positioner className="markdown">
         <MarkdownLayout>
           <ShadowedBox>
             <div className="editor-box">

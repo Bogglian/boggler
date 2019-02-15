@@ -69,13 +69,13 @@ Our commit messages conform to the following rules:
 
 ### Commit Style Types
 
-| Title  | Describe                                        | Usage - commit title                     |
-| ------ | ----------------------------------------------- | ---------------------------------------- |
-| feat   | Add a feature.                                  | feat: Add(Modify, Delete) a Feature      |
-| bugfix | fix a bug .                                     | bugfix: Modify a bug                     |
-| docs   | All about documentation.                        | docs: Add(Modify, Delete) a Document |
-| env    | All about the development environment settings. | env: Add(Modify, Delete a Package        |
-| style  | All about styling.                              | style: Add((Modify, Delete) style title  |
+| Title  | Describe                                        | Usage - commit title                    |
+| ------ | ----------------------------------------------- | --------------------------------------- |
+| feat   | Add a feature.                                  | feat: Add(Modify, Delete) a Feature     |
+| bugfix | fix a bug .                                     | bugfix: Modify a bug                    |
+| docs   | All about documentation.                        | docs: Add(Modify, Delete) a Document    |
+| env    | All about the development environment settings. | env: Add(Modify, Delete a Package       |
+| style  | All about styling.                              | style: Add((Modify, Delete) style title |
 
 ### Commit Contents
 
@@ -100,3 +100,72 @@ but, this is just an example. In fact, what do you write is autonomous.
 ## Issue Template
 
 We are using [issue templates](.github/ISSUE_TEMPLATE/).
+
+## Test Guideline
+
+We followed this test 'Story & Scenario' guideline:
+
+```
+// Example
+
+Story. user possibly create a this components.
+  Scenario
+    given: don't write setting config.
+    when: create this component,
+    then: create a component with default setting config.
+  Scenario
+    given: write setting config to width and height.
+    when: create this component,
+    then: create a component with width and height.
+```
+
+When you finish thinking about 'Story & Scenario', you possible write test code using the 'jest' and 'enzyme'.
+
+> jest is 'Test Runner', enzyme is 'Test Utility for React'
+
+```
+// if basic 'non-interactive' component(this is use only jest)
+
+describe("This Component", () => {
+    describe("user possibly create a component.", () => {
+        it("don't write setting config,", () => {
+            const component = shallow(<This />)
+            const default = { width: null, height: null}
+            expect(component.state()).toEqual(default);
+        });
+
+        it("write setting config to width and height.", () => {
+            const component = shallow(<This width={500} height={400}/>)
+            const boxConfig = { width: 500, height: 400}
+            expect(component.state()).toEqual(boxConfig);
+        })
+    })
+})
+```
+
+```
+// if you want test for 'props'
+
+describe("This Component", () => {
+    describe("user possibly get a component's props.", () => {
+        it("get setting config to a width", () => {
+            const component = shallow(<This width={500} />)
+            expect(wrapper.prop('width')).toEqual(500);
+        });
+
+        it("get setting config to width and height.", () => {
+            const component = shallow(<This width={500} height={400}/>)
+            const boxConfig = { width: 500, height: 400}
+            expect(wrapper.prop('width')).toEqual(500);
+            expect(wrapper.prop('height')).toEqual(400);
+        })
+    })
+})
+
+```
+
+after, if you can repeatedly follow this:
+
+> Write 'Story & Scenario' -> Write test code -> Make feature -> Refactoring
+
+This process removes duplicate code and minimizes functionality.

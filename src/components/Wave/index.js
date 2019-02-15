@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import Wrapper from "./Wrapper";
-
 import { VoiceWave, WaveLayout } from "../../styledComponents";
 class Wave extends Component {
   state= {
@@ -42,25 +41,27 @@ class Wave extends Component {
       <WaveLayout>
         <VoiceWave>
           <Wrapper
-            width="1200"
+            width="1650"
             height="200"
             buffer={buffer}
             position={position}
             seconds={seconds}
             showPosition={true}
           />
-          <ReactPlayer
-            ref={this.ref}
-            url={url}
-            width="100%"
-            height="100%"
-            progressInterval={70}
-            onProgress={this.handlePosChange}
-            onBuffer={onBuffer}
-            onReady={onReady}
-            onPlay={onPlay}
-            controls
-          />
+          <div className="player-wrapper">
+            <ReactPlayer
+              ref={this.ref}
+              url={url}
+              width='100%'
+              height='100%'
+              progressInterval={70}
+              onProgress={this.handlePosChange}
+              onBuffer={onBuffer}
+              onReady={onReady}
+              onPlay={onPlay}
+              controls
+            />
+          </div>
         </VoiceWave>
       </WaveLayout>
     );
