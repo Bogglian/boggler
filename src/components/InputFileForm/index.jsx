@@ -4,7 +4,7 @@ import { AudioProgressbar } from '../AudioProgressbar';
 
 class InputFileForm extends Component {
   render() {
-    const { file, onChange, onClick, onConvertToPDF, onConvertToMD, progress } = this.props;
+    const { file, onChange, onClick, onConvertToMD, onConvertToPDF, progress } = this.props;
       const submit = () => {
         if(!file||progress){
           return(
