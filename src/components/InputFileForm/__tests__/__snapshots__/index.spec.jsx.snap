@@ -44,6 +44,11 @@ ShallowWrapper {
             type="button"
             value="TO PDF"
           />
+          <ForwardRef
+            id="file-submit"
+            type="button"
+            value="TO MD"
+          />
         </form>
         <AudioProgressbar
           className="none"
@@ -79,6 +84,11 @@ ShallowWrapper {
               id="file-submit"
               type="button"
               value="TO PDF"
+            />
+            <ForwardRef
+              id="file-submit"
+              type="button"
+              value="TO MD"
             />
           </form>,
           <AudioProgressbar
@@ -116,6 +126,11 @@ ShallowWrapper {
                 id="file-submit"
                 type="button"
                 value="TO PDF"
+              />,
+              <ForwardRef
+                id="file-submit"
+                type="button"
+                value="TO MD"
               />,
             ],
           },
@@ -399,6 +414,94 @@ ShallowWrapper {
                 "withComponent": [Function],
               },
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "id": "file-submit",
+                "onClick": undefined,
+                "type": "button",
+                "value": "TO MD",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bZQynM",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+  & {
+    width: 100%;
+    height: 100%;
+    ",
+                    "
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    ",
+                    ";
+    display: flex;
+    border-radius: inherit;
+  }
+
+  &#file-upload {
+    display: none;
+  }
+
+  &#file-upload-block {
+    display: none;
+  }
+
+  &#file-submit {
+    font-weight: bold;
+    background-color: ",
+                    "#66d9e8",
+                    ";
+    border-radius: 0.2em;
+    margin-right: 2%;
+    display: inherit;
+    padding: 0.6em 0.8em;
+    font-size: 1.2em;
+
+    :hover {
+      color: white;
+      background-color: ",
+                    "#22b8cf",
+                    ";
+    }
+    :active {
+      background-color: ",
+                    "#66d9e8",
+                    ";
+    }
+  }
+
+  &#file-submit-block {
+    font-weight: bold;
+    background-color: ",
+                    "#66d9e8",
+                    ";
+    border-radius: 0.2em;
+    margin-right: 2%;
+    display: inherit;
+    padding: 0.6em 0.8em;
+    font-size: 1.2em;
+  }
+",
+                  ],
+                },
+                "displayName": "styled.input",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bZQynM",
+                "target": "input",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
           ],
           "type": "form",
         },
@@ -559,6 +662,11 @@ ShallowWrapper {
               type="button"
               value="TO PDF"
             />
+            <ForwardRef
+              id="file-submit"
+              type="button"
+              value="TO MD"
+            />
           </form>
           <AudioProgressbar
             className="none"
@@ -594,6 +702,11 @@ ShallowWrapper {
                 id="file-submit"
                 type="button"
                 value="TO PDF"
+              />
+              <ForwardRef
+                id="file-submit"
+                type="button"
+                value="TO MD"
               />
             </form>,
             <AudioProgressbar
@@ -631,6 +744,11 @@ ShallowWrapper {
                   id="file-submit"
                   type="button"
                   value="TO PDF"
+                />,
+                <ForwardRef
+                  id="file-submit"
+                  type="button"
+                  value="TO MD"
                 />,
               ],
             },
@@ -835,6 +953,94 @@ ShallowWrapper {
                   "onClick": undefined,
                   "type": "button",
                   "value": "TO PDF",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bZQynM",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+  & {
+    width: 100%;
+    height: 100%;
+    ",
+                      "
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    ",
+                      ";
+    display: flex;
+    border-radius: inherit;
+  }
+
+  &#file-upload {
+    display: none;
+  }
+
+  &#file-upload-block {
+    display: none;
+  }
+
+  &#file-submit {
+    font-weight: bold;
+    background-color: ",
+                      "#66d9e8",
+                      ";
+    border-radius: 0.2em;
+    margin-right: 2%;
+    display: inherit;
+    padding: 0.6em 0.8em;
+    font-size: 1.2em;
+
+    :hover {
+      color: white;
+      background-color: ",
+                      "#22b8cf",
+                      ";
+    }
+    :active {
+      background-color: ",
+                      "#66d9e8",
+                      ";
+    }
+  }
+
+  &#file-submit-block {
+    font-weight: bold;
+    background-color: ",
+                      "#66d9e8",
+                      ";
+    border-radius: 0.2em;
+    margin-right: 2%;
+    display: inherit;
+    padding: 0.6em 0.8em;
+    font-size: 1.2em;
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.input",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bZQynM",
+                  "target": "input",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "id": "file-submit",
+                  "onClick": undefined,
+                  "type": "button",
+                  "value": "TO MD",
                 },
                 "ref": null,
                 "rendered": null,
