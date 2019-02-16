@@ -43,10 +43,10 @@ class TestContainer extends Component {
     const markdownText = this.state.input;
     this.handleToggleProgress()
     axios({
-      method: 'post',
+      method: `post`,
       url: `http://localhost:8080/markdown/conversion/${type}`,
       data: {markdownText: markdownText},
-      responseType: 'blob'
+      responseType: `blob`
     })
     .then(response=> {
       FileDownload(response.data, `test.${type}`);
@@ -55,11 +55,11 @@ class TestContainer extends Component {
   }
 
   onConvertToPDF = () => {
-    this.handleConvert("pdf")
+    this.handleConvert('pdf')
   }
 
   onConvertToMD = () => {
-    this.handleConvert("md")
+    this.handleConvert('md')
   }
 
   handleToggleProgress= () => {
