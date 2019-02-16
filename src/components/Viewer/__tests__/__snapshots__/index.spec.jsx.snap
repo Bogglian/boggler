@@ -1,17 +1,9 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-import App from './App';
-
-describe('App Component', () => {
-  describe('user possibly create a App component.', () => {
-    it('should render a App', () => {
-      const component = shallow(<App />);
-
-      expect(component).toMatchInlineSnapshot(`
+exports[`Viewer Component user possibly create a Viewer component. should render a Viewer 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <Viewer />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -24,8 +16,18 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
-    "props": Object {},
+    "nodeType": "function",
+    "props": Object {
+      "astPlugins": Array [],
+      "escapeHtml": true,
+      "plugins": Array [],
+      "rawSourcePos": false,
+      "renderers": Object {},
+      "skipHtml": true,
+      "source": undefined,
+      "sourcePos": false,
+      "transformLinkUri": [Function],
+    },
     "ref": null,
     "rendered": null,
     "type": [Function],
@@ -34,8 +36,18 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
-      "props": Object {},
+      "nodeType": "function",
+      "props": Object {
+        "astPlugins": Array [],
+        "escapeHtml": true,
+        "plugins": Array [],
+        "rawSourcePos": false,
+        "renderers": Object {},
+        "skipHtml": true,
+        "source": undefined,
+        "sourcePos": false,
+        "transformLinkUri": [Function],
+      },
       "ref": null,
       "rendered": null,
       "type": [Function],
@@ -63,7 +75,4 @@ ShallowWrapper {
     },
   },
 }
-`);
-    });
-  });
-});
+`;

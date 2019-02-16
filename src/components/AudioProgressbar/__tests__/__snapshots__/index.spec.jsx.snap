@@ -1,0 +1,4048 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AudioProgressbar Component user possibly create a AudioProgressbar component. should render a AudioProgressbar 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AudioProgressbar />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <ForwardRef>
+        <ForwardRef>
+          <div
+            className="rectangle-39"
+          />
+          <div
+            className="rectangle-38"
+          />
+          <div
+            className="rectangle-37"
+          />
+          <div
+            className="rectangle-36"
+          />
+          <div
+            className="rectangle-35"
+          />
+          <div
+            className="rectangle-34"
+          />
+          <div
+            className="rectangle-33"
+          />
+          <div
+            className="rectangle-32"
+          />
+          <div
+            className="rectangle-31"
+          />
+          <div
+            className="rectangle-30"
+          />
+          <div
+            className="rectangle-29"
+          />
+          <div
+            className="rectangle-28"
+          />
+          <div
+            className="rectangle-27"
+          />
+          <div
+            className="rectangle-26"
+          />
+          <div
+            className="rectangle-25"
+          />
+          <div
+            className="rectangle-24"
+          />
+          <div
+            className="rectangle-23"
+          />
+          <div
+            className="rectangle-22"
+          />
+          <div
+            className="rectangle-21"
+          />
+          <div
+            className="rectangle-20"
+          />
+          <div
+            className="rectangle-19"
+          />
+          <div
+            className="rectangle-18"
+          />
+          <div
+            className="rectangle-17"
+          />
+          <div
+            className="rectangle-16"
+          />
+          <div
+            className="rectangle-15"
+          />
+          <div
+            className="rectangle-14"
+          />
+          <div
+            className="rectangle-13"
+          />
+          <div
+            className="rectangle-12"
+          />
+          <div
+            className="rectangle-11"
+          />
+          <div
+            className="rectangle-10"
+          />
+          <div
+            className="rectangle-9"
+          />
+          <div
+            className="rectangle-8"
+          />
+          <div
+            className="rectangle-7"
+          />
+          <div
+            className="rectangle-6"
+          />
+          <div
+            className="rectangle-5"
+          />
+          <div
+            className="rectangle-4"
+          />
+          <div
+            className="rectangle-3"
+          />
+          <div
+            className="rectangle-2"
+          />
+          <div
+            className="rectangle-1"
+          />
+          <div
+            className="rectangle-1"
+          />
+          <div
+            className="rectangle-2"
+          />
+          <div
+            className="rectangle-3"
+          />
+          <div
+            className="rectangle-4"
+          />
+          <div
+            className="rectangle-5"
+          />
+          <div
+            className="rectangle-6"
+          />
+          <div
+            className="rectangle-7"
+          />
+          <div
+            className="rectangle-8"
+          />
+          <div
+            className="rectangle-9"
+          />
+          <div
+            className="rectangle-10"
+          />
+          <div
+            className="rectangle-11"
+          />
+          <div
+            className="rectangle-12"
+          />
+          <div
+            className="rectangle-13"
+          />
+          <div
+            className="rectangle-14"
+          />
+          <div
+            className="rectangle-15"
+          />
+          <div
+            className="rectangle-16"
+          />
+          <div
+            className="rectangle-17"
+          />
+          <div
+            className="rectangle-18"
+          />
+          <div
+            className="rectangle-19"
+          />
+          <div
+            className="rectangle-20"
+          />
+          <div
+            className="rectangle-21"
+          />
+          <div
+            className="rectangle-22"
+          />
+          <div
+            className="rectangle-23"
+          />
+          <div
+            className="rectangle-24"
+          />
+          <div
+            className="rectangle-25"
+          />
+          <div
+            className="rectangle-26"
+          />
+          <div
+            className="rectangle-27"
+          />
+          <div
+            className="rectangle-28"
+          />
+          <div
+            className="rectangle-29"
+          />
+          <div
+            className="rectangle-30"
+          />
+          <div
+            className="rectangle-31"
+          />
+          <div
+            className="rectangle-32"
+          />
+          <div
+            className="rectangle-33"
+          />
+          <div
+            className="rectangle-34"
+          />
+          <div
+            className="rectangle-35"
+          />
+          <div
+            className="rectangle-36"
+          />
+          <div
+            className="rectangle-37"
+          />
+          <div
+            className="rectangle-38"
+          />
+          <div
+            className="rectangle-39"
+          />
+        </ForwardRef>
+      </ForwardRef>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ForwardRef>
+          <div
+            className="rectangle-39"
+          />
+          <div
+            className="rectangle-38"
+          />
+          <div
+            className="rectangle-37"
+          />
+          <div
+            className="rectangle-36"
+          />
+          <div
+            className="rectangle-35"
+          />
+          <div
+            className="rectangle-34"
+          />
+          <div
+            className="rectangle-33"
+          />
+          <div
+            className="rectangle-32"
+          />
+          <div
+            className="rectangle-31"
+          />
+          <div
+            className="rectangle-30"
+          />
+          <div
+            className="rectangle-29"
+          />
+          <div
+            className="rectangle-28"
+          />
+          <div
+            className="rectangle-27"
+          />
+          <div
+            className="rectangle-26"
+          />
+          <div
+            className="rectangle-25"
+          />
+          <div
+            className="rectangle-24"
+          />
+          <div
+            className="rectangle-23"
+          />
+          <div
+            className="rectangle-22"
+          />
+          <div
+            className="rectangle-21"
+          />
+          <div
+            className="rectangle-20"
+          />
+          <div
+            className="rectangle-19"
+          />
+          <div
+            className="rectangle-18"
+          />
+          <div
+            className="rectangle-17"
+          />
+          <div
+            className="rectangle-16"
+          />
+          <div
+            className="rectangle-15"
+          />
+          <div
+            className="rectangle-14"
+          />
+          <div
+            className="rectangle-13"
+          />
+          <div
+            className="rectangle-12"
+          />
+          <div
+            className="rectangle-11"
+          />
+          <div
+            className="rectangle-10"
+          />
+          <div
+            className="rectangle-9"
+          />
+          <div
+            className="rectangle-8"
+          />
+          <div
+            className="rectangle-7"
+          />
+          <div
+            className="rectangle-6"
+          />
+          <div
+            className="rectangle-5"
+          />
+          <div
+            className="rectangle-4"
+          />
+          <div
+            className="rectangle-3"
+          />
+          <div
+            className="rectangle-2"
+          />
+          <div
+            className="rectangle-1"
+          />
+          <div
+            className="rectangle-1"
+          />
+          <div
+            className="rectangle-2"
+          />
+          <div
+            className="rectangle-3"
+          />
+          <div
+            className="rectangle-4"
+          />
+          <div
+            className="rectangle-5"
+          />
+          <div
+            className="rectangle-6"
+          />
+          <div
+            className="rectangle-7"
+          />
+          <div
+            className="rectangle-8"
+          />
+          <div
+            className="rectangle-9"
+          />
+          <div
+            className="rectangle-10"
+          />
+          <div
+            className="rectangle-11"
+          />
+          <div
+            className="rectangle-12"
+          />
+          <div
+            className="rectangle-13"
+          />
+          <div
+            className="rectangle-14"
+          />
+          <div
+            className="rectangle-15"
+          />
+          <div
+            className="rectangle-16"
+          />
+          <div
+            className="rectangle-17"
+          />
+          <div
+            className="rectangle-18"
+          />
+          <div
+            className="rectangle-19"
+          />
+          <div
+            className="rectangle-20"
+          />
+          <div
+            className="rectangle-21"
+          />
+          <div
+            className="rectangle-22"
+          />
+          <div
+            className="rectangle-23"
+          />
+          <div
+            className="rectangle-24"
+          />
+          <div
+            className="rectangle-25"
+          />
+          <div
+            className="rectangle-26"
+          />
+          <div
+            className="rectangle-27"
+          />
+          <div
+            className="rectangle-28"
+          />
+          <div
+            className="rectangle-29"
+          />
+          <div
+            className="rectangle-30"
+          />
+          <div
+            className="rectangle-31"
+          />
+          <div
+            className="rectangle-32"
+          />
+          <div
+            className="rectangle-33"
+          />
+          <div
+            className="rectangle-34"
+          />
+          <div
+            className="rectangle-35"
+          />
+          <div
+            className="rectangle-36"
+          />
+          <div
+            className="rectangle-37"
+          />
+          <div
+            className="rectangle-38"
+          />
+          <div
+            className="rectangle-39"
+          />
+        </ForwardRef>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <div
+              className="rectangle-39"
+            />,
+            <div
+              className="rectangle-38"
+            />,
+            <div
+              className="rectangle-37"
+            />,
+            <div
+              className="rectangle-36"
+            />,
+            <div
+              className="rectangle-35"
+            />,
+            <div
+              className="rectangle-34"
+            />,
+            <div
+              className="rectangle-33"
+            />,
+            <div
+              className="rectangle-32"
+            />,
+            <div
+              className="rectangle-31"
+            />,
+            <div
+              className="rectangle-30"
+            />,
+            <div
+              className="rectangle-29"
+            />,
+            <div
+              className="rectangle-28"
+            />,
+            <div
+              className="rectangle-27"
+            />,
+            <div
+              className="rectangle-26"
+            />,
+            <div
+              className="rectangle-25"
+            />,
+            <div
+              className="rectangle-24"
+            />,
+            <div
+              className="rectangle-23"
+            />,
+            <div
+              className="rectangle-22"
+            />,
+            <div
+              className="rectangle-21"
+            />,
+            <div
+              className="rectangle-20"
+            />,
+            <div
+              className="rectangle-19"
+            />,
+            <div
+              className="rectangle-18"
+            />,
+            <div
+              className="rectangle-17"
+            />,
+            <div
+              className="rectangle-16"
+            />,
+            <div
+              className="rectangle-15"
+            />,
+            <div
+              className="rectangle-14"
+            />,
+            <div
+              className="rectangle-13"
+            />,
+            <div
+              className="rectangle-12"
+            />,
+            <div
+              className="rectangle-11"
+            />,
+            <div
+              className="rectangle-10"
+            />,
+            <div
+              className="rectangle-9"
+            />,
+            <div
+              className="rectangle-8"
+            />,
+            <div
+              className="rectangle-7"
+            />,
+            <div
+              className="rectangle-6"
+            />,
+            <div
+              className="rectangle-5"
+            />,
+            <div
+              className="rectangle-4"
+            />,
+            <div
+              className="rectangle-3"
+            />,
+            <div
+              className="rectangle-2"
+            />,
+            <div
+              className="rectangle-1"
+            />,
+            <div
+              className="rectangle-1"
+            />,
+            <div
+              className="rectangle-2"
+            />,
+            <div
+              className="rectangle-3"
+            />,
+            <div
+              className="rectangle-4"
+            />,
+            <div
+              className="rectangle-5"
+            />,
+            <div
+              className="rectangle-6"
+            />,
+            <div
+              className="rectangle-7"
+            />,
+            <div
+              className="rectangle-8"
+            />,
+            <div
+              className="rectangle-9"
+            />,
+            <div
+              className="rectangle-10"
+            />,
+            <div
+              className="rectangle-11"
+            />,
+            <div
+              className="rectangle-12"
+            />,
+            <div
+              className="rectangle-13"
+            />,
+            <div
+              className="rectangle-14"
+            />,
+            <div
+              className="rectangle-15"
+            />,
+            <div
+              className="rectangle-16"
+            />,
+            <div
+              className="rectangle-17"
+            />,
+            <div
+              className="rectangle-18"
+            />,
+            <div
+              className="rectangle-19"
+            />,
+            <div
+              className="rectangle-20"
+            />,
+            <div
+              className="rectangle-21"
+            />,
+            <div
+              className="rectangle-22"
+            />,
+            <div
+              className="rectangle-23"
+            />,
+            <div
+              className="rectangle-24"
+            />,
+            <div
+              className="rectangle-25"
+            />,
+            <div
+              className="rectangle-26"
+            />,
+            <div
+              className="rectangle-27"
+            />,
+            <div
+              className="rectangle-28"
+            />,
+            <div
+              className="rectangle-29"
+            />,
+            <div
+              className="rectangle-30"
+            />,
+            <div
+              className="rectangle-31"
+            />,
+            <div
+              className="rectangle-32"
+            />,
+            <div
+              className="rectangle-33"
+            />,
+            <div
+              className="rectangle-34"
+            />,
+            <div
+              className="rectangle-35"
+            />,
+            <div
+              className="rectangle-36"
+            />,
+            <div
+              className="rectangle-37"
+            />,
+            <div
+              className="rectangle-38"
+            />,
+            <div
+              className="rectangle-39"
+            />,
+          ],
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-39",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-38",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-37",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-36",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-35",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-34",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-33",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-32",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-31",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-30",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-29",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-28",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-27",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-26",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-25",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-24",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-23",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-22",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-21",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-20",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-19",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-18",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-17",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-16",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-15",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-14",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-13",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-12",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-11",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-10",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-9",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-8",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-7",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-6",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-5",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-4",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-3",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-2",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-1",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-1",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-2",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-3",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-4",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-5",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-6",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-7",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-8",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-9",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-10",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-11",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-12",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-13",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-14",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-15",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-16",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-17",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-18",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-19",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-20",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-21",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-22",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-23",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-24",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-25",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-26",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-27",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-28",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-29",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-30",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-31",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-32",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-33",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-34",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-35",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-36",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-37",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-38",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "rectangle-39",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-dnqmqq",
+            "isStatic": true,
+            "rules": Array [
+              "
+  & {
+    height: 0.8em;
+    width: 100%;
+    display: inherit;
+    margin-top: 1.7%;
+
+    &.none {
+      display: none;
+    }
+
+    .rectangle-2 {
+      -webkit-animation-delay: 0.1s;
+      animation-delay: 0.1s;
+    }
+
+    .rectangle-3 {
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+
+    .rectangle-4 {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+
+    .rectangle-5 {
+      -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+
+    .rectangle-6 {
+      -webkit-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+    }
+
+    .rectangle-7 {
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+
+    .rectangle-8 {
+      -webkit-animation-delay: 0.7s;
+      animation-delay: 0.7s;
+    }
+
+    .rectangle-9 {
+      -webkit-animation-delay: 0.8s;
+      animation-delay: 0.8s;
+    }
+
+    .rectangle-10 {
+      -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+    }
+
+    .rectangle-11 {
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+
+    .rectangle-12 {
+      -webkit-animation-delay: 1.1s;
+      animation-delay: 1.1s;
+    }
+
+    .rectangle-13 {
+      -webkit-animation-delay: 1.2s;
+      animation-delay: 1.2s;
+    }
+
+    .rectangle-14 {
+      -webkit-animation-delay: 1.3s;
+      animation-delay: 1.3s;
+    }
+
+    .rectangle-15 {
+      -webkit-animation-delay: 1.4s;
+      animation-delay: 1.4s;
+    }
+
+    .rectangle-16 {
+      -webkit-animation-delay: 1.5s;
+      animation-delay: 1.5s;
+    }
+
+    .rectangle-17 {
+      -webkit-animation-delay: 1.6s;
+      animation-delay: 1.6s;
+    }
+
+    .rectangle-18 {
+      -webkit-animation-delay: 1.7s;
+      animation-delay: 1.7s;
+    }
+
+    .rectangle-19 {
+      -webkit-animation-delay: 1.8s;
+      animation-delay: 1.8s;
+    }
+
+    .rectangle-20 {
+      -webkit-animation-delay: 1.9s;
+      animation-delay: 1.9s;
+    }
+
+    .rectangle-21 {
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+    }
+
+    .rectangle-22 {
+      -webkit-animation-delay: 2.1s;
+      animation-delay: 2.1s;
+    }
+
+    .rectangle-23 {
+      -webkit-animation-delay: 2.2s;
+      animation-delay: 2.2s;
+    }
+
+    .rectangle-24 {
+      -webkit-animation-delay: 2.3s;
+      animation-delay: 2.3s;
+    }
+
+    .rectangle-25 {
+      -webkit-animation-delay: 2.4s;
+      animation-delay: 2.4s;
+    }
+
+    .rectangle-26 {
+      -webkit-animation-delay: 2.5s;
+      animation-delay: 2.5s;
+    }
+
+    .rectangle-27 {
+      -webkit-animation-delay: 2.6s;
+      animation-delay: 2.6s;
+    }
+
+    .rectangle-28 {
+      -webkit-animation-delay: 2.7s;
+      animation-delay: 2.7s;
+    }
+
+    .rectangle-29 {
+      -webkit-animation-delay: 2.8s;
+      animation-delay: 2.8s;
+    }
+
+    .rectangle-30 {
+      -webkit-animation-delay: 2.9s;
+      animation-delay: 2.9s;
+    }
+
+    .rectangle-31 {
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s;
+    }
+
+    .rectangle-32 {
+      -webkit-animation-delay: 3.1s;
+      animation-delay: 3.1s;
+    }
+
+    .rectangle-33 {
+      -webkit-animation-delay: 3.2s;
+      animation-delay: 3.2s;
+    }
+
+    .rectangle-34 {
+      -webkit-animation-delay: 3.3s;
+      animation-delay: 3.3s;
+    }
+
+    .rectangle-35 {
+      -webkit-animation-delay: 3.4s;
+      animation-delay: 3.4s;
+    }
+
+    .rectangle-36 {
+      -webkit-animation-delay: 3.5s;
+      animation-delay: 3.5s;
+    }
+
+    .rectangle-37 {
+      -webkit-animation-delay: 3.6s;
+      animation-delay: 3.6s;
+    }
+
+    .rectangle-38 {
+      -webkit-animation-delay: 3.7s;
+      animation-delay: 3.7s;
+    }
+
+    .rectangle-39 {
+      -webkit-animation-delay: 3.8s;
+      animation-delay: 3.8s;
+    }
+
+    div {
+      position: relative;
+      display: inline-block;
+      background: ",
+              "#e3fafc",
+              ";
+      height: 100%;
+      width: 10px;
+      margin: 0;
+      -webkit-animation: load 3s ease-in-out infinite;
+      animation: load 3s ease-in-out infinite;
+    }
+  }
+
+  @-moz-keyframes load {
+    0%,
+    100% {
+      -moz-transform: scaleY(1);
+      background: ",
+              "#c0eb75",
+              ";
+    }
+    16.67% {
+      -moz-transform: scaleY(3);
+      background: ",
+              "#8ce99a",
+              ";
+    }
+    33.33% {
+      -moz-transform: scaleY(1);
+      background: ",
+              "#63e6be",
+              ";
+    }
+    50% {
+      -moz-transform: scaleY(3);
+      background: ",
+              "#66d9e8",
+              ";
+    }
+    66.67% {
+      -moz-transform: scaleY(1);
+      background: ",
+              "#74c0fc",
+              ";
+    }
+    83.34% {
+      -moz-transform: scaleY(3);
+      background: ",
+              "#91a7ff",
+              ";
+    }
+  }
+
+  @-webkit-keyframes load {
+    0%,
+    100% {
+      -webkit-transform: scaleY(1);
+      background: ",
+              "#c0eb75",
+              ";
+    }
+    16.67% {
+      -webkit-transform: scaleY(3);
+      background: ",
+              "#8ce99a",
+              ";
+    }
+    33.33% {
+      -webkit-transform: scaleY(1);
+      background: ",
+              "#63e6be",
+              ";
+    }
+    50% {
+      -webkit-transform: scaleY(3);
+      background: ",
+              "#66d9e8",
+              ";
+    }
+    66.67% {
+      -webkit-transform: scaleY(1);
+      background: ",
+              "#74c0fc",
+              ";
+    }
+    83.34% {
+      -webkit-transform: scaleY(3);
+      background: ",
+              "#91a7ff",
+              ";
+    }
+  }
+
+  @keyframes load {
+    0%,
+    100% {
+      transform: scaleY(1);
+      background: ",
+              "#c0eb75",
+              ";
+    }
+    16.67% {
+      transform: scaleY(3);
+      background: ",
+              "#8ce99a",
+              ";
+    }
+    33.33% {
+      transform: scaleY(1);
+      background: ",
+              "#63e6be",
+              ";
+    }
+    50% {
+      transform: scaleY(3);
+      background: ",
+              "#66d9e8",
+              ";
+    }
+    66.67% {
+      transform: scaleY(1);
+      background: ",
+              "#74c0fc",
+              ";
+    }
+    83.34% {
+      transform: scaleY(3);
+      background: ",
+              "#91a7ff",
+              ";
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-dnqmqq",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-ifAKCX",
+          "isStatic": true,
+          "rules": Array [
+            "
+  & {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    margin-top: -15px; 
+  }
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-ifAKCX",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bxivhb",
+        "isStatic": true,
+        "rules": Array [
+          "
+  & {
+    width: 100%;
+    height: 100%;
+    padding: 0.3%;
+  }
+    
+    &.audio {
+      padding-bottom : 0.5%;
+    }
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bxivhb",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ForwardRef>
+          <ForwardRef>
+            <div
+              className="rectangle-39"
+            />
+            <div
+              className="rectangle-38"
+            />
+            <div
+              className="rectangle-37"
+            />
+            <div
+              className="rectangle-36"
+            />
+            <div
+              className="rectangle-35"
+            />
+            <div
+              className="rectangle-34"
+            />
+            <div
+              className="rectangle-33"
+            />
+            <div
+              className="rectangle-32"
+            />
+            <div
+              className="rectangle-31"
+            />
+            <div
+              className="rectangle-30"
+            />
+            <div
+              className="rectangle-29"
+            />
+            <div
+              className="rectangle-28"
+            />
+            <div
+              className="rectangle-27"
+            />
+            <div
+              className="rectangle-26"
+            />
+            <div
+              className="rectangle-25"
+            />
+            <div
+              className="rectangle-24"
+            />
+            <div
+              className="rectangle-23"
+            />
+            <div
+              className="rectangle-22"
+            />
+            <div
+              className="rectangle-21"
+            />
+            <div
+              className="rectangle-20"
+            />
+            <div
+              className="rectangle-19"
+            />
+            <div
+              className="rectangle-18"
+            />
+            <div
+              className="rectangle-17"
+            />
+            <div
+              className="rectangle-16"
+            />
+            <div
+              className="rectangle-15"
+            />
+            <div
+              className="rectangle-14"
+            />
+            <div
+              className="rectangle-13"
+            />
+            <div
+              className="rectangle-12"
+            />
+            <div
+              className="rectangle-11"
+            />
+            <div
+              className="rectangle-10"
+            />
+            <div
+              className="rectangle-9"
+            />
+            <div
+              className="rectangle-8"
+            />
+            <div
+              className="rectangle-7"
+            />
+            <div
+              className="rectangle-6"
+            />
+            <div
+              className="rectangle-5"
+            />
+            <div
+              className="rectangle-4"
+            />
+            <div
+              className="rectangle-3"
+            />
+            <div
+              className="rectangle-2"
+            />
+            <div
+              className="rectangle-1"
+            />
+            <div
+              className="rectangle-1"
+            />
+            <div
+              className="rectangle-2"
+            />
+            <div
+              className="rectangle-3"
+            />
+            <div
+              className="rectangle-4"
+            />
+            <div
+              className="rectangle-5"
+            />
+            <div
+              className="rectangle-6"
+            />
+            <div
+              className="rectangle-7"
+            />
+            <div
+              className="rectangle-8"
+            />
+            <div
+              className="rectangle-9"
+            />
+            <div
+              className="rectangle-10"
+            />
+            <div
+              className="rectangle-11"
+            />
+            <div
+              className="rectangle-12"
+            />
+            <div
+              className="rectangle-13"
+            />
+            <div
+              className="rectangle-14"
+            />
+            <div
+              className="rectangle-15"
+            />
+            <div
+              className="rectangle-16"
+            />
+            <div
+              className="rectangle-17"
+            />
+            <div
+              className="rectangle-18"
+            />
+            <div
+              className="rectangle-19"
+            />
+            <div
+              className="rectangle-20"
+            />
+            <div
+              className="rectangle-21"
+            />
+            <div
+              className="rectangle-22"
+            />
+            <div
+              className="rectangle-23"
+            />
+            <div
+              className="rectangle-24"
+            />
+            <div
+              className="rectangle-25"
+            />
+            <div
+              className="rectangle-26"
+            />
+            <div
+              className="rectangle-27"
+            />
+            <div
+              className="rectangle-28"
+            />
+            <div
+              className="rectangle-29"
+            />
+            <div
+              className="rectangle-30"
+            />
+            <div
+              className="rectangle-31"
+            />
+            <div
+              className="rectangle-32"
+            />
+            <div
+              className="rectangle-33"
+            />
+            <div
+              className="rectangle-34"
+            />
+            <div
+              className="rectangle-35"
+            />
+            <div
+              className="rectangle-36"
+            />
+            <div
+              className="rectangle-37"
+            />
+            <div
+              className="rectangle-38"
+            />
+            <div
+              className="rectangle-39"
+            />
+          </ForwardRef>
+        </ForwardRef>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <ForwardRef>
+            <div
+              className="rectangle-39"
+            />
+            <div
+              className="rectangle-38"
+            />
+            <div
+              className="rectangle-37"
+            />
+            <div
+              className="rectangle-36"
+            />
+            <div
+              className="rectangle-35"
+            />
+            <div
+              className="rectangle-34"
+            />
+            <div
+              className="rectangle-33"
+            />
+            <div
+              className="rectangle-32"
+            />
+            <div
+              className="rectangle-31"
+            />
+            <div
+              className="rectangle-30"
+            />
+            <div
+              className="rectangle-29"
+            />
+            <div
+              className="rectangle-28"
+            />
+            <div
+              className="rectangle-27"
+            />
+            <div
+              className="rectangle-26"
+            />
+            <div
+              className="rectangle-25"
+            />
+            <div
+              className="rectangle-24"
+            />
+            <div
+              className="rectangle-23"
+            />
+            <div
+              className="rectangle-22"
+            />
+            <div
+              className="rectangle-21"
+            />
+            <div
+              className="rectangle-20"
+            />
+            <div
+              className="rectangle-19"
+            />
+            <div
+              className="rectangle-18"
+            />
+            <div
+              className="rectangle-17"
+            />
+            <div
+              className="rectangle-16"
+            />
+            <div
+              className="rectangle-15"
+            />
+            <div
+              className="rectangle-14"
+            />
+            <div
+              className="rectangle-13"
+            />
+            <div
+              className="rectangle-12"
+            />
+            <div
+              className="rectangle-11"
+            />
+            <div
+              className="rectangle-10"
+            />
+            <div
+              className="rectangle-9"
+            />
+            <div
+              className="rectangle-8"
+            />
+            <div
+              className="rectangle-7"
+            />
+            <div
+              className="rectangle-6"
+            />
+            <div
+              className="rectangle-5"
+            />
+            <div
+              className="rectangle-4"
+            />
+            <div
+              className="rectangle-3"
+            />
+            <div
+              className="rectangle-2"
+            />
+            <div
+              className="rectangle-1"
+            />
+            <div
+              className="rectangle-1"
+            />
+            <div
+              className="rectangle-2"
+            />
+            <div
+              className="rectangle-3"
+            />
+            <div
+              className="rectangle-4"
+            />
+            <div
+              className="rectangle-5"
+            />
+            <div
+              className="rectangle-6"
+            />
+            <div
+              className="rectangle-7"
+            />
+            <div
+              className="rectangle-8"
+            />
+            <div
+              className="rectangle-9"
+            />
+            <div
+              className="rectangle-10"
+            />
+            <div
+              className="rectangle-11"
+            />
+            <div
+              className="rectangle-12"
+            />
+            <div
+              className="rectangle-13"
+            />
+            <div
+              className="rectangle-14"
+            />
+            <div
+              className="rectangle-15"
+            />
+            <div
+              className="rectangle-16"
+            />
+            <div
+              className="rectangle-17"
+            />
+            <div
+              className="rectangle-18"
+            />
+            <div
+              className="rectangle-19"
+            />
+            <div
+              className="rectangle-20"
+            />
+            <div
+              className="rectangle-21"
+            />
+            <div
+              className="rectangle-22"
+            />
+            <div
+              className="rectangle-23"
+            />
+            <div
+              className="rectangle-24"
+            />
+            <div
+              className="rectangle-25"
+            />
+            <div
+              className="rectangle-26"
+            />
+            <div
+              className="rectangle-27"
+            />
+            <div
+              className="rectangle-28"
+            />
+            <div
+              className="rectangle-29"
+            />
+            <div
+              className="rectangle-30"
+            />
+            <div
+              className="rectangle-31"
+            />
+            <div
+              className="rectangle-32"
+            />
+            <div
+              className="rectangle-33"
+            />
+            <div
+              className="rectangle-34"
+            />
+            <div
+              className="rectangle-35"
+            />
+            <div
+              className="rectangle-36"
+            />
+            <div
+              className="rectangle-37"
+            />
+            <div
+              className="rectangle-38"
+            />
+            <div
+              className="rectangle-39"
+            />
+          </ForwardRef>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <div
+                className="rectangle-39"
+              />,
+              <div
+                className="rectangle-38"
+              />,
+              <div
+                className="rectangle-37"
+              />,
+              <div
+                className="rectangle-36"
+              />,
+              <div
+                className="rectangle-35"
+              />,
+              <div
+                className="rectangle-34"
+              />,
+              <div
+                className="rectangle-33"
+              />,
+              <div
+                className="rectangle-32"
+              />,
+              <div
+                className="rectangle-31"
+              />,
+              <div
+                className="rectangle-30"
+              />,
+              <div
+                className="rectangle-29"
+              />,
+              <div
+                className="rectangle-28"
+              />,
+              <div
+                className="rectangle-27"
+              />,
+              <div
+                className="rectangle-26"
+              />,
+              <div
+                className="rectangle-25"
+              />,
+              <div
+                className="rectangle-24"
+              />,
+              <div
+                className="rectangle-23"
+              />,
+              <div
+                className="rectangle-22"
+              />,
+              <div
+                className="rectangle-21"
+              />,
+              <div
+                className="rectangle-20"
+              />,
+              <div
+                className="rectangle-19"
+              />,
+              <div
+                className="rectangle-18"
+              />,
+              <div
+                className="rectangle-17"
+              />,
+              <div
+                className="rectangle-16"
+              />,
+              <div
+                className="rectangle-15"
+              />,
+              <div
+                className="rectangle-14"
+              />,
+              <div
+                className="rectangle-13"
+              />,
+              <div
+                className="rectangle-12"
+              />,
+              <div
+                className="rectangle-11"
+              />,
+              <div
+                className="rectangle-10"
+              />,
+              <div
+                className="rectangle-9"
+              />,
+              <div
+                className="rectangle-8"
+              />,
+              <div
+                className="rectangle-7"
+              />,
+              <div
+                className="rectangle-6"
+              />,
+              <div
+                className="rectangle-5"
+              />,
+              <div
+                className="rectangle-4"
+              />,
+              <div
+                className="rectangle-3"
+              />,
+              <div
+                className="rectangle-2"
+              />,
+              <div
+                className="rectangle-1"
+              />,
+              <div
+                className="rectangle-1"
+              />,
+              <div
+                className="rectangle-2"
+              />,
+              <div
+                className="rectangle-3"
+              />,
+              <div
+                className="rectangle-4"
+              />,
+              <div
+                className="rectangle-5"
+              />,
+              <div
+                className="rectangle-6"
+              />,
+              <div
+                className="rectangle-7"
+              />,
+              <div
+                className="rectangle-8"
+              />,
+              <div
+                className="rectangle-9"
+              />,
+              <div
+                className="rectangle-10"
+              />,
+              <div
+                className="rectangle-11"
+              />,
+              <div
+                className="rectangle-12"
+              />,
+              <div
+                className="rectangle-13"
+              />,
+              <div
+                className="rectangle-14"
+              />,
+              <div
+                className="rectangle-15"
+              />,
+              <div
+                className="rectangle-16"
+              />,
+              <div
+                className="rectangle-17"
+              />,
+              <div
+                className="rectangle-18"
+              />,
+              <div
+                className="rectangle-19"
+              />,
+              <div
+                className="rectangle-20"
+              />,
+              <div
+                className="rectangle-21"
+              />,
+              <div
+                className="rectangle-22"
+              />,
+              <div
+                className="rectangle-23"
+              />,
+              <div
+                className="rectangle-24"
+              />,
+              <div
+                className="rectangle-25"
+              />,
+              <div
+                className="rectangle-26"
+              />,
+              <div
+                className="rectangle-27"
+              />,
+              <div
+                className="rectangle-28"
+              />,
+              <div
+                className="rectangle-29"
+              />,
+              <div
+                className="rectangle-30"
+              />,
+              <div
+                className="rectangle-31"
+              />,
+              <div
+                className="rectangle-32"
+              />,
+              <div
+                className="rectangle-33"
+              />,
+              <div
+                className="rectangle-34"
+              />,
+              <div
+                className="rectangle-35"
+              />,
+              <div
+                className="rectangle-36"
+              />,
+              <div
+                className="rectangle-37"
+              />,
+              <div
+                className="rectangle-38"
+              />,
+              <div
+                className="rectangle-39"
+              />,
+            ],
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-39",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-38",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-37",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-36",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-35",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-34",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-33",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-32",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-31",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-30",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-29",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-28",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-27",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-26",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-25",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-24",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-23",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-22",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-21",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-20",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-19",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-18",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-17",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-16",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-15",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-14",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-13",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-12",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-11",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-10",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-9",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-8",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-7",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-6",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-5",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-4",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-3",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-2",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-1",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-1",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-2",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-3",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-4",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-5",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-6",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-7",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-8",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-9",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-10",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-11",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-12",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-13",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-14",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-15",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-16",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-17",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-18",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-19",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-20",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-21",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-22",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-23",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-24",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-25",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-26",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-27",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-28",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-29",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-30",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-31",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-32",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-33",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-34",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-35",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-36",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-37",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-38",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "rectangle-39",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-dnqmqq",
+              "isStatic": true,
+              "rules": Array [
+                "
+  & {
+    height: 0.8em;
+    width: 100%;
+    display: inherit;
+    margin-top: 1.7%;
+
+    &.none {
+      display: none;
+    }
+
+    .rectangle-2 {
+      -webkit-animation-delay: 0.1s;
+      animation-delay: 0.1s;
+    }
+
+    .rectangle-3 {
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+
+    .rectangle-4 {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+
+    .rectangle-5 {
+      -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+
+    .rectangle-6 {
+      -webkit-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+    }
+
+    .rectangle-7 {
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+
+    .rectangle-8 {
+      -webkit-animation-delay: 0.7s;
+      animation-delay: 0.7s;
+    }
+
+    .rectangle-9 {
+      -webkit-animation-delay: 0.8s;
+      animation-delay: 0.8s;
+    }
+
+    .rectangle-10 {
+      -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+    }
+
+    .rectangle-11 {
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+
+    .rectangle-12 {
+      -webkit-animation-delay: 1.1s;
+      animation-delay: 1.1s;
+    }
+
+    .rectangle-13 {
+      -webkit-animation-delay: 1.2s;
+      animation-delay: 1.2s;
+    }
+
+    .rectangle-14 {
+      -webkit-animation-delay: 1.3s;
+      animation-delay: 1.3s;
+    }
+
+    .rectangle-15 {
+      -webkit-animation-delay: 1.4s;
+      animation-delay: 1.4s;
+    }
+
+    .rectangle-16 {
+      -webkit-animation-delay: 1.5s;
+      animation-delay: 1.5s;
+    }
+
+    .rectangle-17 {
+      -webkit-animation-delay: 1.6s;
+      animation-delay: 1.6s;
+    }
+
+    .rectangle-18 {
+      -webkit-animation-delay: 1.7s;
+      animation-delay: 1.7s;
+    }
+
+    .rectangle-19 {
+      -webkit-animation-delay: 1.8s;
+      animation-delay: 1.8s;
+    }
+
+    .rectangle-20 {
+      -webkit-animation-delay: 1.9s;
+      animation-delay: 1.9s;
+    }
+
+    .rectangle-21 {
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+    }
+
+    .rectangle-22 {
+      -webkit-animation-delay: 2.1s;
+      animation-delay: 2.1s;
+    }
+
+    .rectangle-23 {
+      -webkit-animation-delay: 2.2s;
+      animation-delay: 2.2s;
+    }
+
+    .rectangle-24 {
+      -webkit-animation-delay: 2.3s;
+      animation-delay: 2.3s;
+    }
+
+    .rectangle-25 {
+      -webkit-animation-delay: 2.4s;
+      animation-delay: 2.4s;
+    }
+
+    .rectangle-26 {
+      -webkit-animation-delay: 2.5s;
+      animation-delay: 2.5s;
+    }
+
+    .rectangle-27 {
+      -webkit-animation-delay: 2.6s;
+      animation-delay: 2.6s;
+    }
+
+    .rectangle-28 {
+      -webkit-animation-delay: 2.7s;
+      animation-delay: 2.7s;
+    }
+
+    .rectangle-29 {
+      -webkit-animation-delay: 2.8s;
+      animation-delay: 2.8s;
+    }
+
+    .rectangle-30 {
+      -webkit-animation-delay: 2.9s;
+      animation-delay: 2.9s;
+    }
+
+    .rectangle-31 {
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s;
+    }
+
+    .rectangle-32 {
+      -webkit-animation-delay: 3.1s;
+      animation-delay: 3.1s;
+    }
+
+    .rectangle-33 {
+      -webkit-animation-delay: 3.2s;
+      animation-delay: 3.2s;
+    }
+
+    .rectangle-34 {
+      -webkit-animation-delay: 3.3s;
+      animation-delay: 3.3s;
+    }
+
+    .rectangle-35 {
+      -webkit-animation-delay: 3.4s;
+      animation-delay: 3.4s;
+    }
+
+    .rectangle-36 {
+      -webkit-animation-delay: 3.5s;
+      animation-delay: 3.5s;
+    }
+
+    .rectangle-37 {
+      -webkit-animation-delay: 3.6s;
+      animation-delay: 3.6s;
+    }
+
+    .rectangle-38 {
+      -webkit-animation-delay: 3.7s;
+      animation-delay: 3.7s;
+    }
+
+    .rectangle-39 {
+      -webkit-animation-delay: 3.8s;
+      animation-delay: 3.8s;
+    }
+
+    div {
+      position: relative;
+      display: inline-block;
+      background: ",
+                "#e3fafc",
+                ";
+      height: 100%;
+      width: 10px;
+      margin: 0;
+      -webkit-animation: load 3s ease-in-out infinite;
+      animation: load 3s ease-in-out infinite;
+    }
+  }
+
+  @-moz-keyframes load {
+    0%,
+    100% {
+      -moz-transform: scaleY(1);
+      background: ",
+                "#c0eb75",
+                ";
+    }
+    16.67% {
+      -moz-transform: scaleY(3);
+      background: ",
+                "#8ce99a",
+                ";
+    }
+    33.33% {
+      -moz-transform: scaleY(1);
+      background: ",
+                "#63e6be",
+                ";
+    }
+    50% {
+      -moz-transform: scaleY(3);
+      background: ",
+                "#66d9e8",
+                ";
+    }
+    66.67% {
+      -moz-transform: scaleY(1);
+      background: ",
+                "#74c0fc",
+                ";
+    }
+    83.34% {
+      -moz-transform: scaleY(3);
+      background: ",
+                "#91a7ff",
+                ";
+    }
+  }
+
+  @-webkit-keyframes load {
+    0%,
+    100% {
+      -webkit-transform: scaleY(1);
+      background: ",
+                "#c0eb75",
+                ";
+    }
+    16.67% {
+      -webkit-transform: scaleY(3);
+      background: ",
+                "#8ce99a",
+                ";
+    }
+    33.33% {
+      -webkit-transform: scaleY(1);
+      background: ",
+                "#63e6be",
+                ";
+    }
+    50% {
+      -webkit-transform: scaleY(3);
+      background: ",
+                "#66d9e8",
+                ";
+    }
+    66.67% {
+      -webkit-transform: scaleY(1);
+      background: ",
+                "#74c0fc",
+                ";
+    }
+    83.34% {
+      -webkit-transform: scaleY(3);
+      background: ",
+                "#91a7ff",
+                ";
+    }
+  }
+
+  @keyframes load {
+    0%,
+    100% {
+      transform: scaleY(1);
+      background: ",
+                "#c0eb75",
+                ";
+    }
+    16.67% {
+      transform: scaleY(3);
+      background: ",
+                "#8ce99a",
+                ";
+    }
+    33.33% {
+      transform: scaleY(1);
+      background: ",
+                "#63e6be",
+                ";
+    }
+    50% {
+      transform: scaleY(3);
+      background: ",
+                "#66d9e8",
+                ";
+    }
+    66.67% {
+      transform: scaleY(1);
+      background: ",
+                "#74c0fc",
+                ";
+    }
+    83.34% {
+      transform: scaleY(3);
+      background: ",
+                "#91a7ff",
+                ";
+    }
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-dnqmqq",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ifAKCX",
+            "isStatic": true,
+            "rules": Array [
+              "
+  & {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    margin-top: -15px; 
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-ifAKCX",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bxivhb",
+          "isStatic": true,
+          "rules": Array [
+            "
+  & {
+    width: 100%;
+    height: 100%;
+    padding: 0.3%;
+  }
+    
+    &.audio {
+      padding-bottom : 0.5%;
+    }
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bxivhb",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
