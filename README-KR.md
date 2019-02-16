@@ -1,5 +1,7 @@
 # 🎙 보글러
 
+![](https://travis-ci.org/teamthesol/boggler.svg?branch=master)
+
 [English](README.md)
 
 이것은 2018년 12월 26일부터 시작되었습니다.
