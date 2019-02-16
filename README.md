@@ -1,5 +1,7 @@
 # 🎙 Boggler
 
+![](https://travis-ci.org/teamthesol/boggler.svg?branch=master)
+
 [한국어](README-KR.md)
 
 It started in Dec 26, 2018
