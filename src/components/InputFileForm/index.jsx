@@ -4,7 +4,7 @@ import { AudioProgressbar } from '../AudioProgressbar';
 
 class InputFileForm extends Component {
   render() {
-    const { file, onChange, onClick, onConvertToPDF, progress } = this.props;
+    const { file, onChange, onClick, onConvertToPDF, onConvertToMD, progress } = this.props;
       const submit = () => {
         if(!file||progress){
           return(
@@ -64,6 +64,12 @@ class InputFileForm extends Component {
               type="button"
               value="TO PDF"
               onClick={onConvertToPDF}
+            />
+            <StyledInput
+              id="file-submit"
+              type="button"
+              value="TO MD"
+              onClick={onConvertToMD}
             />
           </form>
           <AudioProgressbar className={progress ? '-stt ' : 'none'} />
