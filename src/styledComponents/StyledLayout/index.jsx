@@ -73,10 +73,13 @@ const Positioner = styled.div`
     height: 100%;
     padding: 0.3%;
   }
-    
-    &.audio {
-      padding-bottom : 0.5%;
-    }
+
+  &.audio {
+    padding-bottom: 0.5%;
+  }
+  &.button {
+    margin-left: -20px;
+  }
 `;
 
 const ProgressLayout = styled.div`
@@ -85,7 +88,7 @@ const ProgressLayout = styled.div`
     height: 100%;
     display: block;
     text-align: center;
-    margin-top: -15px; 
+    margin-top: -15px;
   }
 `;
 
