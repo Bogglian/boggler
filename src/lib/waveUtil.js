@@ -1,17 +1,29 @@
-import oc from "open-color";
+import oc from 'open-color';
 
 /**
  * Animate the drawing of a bar wave
  */
 const light = 3;
-const color = [oc.red[light], oc.orange[light], oc.yellow[light], oc.lime[light], oc.green[light], oc.teal[light],
-                oc.cyan[light], oc.blue[light], oc.indigo[light], oc.violet[light], oc.grape[light], oc.pink[light]];
+const color = [
+  oc.red[light],
+  oc.orange[light],
+  oc.yellow[light],
+  oc.lime[light],
+  oc.green[light],
+  oc.teal[light],
+  oc.cyan[light],
+  oc.blue[light],
+  oc.indigo[light],
+  oc.violet[light],
+  oc.grape[light],
+  oc.pink[light],
+];
 
 const animateBar = (ctx, bounds, style, maxAmp, scaleFactor = 1) => {
   if (scaleFactor <= 100) {
     setTimeout(() => {
       requestAnimationFrame(() =>
-        drawPoints(ctx, bounds, style, maxAmp, scaleFactor)
+        drawPoints(ctx, bounds, style, maxAmp, scaleFactor),
       );
     }, 1);
   }
@@ -25,9 +37,9 @@ export const calculateWaveData = (buffer, width, barDistance, pointWidth) => {
   // get the wave data
   console.log(buffer.duration / 10);
   //Seconds to be shown on a single screen
-  const seconds = 10;
   const wave = buffer.getChannelData(0);
-  const pointCnt = width / (pointWidth + barDistance) * (buffer.duration / 10);
+  const pointCnt =
+    (width / (pointWidth + barDistance)) * (buffer.duration / 10);
   console.log(pointCnt);
   // find how many steps we are going to draw
   const step = Math.ceil(wave.length / pointCnt);
@@ -49,7 +61,7 @@ const drawPoint = (ctx, x, y, width, height, type) => {
  * Draw all the points in the wave
  */
 const drawPoints = (ctx, bounds, style, maxAmp, scaleFactor = 1) => {
-  console.log("scaleFactor2 : " + scaleFactor);
+  console.log('scaleFactor2 : ' + scaleFactor);
   bounds.forEach((bound, i) => {
     ctx.fillStyle = color[i % 12];
     //선의 색
@@ -60,7 +72,7 @@ const drawPoints = (ctx, bounds, style, maxAmp, scaleFactor = 1) => {
       (1 + bound.min) * maxAmp,
       style.pointWidth,
       Math.max(1, (bound.max - bound.min) * maxAmp) * scaleFactor,
-      style.plot
+      style.plot,
     );
   });
   if (style.plot === 'line') {
@@ -80,7 +92,7 @@ export const drawWaveform = (
   position = -1,
   waveStyle,
   height = 300,
-  width
+  width,
 ) => {
   if (!canvas || !bounds || !bounds.length) return;
   const ctx = canvas.getContext('2d');
@@ -89,15 +101,15 @@ export const drawWaveform = (
   // get our canvas size
   const canvasSize = {
     height: (canvas.height = height),
-    width: (canvas.width = width)
+    width: (canvas.width = width),
   };
   //도형 내부 색
   ctx.fillStyle = waveStyle.color;
   //선의 색
   ctx.strokeStyle = waveStyle.color;
   // find the max height we can draw
-  const maxAmp = canvasSize.height / 2 -10;
-  console.log("maxAmp!! : " + maxAmp);
+  const maxAmp = canvasSize.height / 2 - 10;
+  console.log('maxAmp!! : ' + maxAmp);
   if (waveStyle.animate) {
     if (waveStyle.plot === 'bar') {
       animateBar(ctx, bounds, waveStyle, maxAmp, 1);
@@ -125,15 +137,15 @@ const getBounds = values => {
   return values.reduce(
     (total, v) => ({
       max: v > total.max ? v : total.max,
-      min: v < total.min ? v : total.min
+      min: v < total.min ? v : total.min,
     }),
-    { max: -1.0, min: 1.0 }
+    { max: -1.0, min: 1.0 },
   );
 };
 
 export const getDataOfPage = (nowPage, maxPage, step, data) => {
-   if (nowPage === maxPage) {
-     return data.slice(nowPage * step, data.length);
-   }
-   return data.slice(nowPage * step, nowPage * step + step);
+  if (nowPage === maxPage) {
+    return data.slice(nowPage * step, data.length);
+  }
+  return data.slice(nowPage * step, nowPage * step + step);
 };

@@ -109,7 +109,6 @@ class Wrapper extends React.Component {
       position,
       responsive,
       showPosition,
-      waveStyle,
     } = this.props;
     return (
       <div
@@ -129,14 +128,13 @@ class Wrapper extends React.Component {
           height={this.state.height}
           width={this.state.width}
         />
-        {showPosition &&
-          buffer && (
-            <Position
-              id="posMarker"
-              markerStyle={markerStyle}
-              position={position}
-            />
-          )}
+        {showPosition && buffer && (
+          <Position
+            id="posMarker"
+            markerStyle={markerStyle}
+            position={position}
+          />
+        )}
       </div>
     );
   }

@@ -9,7 +9,6 @@ class Wave extends Component {
   };
 
   handlePosChange = () => {
-    const { position, seconds } = this.state;
     const currentTime = this.player.getCurrentTime();
     const nowSeconds = Math.ceil(currentTime * 10);
     const nowPosition = currentTime / 10 - Math.floor(currentTime / 10);
