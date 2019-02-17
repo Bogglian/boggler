@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router();
 
+const markdownpdf = require("markdown-pdf");
+
 router.post('/pdf', function(req, res) {
   markdownpdf().from.string(req.body.markdownText).to.buffer("", function (err,buffer) {
     res.send(buffer);
