@@ -30,3 +30,6 @@ audio/
 
 # dotenv for deepspeech
 .env
+
+# Uploaded files
+src/server/upload

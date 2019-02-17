@@ -32,6 +32,7 @@
     "start": "concurrently \"yarn nodemon ./src/server/index.js \" \"yarn dev\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "yarn test -w=4 --silent --noStackTrace --forceExit",
     "eject": "react-scripts eject",
     "dev": "react-scripts start",
     "pre": "node preinstall.js"
