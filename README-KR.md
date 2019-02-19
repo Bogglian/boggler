@@ -20,9 +20,9 @@ in [The Naver D2 fest finalist progress board](https://d2campusfest6th-2019.hero
 
 이처럼 보글러는 음성을 텍스트로 변환하기 위한 작업의 피로를 줄이기 위한 도구로 만들어지고 있습니다.
 
-## 2019년 1월 28일까지의 Git 기록
+## 2019년 2월 19일까지의 역사([Boggler](https://github.com/teamthesol/boggler), [Node-DeepSpeech](https://github.com/teamthesol/node-DeepSpeech))
 
-[![Git history by January 28, 2019](https://img.youtube.com/vi/mcGezqSdXi8/0.jpg)](https://www.youtube.com/watch?v=mcGezqSdXi8&feature=youtu.be)
+[![Git history by Feb 19, 2019](https://img.youtube.com/vi/dg_y28mKTMU/0.jpg)](https://www.youtube.com/watch?v=dg_y28mKTMU&feature=youtu.be)
 
 ## 💅 스타일 데모
 

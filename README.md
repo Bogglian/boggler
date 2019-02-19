@@ -22,9 +22,9 @@ Sometimes we listen to lectures or record important things. However, there is th
 
 Boggler is being created as a tool to reduce the fatigue of work to convert speech to text.
 
-## Git history by January 28, 2019
+## History by Feb 19, 2019([Boggler](https://github.com/teamthesol/boggler), [Node-DeepSpeech](https://github.com/teamthesol/node-DeepSpeech))
 
-[![Git history by January 28, 2019](https://img.youtube.com/vi/mcGezqSdXi8/0.jpg)](https://www.youtube.com/watch?v=mcGezqSdXi8&feature=youtu.be)
+[![Git history by Feb 19, 2019](https://img.youtube.com/vi/dg_y28mKTMU/0.jpg)](https://www.youtube.com/watch?v=dg_y28mKTMU&feature=youtu.be)
 
 ## 💅 Style Demo
 
