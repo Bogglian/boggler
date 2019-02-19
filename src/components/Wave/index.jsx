@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
-import Wrapper from './Wrapper';
+import { Wrapper } from './Wrapper';
 import { VoiceWave, WaveLayout } from '../../styledComponents';
+
 class Wave extends Component {
   state = {
     position: 0,
@@ -36,7 +37,7 @@ class Wave extends Component {
             buffer={buffer}
             position={position}
             seconds={seconds}
-            showPosition={true}
+            showPosition
           />
           <div className="player-wrapper">
             <ReactPlayer

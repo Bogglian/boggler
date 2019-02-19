@@ -1,7 +1,8 @@
-const express = require('express')
-const router = express.Router();
-const deepspeech = require('../controller/deepspeechController')()
+const express = require('express');
 
-router.post('', deepspeech.file)
+const router = express.Router();
+const deepspeech = require('../controller/deepspeechController')();
+
+router.post('', deepspeech.file);
 
 module.exports = router;

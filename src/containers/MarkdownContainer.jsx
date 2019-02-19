@@ -25,4 +25,4 @@ class MarkdownContainer extends Component {
   }
 }
 
-export default MarkdownContainer;
+export { MarkdownContainer };

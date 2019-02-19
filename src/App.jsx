@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import TestContainer from './containers/TestContainer';
+import { BogglerContainer } from './containers';
 
 class App extends Component {
   render() {
-    return (
-      <TestContainer />
-    );
+    return <BogglerContainer />;
   }
 }
 

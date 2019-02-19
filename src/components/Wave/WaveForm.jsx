@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { calculateWaveData, drawWaveform, getDataOfPage } from '../../lib/waveUtil';
+import {
+  calculateWaveData,
+  drawWaveform,
+  getDataOfPage,
+} from '../../lib/waveUtil';
 
-class Waveform extends React.Component {
+class WaveForm extends React.Component {
   state = {
     data: null,
     nowPage: 0,
-    maxPage: 0
+    maxPage: 0,
   };
 
   componentWillReceiveProps(next) {
@@ -20,21 +24,25 @@ class Waveform extends React.Component {
         next.buffer,
         next.width,
         next.waveStyle.barDistance,
-        next.waveStyle.pointWidth
+        next.waveStyle.pointWidth,
       );
-      const maxPage = parseInt(next.buffer.duration / 10);
-      this.setState({
-        data: data,
-        nowPage: 0,
-        maxPage: maxPage
-      }, this.draw);
+      this.setState(
+        {
+          data,
+          nowPage: 0,
+        },
+        this.draw,
+      );
     } else if (
       Object.keys(next.waveStyle).some(
-        k => next.waveStyle[k] !== this.props.waveStyle[k]
+        k => next.waveStyle[k] !== this.props.waveStyle[k],
       )
     ) {
       this.draw(false, next);
-    } else if (this.verifyDrawablePage(next.seconds) && next.seconds !== this.props.seconds) {
+    } else if (
+      this.verifyDrawablePage(next.seconds) &&
+      next.seconds !== this.props.seconds
+    ) {
       this.drawPage(parseInt(next.seconds / 100));
     }
   }
@@ -43,44 +51,44 @@ class Waveform extends React.Component {
     return false;
   }
 
-  handleKeyPress = (e) => {
-    if(e.key === 'ArrowRight') {
+  handleKeyPress = e => {
+    if (e.key === 'ArrowRight') {
       this.drawNextPage();
     }
 
-    if(e.key === 'ArrowLeft'){
+    if (e.key === 'ArrowLeft') {
       this.drawPreviousPage();
     }
-  }
+  };
 
-  drawPage = (page) => {
+  drawPage = page => {
     this.setState({
-      nowPage: page
+      nowPage: page,
     });
     this.draw(false, this.props, page);
-  }
+  };
 
   drawNextPage = () => {
     const { nowPage, maxPage } = this.state;
-    if(nowPage < maxPage){
+    if (nowPage < maxPage) {
       this.drawPage(nowPage + 1);
     }
-  }
+  };
 
   drawPreviousPage = () => {
     const { nowPage } = this.state;
-    if(nowPage > 0){
+    if (nowPage > 0) {
       this.drawPage(nowPage - 1);
     }
-  }
+  };
 
-  verifyDrawablePage = (seconds) => {
+  verifyDrawablePage = seconds => {
     const { nowPage } = this.state;
-    return ( seconds % 100 === 0 || parseInt(seconds / 100) !== nowPage);
-  }
+    return seconds % 100 === 0 || parseInt(seconds / 100) !== nowPage;
+  };
 
   draw = async (animate = true, next, nextPage = 0) => {
-    const { data, maxPage }= this.state;
+    const { data, maxPage } = this.state;
     const step = parseInt(data.length / (this.props.buffer.duration / 10));
     const drawingData = getDataOfPage(nextPage, maxPage, step, data);
     const props = next || this.props;
@@ -91,10 +99,10 @@ class Waveform extends React.Component {
       -1,
       {
         ...props.waveStyle,
-        animate: props.waveStyle.animate && animate
+        animate: props.waveStyle.animate && animate,
       },
       props.height,
-      props.width
+      props.width,
     );
   };
 
@@ -103,41 +111,42 @@ class Waveform extends React.Component {
       <canvas
         tabIndex="0"
         onKeyDown={this.handleKeyPress}
-        ref={canvas => (this.canvas = canvas)}
+        ref={canvas => {
+          this.canvas = canvas;
+        }}
         style={{
           height: '100%',
-          width: '100%'
+          width: '100%',
         }}
       />
     );
   }
 }
 
-Waveform.defaultProps = {
+WaveForm.defaultProps = {
   height: 300,
   waveStyle: {
     animate: true,
     color: '#38d9a9',
     plot: 'bar',
     pointWidth: 10,
-    barDistance: 2
+    barDistance: 2,
   },
-  width: 500
+  width: 500,
 };
 
-Waveform.propTypes = {
-  buffer: PropTypes.object,
+WaveForm.propTypes = {
+  buffer: PropTypes.number,
   height: PropTypes.number,
   waveStyle: PropTypes.shape({
     animate: PropTypes.bool,
     color: PropTypes.string,
     plot: PropTypes.oneOf(['bar', 'line']),
     pointWidth: PropTypes.number,
-    barDistance: PropTypes.number
+    barDistance: PropTypes.number,
   }),
   width: PropTypes.number,
   seconds: PropTypes.number,
-  onWaveFormChange: PropTypes.func
 };
 
-export default Waveform;
+export { WaveForm };
