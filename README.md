@@ -8,6 +8,10 @@ It started in Dec 26, 2018
 
 [The 6th D2 CAMPUS FEST Final Entry Project](https://github.com/D2CampusFest/6th) - in Naver D2
 
+![d2-rank-board](assets/d2-rank-board.png)
+
+in [The Naver D2 fest finalist progress board](https://d2campusfest6th-2019.herokuapp.com/)
+
 ## ❓ What is Boggler?
 
 Boggler's main point is that it analyzes the audio information that is streamed or entered into a file and converts it into text. For example, a conversation in a meeting or a speaker's voice is converted into text to provide a better typing environment.

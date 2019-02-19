@@ -8,6 +8,8 @@
 
 [제 6회 D2 캠퍼스 Fest 결승 진출 프로젝트](https://github.com/D2CampusFest/6th) - in Naver D2
 
+in [The Naver D2 fest finalist progress board](https://d2campusfest6th-2019.herokuapp.com/)
+
 ## ❓ 보글러란?
 
 보글러의 가장 큰 핵심은 스트리밍 혹은 파일로 입력받은 음성 정보를 분석해 이를 텍스트로 변환시킨다는 점입니다. 가령 미팅에서의 가벼운 대화 혹은 강연자의 음성을 텍스트로 변환해 보다 나은 필사 환경을 제공합니다.
