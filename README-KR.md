@@ -44,7 +44,7 @@ CodeSandbox에서 본 프로젝트의 핵심 도구인 deepSpeech와 waveform �
 
 ## 🚀 사용 사례
 
-> 준비중입니다.
+[![Boggler v1.0.0 Demo](https://img.youtube.com/vi/Hin_oocK4Kc/0.jpg)](https://www.youtube.com/watch?v=Hin_oocK4Kc&feature=youtu.be)
 
 ## 🔧 사용된 오픈소스 도구
 
@@ -52,35 +52,36 @@ CodeSandbox에서 본 프로젝트의 핵심 도구인 deepSpeech와 waveform �
 
 ### 주(主) 도구
 
-- [node-DeepSpeech](https://github.com/teamthesol/ndoe-DeepSpeech) - MPL 2.0
-- [react](https://github.com/facebook/react) - MIT
-- [node](https://github.com/nodejs/node) - MIT
+- [Node-DeepSpeech](https://github.com/teamthesol/ndoe-DeepSpeech) - MPL 2.0
+- [React](https://github.com/facebook/react) - MIT
+- [Node](https://github.com/nodejs/node) - MIT
 
 ### 기타 - MIT
 
 #### 개발자 환경 도구
 
-- [vscode](https://github.com/Microsoft/vscode)
-- [eslint](https://github.com/eslint/eslint)
-- [prettier](https://github.com/prettier/prettier)
+- [Vscode](https://github.com/Microsoft/vscode)
+- [Eslint](https://github.com/eslint/eslint)
+- [Prettier](https://github.com/prettier/prettier)
 
 #### 프론트 엔드 도구
 
-- [react-router](https://github.com/ReactTraining/react-router)
-- [redux](https://github.com/reduxjs/redux)
-- [immer](https://github.com/mweststrate/immer)
-- [styled-components](https://github.com/styled-components/styled-components)
-- [waveform-react](https://github.com/ruebel/waveform-react)
-- [open-color](https://github.com/yeun/open-color)
+- [Styled-components](https://github.com/styled-components/styled-components)
+- [Open-color](https://github.com/yeun/open-color)
+- [Prop-types](https://github.com/facebook/prop-types)
+- [Enzyme](https://airbnb.io/enzyme/)
+- [Jest](https://jest-bot.github.io/jest/)
 
 #### 백 엔드 도구
 
-- [nodemon](https://github.com/remy/nodemon)
-- [concurrently](https://github.com/kimmobrunfeldt/concurrently)
-- [express](https://github.com/expressjs/express)
-- [axios](https://github.com/axios/axios)
-- [mysql](https://github.com/mysqljs/mysql)
-- [sox](http://sox.sourceforge.net/)
+- [Nodemon](https://github.com/remy/nodemon)
+- [Concurrently](https://github.com/kimmobrunfeldt/concurrently)
+- [Express](https://github.com/expressjs/express)
+- [Axios](https://github.com/axios/axios)
+- [Body-parser](https://github.com/expressjs/body-parser)
+- [Concurrently](https://github.com/kimmobrunfeldt/concurrently#readme)
+- [Codemirror](https://codemirror.net/)
+- [Markdown-pdf](https://github.com/alanshaw/markdown-pdf)
 
 #### 영상 제공(Git 기록)
 
