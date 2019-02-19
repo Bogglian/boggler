@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { AudioProgressbar, Wave } from '../components';
+import { Wave } from '../components';
 import { AudioLayout, Positioner, ShadowedBox } from '../styledComponents';
 import { getAudioBuffer, getContext } from '../lib/utils';
 
@@ -47,7 +47,7 @@ class AudioContainer extends Component {
   };
 
   render() {
-    const { buffering, url, buffer, seconds, position } = this.state;
+    const { url, buffer } = this.state;
     return (
       <Positioner className="audio">
         <AudioLayout>
