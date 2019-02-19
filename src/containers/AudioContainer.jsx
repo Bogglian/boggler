@@ -6,7 +6,6 @@ import { getAudioBuffer, getContext } from '../lib/utils';
 
 class AudioContainer extends Component {
   state = {
-    buffering: false,
     url: '',
     buffer: null,
     position: 0,
@@ -68,4 +67,4 @@ class AudioContainer extends Component {
   }
 }
 
-export default AudioContainer;
+export { AudioContainer };

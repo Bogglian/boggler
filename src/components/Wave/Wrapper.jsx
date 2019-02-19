@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Position from './Position';
-import WaveForm from './WaveForm';
+import { Position } from './Position';
+import { WaveForm } from './WaveForm';
 
 class Wrapper extends React.Component {
   state = {
@@ -60,7 +60,7 @@ class Wrapper extends React.Component {
   };
 
   getHeight(props, wrapper) {
-    return props.responsive ? wrapper.offsetHeight : props.height;
+    return this.props.responsive ? wrapper.offsetHeight : props.height;
   }
 
   getMousePosition = e => {
@@ -72,7 +72,7 @@ class Wrapper extends React.Component {
   };
 
   getWidth(props, wrapper) {
-    return props.responsive ? wrapper.offsetWidth : props.width;
+    return this.props.responsive ? wrapper.offsetWidth : props.width;
   }
 
   handleMouseDown = e => {
@@ -112,14 +112,10 @@ class Wrapper extends React.Component {
     } = this.props;
     return (
       <div
-        onMouseDown={this.handleMouseDown}
-        onMouseMove={this.handleMouseMove}
-        onMouseUp={this.handleMouseUp}
-        ref={wrapper => (this.wrapper = wrapper)}
         style={{
-          height: responsive ? '100%' : this.props.height + 'px',
+          height: responsive ? '100%' : `${this.props.height}px`,
           position: 'relative',
-          width: responsive ? '100%' : this.props.width + 'px',
+          width: responsive ? '100%' : `${this.props.width}px`,
         }}
       >
         <WaveForm
@@ -141,7 +137,7 @@ class Wrapper extends React.Component {
 }
 
 Wrapper.propTypes = {
-  buffer: PropTypes.object,
+  buffer: PropTypes.number,
   height: PropTypes.number,
   markerStyle: PropTypes.shape({
     color: PropTypes.string,
@@ -159,4 +155,4 @@ Wrapper.propTypes = {
   width: PropTypes.number,
 };
 
-export default Wrapper;
+export { Wrapper };
